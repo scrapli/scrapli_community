@@ -17,7 +17,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/scrapli/scrapli_community",
     packages=setuptools.find_packages(),
-    install_requires=[],
+    install_requires=["scrapli>=2020.07.12"],
     extras_require={},
     classifiers=[
         "License :: OSI Approved :: MIT License",
