@@ -49,12 +49,7 @@ SCRAPLI_PLATFORM = {
         "async_on_open": default_async_on_open,
         "sync_on_close": default_sync_on_close,
         "async_on_close": default_async_on_close,
-        "failed_when_contains": [
-            "% Ambiguous command",
-            "% Incomplete command",
-            "% Invalid input detected",
-            "% Unknown command",
-        ],
+        "failed_when_contains": ["Error -", "Invalid input -"],
         "textfsm_platform": "brocade_fastiron",
         "genie_platform": "",
     },
