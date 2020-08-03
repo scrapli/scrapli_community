@@ -32,5 +32,5 @@ def test_default_prompt_patterns(priv_pattern):
     priv_level_name = priv_pattern[0]
     prompt = priv_pattern[1]
     prompt_pattern = DEFAULT_PRIVILEGE_LEVELS.get(priv_level_name).pattern
-    match = re.search(pattern=prompt_pattern, string=prompt)
+    match = re.search(pattern=prompt_pattern, string=prompt, flags=re.M | re.I)
     assert match
