@@ -1,1 +1,1 @@
-"""scrapli_community platforom library"""
+"""scrapli_community platform library"""

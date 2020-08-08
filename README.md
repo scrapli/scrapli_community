@@ -22,6 +22,9 @@ Please see the main [scrapli repo](https://github.com/carlmontanari/scrapli) for
 # Table of Contents
 
 - [What is a Platform](#what-is-a-platform)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Supported Platforms](#supported-platforms)
 - [Why add a Platform](#why-add-a-platform)
 - [Adding a Platform](#adding-a-platform)
   - [Driver Type](#driver-type)
@@ -39,6 +42,68 @@ A scrapli community platform is a collection of arguments/settings that apply to
  scrapli arguments. Once a platform exists and scrapli community has been installed, users can simply pass an
   argument "platform" with a value that matches the platform name and the scrapli factory (`Scrapli`) will automatically
    add the appropriate platform arguments to the connection object it returns.  
+
+
+# Installation
+
+You should be able to pip install scrapli-community "normally":
+
+```
+pip install scrapli-community
+```
+
+To install from this repositories master branch:
+
+```
+pip install git+https://github.com/scrapli/scrapli_community
+```
+
+To install from this repositories develop branch:
+
+```
+pip install -e git+https://github.com/scrapli/scrapli_community.git@develop#egg=scrapli_community
+```
+
+To install from source:
+
+```
+git clone https://github.com/scrapli/scrapli_community
+cd scrapli_community
+python setup.py install
+```
+
+
+# Quick Start
+
+If a scrapli community platform has already been created for your target vendor/os taking advantage of that is quite
+ easy! You can simply pass an argument `platform` with the name of the platform as the value to the `Scrapli` or
+  `AsyncScrapli` factory classes. Note that the name of the platform should follow the pattern "{vendor}_{os}" -- for
+   example `ruckus_fastiron` or for the example platform: `scrapli_networkdriver`.
+
+```
+from scrapli import Scrapli
+
+my_device = {
+    "host": "172.18.0.11",
+    "auth_username": "vrnetlab",
+    "auth_password": "VR-netlab9",
+    "auth_strict_key": False,
+    "platform": "ruckus_fastiron"
+}
+
+conn = Scrapli(**my_device)
+conn.open()
+```
+
+
+# Supported Platforms
+
+The following are the currently supported platforms:
+
+| Platform Name         | Vendor          | OS            | Contributor(s)                                       | Last Update | Notes                                                                                 |
+|-----------------------|-----------------|---------------|------------------------------------------------------|-------------|---------------------------------------------------------------------------------------|
+| ruckus_fastiron       | Ruckus          | FastIron      | [Brett Canter](https://github.com/wonderbred)        | 2020.08.08  |                                                                                       |
+| huawei_vrp            | Huawei          | VRP           |                                                      | 2020.08.08  | Untested, based on [this issue](https://github.com/carlmontanari/scrapli/issues/20)   | 
 
 
 # Why add a Platform
@@ -101,7 +166,6 @@ wlc = {
 
 conn = Scrapli(**wlc)
 ``` 
-
 
 
 # Adding a Platform

@@ -9,7 +9,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 setuptools.setup(
     name="scrapli_community",
-    version="2020.07.26",
+    version="2020.08.08",
     author=__author__,
     author_email="carl.r.montanari@gmail.com",
     description="",
