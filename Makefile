@@ -1,9 +1,11 @@
 lint:
-	python -m isort -rc -y .
-	python -m black .
-	python -m pylama .
-	python -m pydocstyle .
-	python -m mypy --strict scrapli_community/
+	python -m isort scrapli_community/
+	python -m isort tests/
+	python -m black scrapli_community/
+	python -m black tests/
+	python -m pylama scrapli_community/
+	python -m pydocstyle scrapli_community/
+	python -m mypy scrapli_community/
 
 test:
 	python -m pytest \
