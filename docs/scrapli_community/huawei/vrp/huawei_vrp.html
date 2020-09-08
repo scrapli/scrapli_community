@@ -36,7 +36,7 @@ from scrapli_community.huawei.vrp.sync import default_sync_on_close, default_syn
 DEFAULT_PRIVILEGE_LEVELS = {
     &#34;privilege_exec&#34;: (
         PrivilegeLevel(
-            pattern=r&#34;^[&lt;a-z0-9.\-@()/:]{1,48}[#&gt;$]\s*$&#34;,
+            pattern=r&#34;^&lt;[a-z0-9.\-_@()/:]{1,48}&gt;\s*$&#34;,
             name=&#34;privilege_exec&#34;,
             previous_priv=&#34;&#34;,
             deescalate=&#34;&#34;,

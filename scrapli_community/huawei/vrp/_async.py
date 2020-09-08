@@ -1,4 +1,4 @@
-"""scrapli_community.huawei.vrp._ansync"""
+"""scrapli_community.huawei.vrp._async"""
 from scrapli.driver import AsyncNetworkDriver
 
 
