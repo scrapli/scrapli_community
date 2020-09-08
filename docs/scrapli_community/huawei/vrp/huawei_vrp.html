@@ -47,7 +47,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     &#34;configuration&#34;: (
         PrivilegeLevel(
-            pattern=r&#34;^\[[a-z0-9.\-@/:]{1,32}\]$&#34;,
+            pattern=r&#34;^\[[a-z0-9.\-_@/:]{1,64}\]$&#34;,
             name=&#34;configuration&#34;,
             previous_priv=&#34;privilege_exec&#34;,
             deescalate=&#34;quit&#34;,
