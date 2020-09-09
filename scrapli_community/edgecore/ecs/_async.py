@@ -38,5 +38,5 @@ async def default_async_on_close(conn: AsyncNetworkDriver) -> None:
     # the exit command!
     await conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
 
-    conn.transport.write(channel_input="exit")
-    conn.transport.write(channel_input=conn.channel.comms_return_char)
+    await conn.transport.write(channel_input="exit")
+    await conn.transport.write(channel_input=conn.channel.comms_return_char)
