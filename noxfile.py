@@ -34,7 +34,7 @@ for requirement in dev_editable_requirements_lines:
     DEV_REQUIREMENTS[parsed_requirement.groups()[0]] = requirement
 
 
-@nox.session(python=["3.6", "3.7", "3.8"])
+@nox.session(python=["3.6", "3.7", "3.8", "3.9"])
 def unit_tests(session):
     """
     Nox run unit tests
@@ -155,6 +155,8 @@ def mypy(session):
 
     """
     session.install(f"mypy{DEV_REQUIREMENTS['mypy']}")
+    session.install("-e", DEV_REQUIREMENTS["scrapli_stubs"].split()[1])
+    session.env["MYPYPATH"] = f"{session.virtualenv.location}/src/scrapli-stubs"
     session.run("mypy", "--strict", "scrapli_community/")
 
 
