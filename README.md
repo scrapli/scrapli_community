@@ -252,14 +252,14 @@ The "defaults" section contains all of the most "normal" or common arguments/set
   are the most commonly needed arguments, see the scrapli core docs for all available options.
 
 | Argument                          | Type                      | Required | Purpose                                   |
-|-----------------------------------|---------------------------|------------------------------------------------------|
-| privilege_levels                  | Dict[str, PrivilegeLevel] | True     | dictionary defining device priv levels    |
+|-----------------------------------|---------------------------|----------|-------------------------------------------|
+| privilege_levels                  | Dict [str: PrivilegeLevel]| True     | dictionary defining device priv levels    |
 | default_desired_privilege_level   | str                       | True     | string of desired default priv level      |
 | sync_on_open                      | Callable                  | False    | callable to run "on open"                 |
 | async_on_open                     | Callable                  | False    | asyncio callable to run "on open"         |
 | sync_on_close                     | Callable                  | False    | callable to run "on close"                |
 | async_on_close                    | Callable                  | False    | asyncio callable to run "on close"        |
-| failed_when_contains              | List[str]                 | False    | list of strings indicating command failure|
+| failed_when_contains              | List [str]                | False    | list of strings indicating command failure|
 | textfsm_platform                  | str                       | False    | platform name for textfms/ntc parser      |
 | genie_platform                    | str                       | False    | platform name for genie parser            |
 
