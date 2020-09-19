@@ -9,7 +9,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 setuptools.setup(
     name="scrapli_community",
-    version="2020.08.08",
+    version="2020.09.19",
     author=__author__,
     author_email="carl.r.montanari@gmail.com",
     description="",
@@ -25,6 +25,7 @@ setuptools.setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
         "Operating System :: POSIX :: Linux",
         "Operating System :: MacOS",
     ],

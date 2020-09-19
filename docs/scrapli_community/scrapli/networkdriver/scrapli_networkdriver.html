@@ -31,10 +31,15 @@
 from scrapli.driver.base_network_driver import PrivilegeLevel
 
 from scrapli_community.scrapli.networkdriver._async import (
+    AsyncScrapliNetworkDriverWithMethods,
     default_async_on_close,
     default_async_on_open,
 )
-from scrapli_community.scrapli.networkdriver.sync import default_sync_on_close, default_sync_on_open
+from scrapli_community.scrapli.networkdriver.sync import (
+    ScrapliNetworkDriverWithMethods,
+    default_sync_on_close,
+    default_sync_on_open,
+)
 
 DEFAULT_PRIVILEGE_LEVELS = {
     &#34;exec&#34;: (
@@ -93,7 +98,14 @@ SCRAPLI_PLATFORM = {
     &#34;variants&#34;: {
         # just as an networkdriver... this won&#39;t do anything different than &#34;normal&#34; defaults as
         # above but this is how we can override the defaults
-        &#34;test_variant1&#34;: {&#34;default_desired_privilege_level&#34;: &#34;configuration&#34;}
+        &#34;test_variant1&#34;: {&#34;default_desired_privilege_level&#34;: &#34;configuration&#34;},
+        # test variant for testing instantiating a scrapli community platform class
+        &#34;test_variant2&#34;: {
+            &#34;driver_type&#34;: {
+                &#34;sync&#34;: ScrapliNetworkDriverWithMethods,
+                &#34;async&#34;: AsyncScrapliNetworkDriverWithMethods,
+            },
+        },
     },
 }</code></pre>
 </details>

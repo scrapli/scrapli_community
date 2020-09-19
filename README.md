@@ -103,7 +103,8 @@ The following are the currently supported platforms:
 | Platform Name         | Vendor          | OS            | Contributor(s)                                       | Last Update | Notes                                                                                 |
 |-----------------------|-----------------|---------------|------------------------------------------------------|-------------|---------------------------------------------------------------------------------------|
 | ruckus_fastiron       | Ruckus          | FastIron      | [Brett Canter](https://github.com/wonderbred)        | 2020.08.08  |                                                                                       |
-| huawei_vrp            | Huawei          | VRP           |                                                      | 2020.08.08  | Untested, based on [this issue](https://github.com/carlmontanari/scrapli/issues/20)   | 
+| huawei_vrp            | Huawei          | VRP           | [Alex Lardschneider](https://github.com/AlexLardschneider)                               | 2020.09.19  | Last update fixed minor prompt pattern issue (missing underscore)                     | 
+| edgecore_ecs          | Edgecore        | ECS           | [Alex Lardschneider](https://github.com/AlexLardschneider)                               | 2020.09.19  | For the firmware shipped by Edgecore itself                                           |
 
 
 # Why add a Platform
@@ -231,10 +232,13 @@ The following sections will outline each of these values and what they mean/how 
 
 ## Driver Type
 
-As mentioned above, there are only two permissible values for the `driver_type` argument, this can be either "generic
-" or "network" and indicates which base driver class to use in scrapli core. If your device platform has the concept
+As mentioned above, there are only two primary values for the `driver_type` argument, this can be either "generic"
+ or "network" and indicates which base driver class to use in scrapli core. If your device platform has the concept
  of different privilege levels then you should select "network", otherwise "generic". Most network specific platforms
   will likely be built with the "network" option selected (probably).
+
+You can also create your own class (inheriting from either the `NetworkDriver` or `GenericDriver` or their asyncio
+ counterparts) if you wish to be able to override any methods of those classes or to implement your own methods.
 
 Note that depending on the type selected for `driver_type` there will be slightly different required arguments
  -- please see the example/test generic and network drivers in the [scrapli vendor directory](scrapli_community/scrapli)
