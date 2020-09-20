@@ -2,15 +2,15 @@ import re
 
 import pytest
 
-from scrapli_community.edgecore.ecs.edgecore_ecs import DEFAULT_PRIVILEGE_LEVELS
+from scrapli_community.fortinet.wlc.fortinet_wlc import DEFAULT_PRIVILEGE_LEVELS
 
 
 @pytest.mark.parametrize(
     "priv_pattern",
     [
-        ("privilege_exec", "SCRAPLI_ECS-TEST_SW-0#"),
-        ("configuration", "SCRAPLI_ECS-TEST_SW-0(config)#"),
-        ("configuration", "SCRAPLI_ECS-TEST_SW-0(config-if)#"),
+        ("privilege_exec", "SCRAPLI-FORTINET-WLC-TEST(1)#"),
+        ("configuration", "SCRAPLI-FORTINET-WLC-TEST(15)(config)#"),
+        ("configuration", "SCRAPLI-FORTINET-WLC-TEST(15)(config-ap)#"),
     ],
     ids=[
         "ssh_prompt_privilege_exec",
