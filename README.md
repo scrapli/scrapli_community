@@ -105,6 +105,7 @@ The following are the currently supported platforms:
 | ruckus_fastiron       | Ruckus          | FastIron      | [Brett Canter](https://github.com/wonderbred)        | 2020.08.08  |                                                                                       |
 | huawei_vrp            | Huawei          | VRP           | [Alex Lardschneider](https://github.com/AlexLardschneider)                               | 2020.09.19  | Last update fixed minor prompt pattern issue (missing underscore)                     | 
 | edgecore_ecs          | Edgecore        | ECS           | [Alex Lardschneider](https://github.com/AlexLardschneider)                               | 2020.09.19  | For the firmware shipped by Edgecore itself                                           |
+| fortinet_wlc          | Fortinet        | WLC           | [Alex Lardschneider](https://github.com/AlexLardschneider)                               | 2020.XX.XX  | For the Meru-based OS, no the same as FortiOS                                         |
 
 
 # Why add a Platform
