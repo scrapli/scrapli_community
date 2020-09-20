@@ -1,6 +1,8 @@
 CHANGELOG
 =======
 
+# 2020.XX.XX
+
 # 2020.09.19
 - Add Ruckus Fastiron Platform (thank you Brett!)
 - Add Edgecore ECS Platform (thank you Alex!)
