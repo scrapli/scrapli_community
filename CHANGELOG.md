@@ -3,6 +3,7 @@ CHANGELOG
 
 # 2020.XX.XX
 - Add Fortinet WLC (thank you again Alex!) -- see #6
+- Add Aethra ATOSNT (Alex!!!) -- see #9
 
 # 2020.09.19
 - Add Ruckus Fastiron Platform (thank you Brett!)
