@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.8.4" />
-<title>scrapli_community.huawei.vrp.huawei_vrp API documentation</title>
-<meta name="description" content="scrapli_community.huawei.vrp.huawei_vrp" />
+<title>scrapli_community.aethra.atosnt API documentation</title>
+<meta name="description" content="scrapli_community.aethra.atosnt" />
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
 <link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin>
@@ -19,84 +19,32 @@
 <main>
 <article id="content">
 <header>
-<h1 class="title">Module <code>scrapli_community.huawei.vrp.huawei_vrp</code></h1>
+<h1 class="title">Module <code>scrapli_community.aethra.atosnt</code></h1>
 </header>
 <section id="section-intro">
-<p>scrapli_community.huawei.vrp.huawei_vrp</p>
+<p>scrapli_community.aethra.atosnt</p>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">&#34;&#34;&#34;scrapli_community.huawei.vrp.huawei_vrp&#34;&#34;&#34;
-from scrapli.driver.base_network_driver import PrivilegeLevel
+<pre><code class="python">&#34;&#34;&#34;scrapli_community.aethra.atosnt&#34;&#34;&#34;
+from scrapli_community.aethra.atosnt.aethra_atosnt import SCRAPLI_PLATFORM
 
-from scrapli_community.huawei.vrp._async import default_async_on_close, default_async_on_open
-from scrapli_community.huawei.vrp.sync import default_sync_on_close, default_sync_on_open
-
-DEFAULT_PRIVILEGE_LEVELS = {
-    &#34;privilege_exec&#34;: (
-        PrivilegeLevel(
-            pattern=r&#34;^&lt;[a-z0-9.\-_@()/:]{1,48}&gt;\s*$&#34;,
-            name=&#34;privilege_exec&#34;,
-            previous_priv=&#34;&#34;,
-            deescalate=&#34;&#34;,
-            escalate=&#34;&#34;,
-            escalate_auth=False,
-            escalate_prompt=&#34;&#34;,
-        )
-    ),
-    &#34;configuration&#34;: (
-        PrivilegeLevel(
-            # On some versions of VRP running on the AR160 &amp; AR650 router series (and possibly
-            # others), the router outputs the current OS version in the following format when
-            # calling the command &#39;display current-configuration&#39;:
-            #
-            # &lt;HOSTNAME&gt;display current-configuration
-            # [V200R009C00SPC500]
-            # #
-            # sysname HOSTNAME
-            # ...
-            #
-            # Since the version string is basically in the same format as the prompt in
-            # configuration mode, scrapli only reads until it sees this very string, and then
-            # stops reading since it assumes that a valid prompt has been found.
-            #
-            # The following pattern tries to prevent this from happening by using a regex negative
-            # lookahead to exclude &#39;[V***R***C**]&#39; from the prompt pattern, but still match
-            # a regular hostname.
-            #
-            pattern=r&#34;^(?!\[V\d{3}R\d{3}C\d{2,3}.*\])(?=\[[a-z0-9.\-_@/:]{1,64}\]$).*$&#34;,
-            name=&#34;configuration&#34;,
-            previous_priv=&#34;privilege_exec&#34;,
-            deescalate=&#34;quit&#34;,
-            escalate=&#34;system-view&#34;,
-            escalate_auth=False,
-            escalate_prompt=&#34;&#34;,
-        )
-    ),
-}
-
-SCRAPLI_PLATFORM = {
-    &#34;driver_type&#34;: &#34;network&#34;,
-    &#34;defaults&#34;: {
-        &#34;privilege_levels&#34;: DEFAULT_PRIVILEGE_LEVELS,
-        &#34;default_desired_privilege_level&#34;: &#34;privilege_exec&#34;,
-        &#34;sync_on_open&#34;: default_sync_on_open,
-        &#34;async_on_open&#34;: default_async_on_open,
-        &#34;sync_on_close&#34;: default_sync_on_close,
-        &#34;async_on_close&#34;: default_async_on_close,
-        &#34;failed_when_contains&#34;: [
-            &#34;Error: Unrecognized command found at &#39;^&#39; position.&#34;,
-            &#34;Error: Wrong parameter found at &#39;^&#39; position.&#34;,
-            &#34;Error:Incomplete command found at &#39;^&#39; position.&#34;,
-        ],
-        &#34;textfsm_platform&#34;: &#34;huawei_vrp&#34;,
-        &#34;genie_platform&#34;: &#34;&#34;,
-    },
-}</code></pre>
+__all__ = (&#34;SCRAPLI_PLATFORM&#34;,)</code></pre>
 </details>
 </section>
 <section>
+<h2 class="section-title" id="header-submodules">Sub-modules</h2>
+<dl>
+<dt><code class="name"><a title="scrapli_community.aethra.atosnt.aethra_atosnt" href="aethra_atosnt.html">scrapli_community.aethra.atosnt.aethra_atosnt</a></code></dt>
+<dd>
+<div class="desc"><p>scrapli_community.aethra.atosnt.aethra_atosnt</p></div>
+</dd>
+<dt><code class="name"><a title="scrapli_community.aethra.atosnt.sync" href="sync.html">scrapli_community.aethra.atosnt.sync</a></code></dt>
+<dd>
+<div class="desc"><p>scrapli_community.aethra.atosnt.sync</p></div>
+</dd>
+</dl>
 </section>
 <section>
 </section>
@@ -113,7 +61,13 @@ SCRAPLI_PLATFORM = {
 <ul id="index">
 <li><h3>Super-module</h3>
 <ul>
-<li><code><a title="scrapli_community.huawei.vrp" href="index.html">scrapli_community.huawei.vrp</a></code></li>
+<li><code><a title="scrapli_community.aethra" href="../index.html">scrapli_community.aethra</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-submodules">Sub-modules</a></h3>
+<ul>
+<li><code><a title="scrapli_community.aethra.atosnt.aethra_atosnt" href="aethra_atosnt.html">scrapli_community.aethra.atosnt.aethra_atosnt</a></code></li>
+<li><code><a title="scrapli_community.aethra.atosnt.sync" href="sync.html">scrapli_community.aethra.atosnt.sync</a></code></li>
 </ul>
 </li>
 </ul>
