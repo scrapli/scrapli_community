@@ -65,7 +65,7 @@ SCRAPLI_PLATFORM = {
         "genie_platform": "",
         # Force the screen to be 256 characters wide.
         # Might get overwritten by global Scrapli transport options.
-        # See issue #1 for more details.
+        # See issue #18 for more details.
         "transport_options": {"ptyprocess": {"cols": 256}},
     },
 }
