@@ -1,10 +1,8 @@
-![](https://github.com/scrapli/scrapli_community/workflows/Weekly%20Build/badge.svg)
-[![PyPI version](https://badge.fury.io/py/scrapli.svg)](https://badge.fury.io/py/scrapli)
-[![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
-[![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/)
-[![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-380/)
+[![Supported Versions](https://img.shields.io/pypi/pyversions/scrapli.svg)](https://pypi.org/project/scrapli)
+[![PyPI version](https://badge.fury.io/py/scrapli-community.svg)](https://badge.fury.io/py/scrapli-community)
+[![Weekly Build](https://github.com/scrapli/scrapli_community/workflows/Weekly%20Build/badge.svg)](https://github.com/scrapli/scrapli_community/actions?query=workflow%3A%22Weekly+Build%22)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-blueviolet.svg)](https://opensource.org/licenses/MIT)
 
 scrapli_community
 =================
@@ -103,8 +101,10 @@ The following are the currently supported platforms:
 | Platform Name         | Vendor          | OS            | Contributor(s)                                       | Last Update | Notes                                                                                 |
 |-----------------------|-----------------|---------------|------------------------------------------------------|-------------|---------------------------------------------------------------------------------------|
 | ruckus_fastiron       | Ruckus          | FastIron      | [Brett Canter](https://github.com/wonderbred)        | 2020.08.08  |                                                                                       |
-| huawei_vrp            | Huawei          | VRP           | [Alex Lardschneider](https://github.com/AlexLardschneider)                               | 2020.09.19  | Last update fixed minor prompt pattern issue (missing underscore)                     | 
+| huawei_vrp            | Huawei          | VRP           | [Alex Lardschneider](https://github.com/AlexLardschneider)                               | 2020.11.13  | Last update fixed minor prompt pattern issue (missing underscore)<br><br>Might need to manually set `screen-width` or PTY cols, see issue [#18](https://github.com/scrapli/scrapli_community/issues/18) for more details.                  | 
 | edgecore_ecs          | Edgecore        | ECS           | [Alex Lardschneider](https://github.com/AlexLardschneider)                               | 2020.09.19  | For the firmware shipped by Edgecore itself                                           |
+| fortinet_wlc          | Fortinet        | WLC           | [Alex Lardschneider](https://github.com/AlexLardschneider)                               | 2020.XX.XX  | For the Meru-based OS, not the same as FortiOS                                         |
+| aethra_atosnt         | Aethra          | ATOSNT        | [Alex Lardschneider](https://github.com/AlexLardschneider)                               | 2020.XX.XX  | Tested on ATOS NT, ranging from 6.3.X up to 6.5.X:                                    |
 
 
 # Why add a Platform

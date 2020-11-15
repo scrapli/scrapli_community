@@ -1,6 +1,11 @@
 CHANGELOG
 =======
 
+# 2020.11.15
+- Add Fortinet WLC (thank you again Alex!) -- see #6
+- Add Aethra ATOSNT (Alex!!!) -- see #9
+- Fix screen width on Huawei VRP (Alex again!) -- see #18
+
 # 2020.09.19
 - Add Ruckus Fastiron Platform (thank you Brett!)
 - Add Edgecore ECS Platform (thank you Alex!)

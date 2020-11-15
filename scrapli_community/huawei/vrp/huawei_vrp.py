@@ -18,7 +18,25 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "configuration": (
         PrivilegeLevel(
-            pattern=r"^\[[a-z0-9.\-_@/:]{1,64}\]$",
+            # On some versions of VRP running on the AR160 & AR650 router series (and possibly
+            # others), the router outputs the current OS version in the following format when
+            # calling the command 'display current-configuration':
+            #
+            # <HOSTNAME>display current-configuration
+            # [V200R009C00SPC500]
+            # #
+            # sysname HOSTNAME
+            # ...
+            #
+            # Since the version string is basically in the same format as the prompt in
+            # configuration mode, scrapli only reads until it sees this very string, and then
+            # stops reading since it assumes that a valid prompt has been found.
+            #
+            # The following pattern tries to prevent this from happening by using a regex negative
+            # lookahead to exclude '[V***R***C**]' from the prompt pattern, but still match
+            # a regular hostname.
+            #
+            pattern=r"^(?!\[V\d{3}R\d{3}C\d{2,3}.*\])(?=\[[a-z0-9.\-_@/:]{1,64}\]$).*$",
             name="configuration",
             previous_priv="privilege_exec",
             deescalate="quit",
@@ -30,7 +48,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
 }
 
 SCRAPLI_PLATFORM = {
-    "driver_type": "network",  # generic|network
+    "driver_type": "network",
     "defaults": {
         "privilege_levels": DEFAULT_PRIVILEGE_LEVELS,
         "default_desired_privilege_level": "privilege_exec",
@@ -38,8 +56,16 @@ SCRAPLI_PLATFORM = {
         "async_on_open": default_async_on_open,
         "sync_on_close": default_sync_on_close,
         "async_on_close": default_async_on_close,
-        "failed_when_contains": [],
+        "failed_when_contains": [
+            "Error: Unrecognized command found at '^' position.",
+            "Error: Wrong parameter found at '^' position.",
+            "Error:Incomplete command found at '^' position.",
+        ],
         "textfsm_platform": "huawei_vrp",
         "genie_platform": "",
+        # Force the screen to be 256 characters wide.
+        # Might get overwritten by global Scrapli transport options.
+        # See issue #18 for more details.
+        "transport_options": {"ptyprocess": {"cols": 256}},
     },
 }
