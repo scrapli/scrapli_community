@@ -16,7 +16,9 @@ setuptools.setup(
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/scrapli/scrapli_community",
-    project_urls={"Changelog": "https://github.com/scrapli/scrapli_community/blob/master/CHANGELOG.md"},
+    project_urls={
+        "Changelog": "https://github.com/scrapli/scrapli_community/blob/master/CHANGELOG.md"
+    },
     license="MIT",
     packages=setuptools.find_packages(),
     install_requires=["scrapli>=2020.07.12"],
