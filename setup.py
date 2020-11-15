@@ -7,6 +7,9 @@ __author__ = "Carl Montanari"
 with open("README.md", "r", encoding="utf-8") as f:
     README = f.read()
 
+with open("requirements.txt", "r") as f:
+    INSTALL_REQUIRES = f.read().splitlines()
+
 setuptools.setup(
     name="scrapli_community",
     version="2020.11.15",
@@ -21,7 +24,7 @@ setuptools.setup(
     },
     license="MIT",
     packages=setuptools.find_packages(),
-    install_requires=["scrapli>=2020.07.12"],
+    install_requires=INSTALL_REQUIRES,
     extras_require={},
     classifiers=[
         "License :: OSI Approved :: MIT License",
