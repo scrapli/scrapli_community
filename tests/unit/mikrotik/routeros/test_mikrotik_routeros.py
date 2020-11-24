@@ -14,6 +14,7 @@ from scrapli_community.mikrotik.routeros.mikrotik_routeros import SCRAPLI_PLATFO
         "[username@SCRAPLI-TEST-ROUTER] > ",
         "[username@SCRAPLI-TEST-ROUTER] /interface> ",
         "[username@SCRAPLI-TEST-ROUTER] /system console> ",
+        "[username@SCRAPLI TEST ROUTER] /system console> ",
     ],
 )
 def test_default_prompt_patterns(prompt):

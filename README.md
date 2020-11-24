@@ -98,13 +98,14 @@ conn.open()
 
 The following are the currently supported platforms:
 
-| Platform Name         | Vendor          | OS            | Contributor(s)                                       | Last Update | Notes                                                                                 |
-|-----------------------|-----------------|---------------|------------------------------------------------------|-------------|---------------------------------------------------------------------------------------|
-| ruckus_fastiron       | Ruckus          | FastIron      | [Brett Canter](https://github.com/wonderbred)        | 2020.08.08  |                                                                                       |
-| huawei_vrp            | Huawei          | VRP           | [Alex Lardschneider](https://github.com/AlexLardschneider)                               | 2020.11.13  | Last update fixed minor prompt pattern issue (missing underscore)<br><br>Might need to manually set `screen-width` or PTY cols, see issue [#18](https://github.com/scrapli/scrapli_community/issues/18) for more details.                  | 
-| edgecore_ecs          | Edgecore        | ECS           | [Alex Lardschneider](https://github.com/AlexLardschneider)                               | 2020.09.19  | For the firmware shipped by Edgecore itself                                           |
-| fortinet_wlc          | Fortinet        | WLC           | [Alex Lardschneider](https://github.com/AlexLardschneider)                               | 2020.XX.XX  | For the Meru-based OS, not the same as FortiOS                                         |
-| aethra_atosnt         | Aethra          | ATOSNT        | [Alex Lardschneider](https://github.com/AlexLardschneider)                               | 2020.XX.XX  | Tested on ATOS NT, ranging from 6.3.X up to 6.5.X:                                    |
+| Platform Name         | Vendor          | OS            | Contributor(s)                                             | Last Update | Notes                                                                                 |
+|-----------------------|-----------------|---------------|------------------------------------------------------------|-------------|---------------------------------------------------------------------------------------|
+| ruckus_fastiron       | Ruckus          | FastIron      | [Brett Canter](https://github.com/wonderbred)              | 2020.08.08  |                                                                                       |
+| huawei_vrp            | Huawei          | VRP           | [Alex Lardschneider](https://github.com/AlexLardschneider) | 2020.11.13  | Last update fixed minor prompt pattern issue (missing underscore)<br><br>Might need to manually set `screen-width` or PTY cols, see issue [#18](https://github.com/scrapli/scrapli_community/issues/18) for more details.                  | 
+| edgecore_ecs          | Edgecore        | ECS           | [Alex Lardschneider](https://github.com/AlexLardschneider) | 2020.09.19  | For the firmware shipped by Edgecore itself                                           |
+| fortinet_wlc          | Fortinet        | WLC           | [Alex Lardschneider](https://github.com/AlexLardschneider) | 2020.11.15  | For the Meru-based OS, not the same as FortiOS                                        |
+| aethra_atosnt         | Aethra          | ATOSNT        | [Alex Lardschneider](https://github.com/AlexLardschneider) | 2020.11.15  | Tested on ATOS NT, ranging from 6.3.X up to 6.5.X:                                    |
+| aethra_atosnt         | Mikrotik        | RouterOS      | [Alex Lardschneider](https://github.com/AlexLardschneider) | 2020.11.15  |                                                                                       |
 
 
 # Why add a Platform

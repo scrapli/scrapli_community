@@ -12,7 +12,7 @@ SCRAPLI_PLATFORM = {
         "async": AsyncMikrotikRouterOSDriver,
     },
     "defaults": {
-        "comms_prompt_pattern": r"\[[a-z0-9.\-_+]{1,48}@[a-z0-9.\-_]{1,64}\].{1,16}>",
+        "comms_prompt_pattern": r"\[[a-z0-9.\-_+\s]{1,48}@[a-z0-9.\-_\s]{1,64}\].{1,16}>",
         "comms_return_char": "\r\n",  # Mikrotik ROS uses '\r\n' as newline character.
         "sync_on_open": None,
         "async_on_open": None,
