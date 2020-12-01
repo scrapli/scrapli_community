@@ -57,9 +57,7 @@ SCRAPLI_PLATFORM = {
         "sync_on_close": default_sync_on_close,
         "async_on_close": default_async_on_close,
         "failed_when_contains": [
-            "Error: Unrecognized command found at '^' position.",
-            "Error: Wrong parameter found at '^' position.",
-            "Error:Incomplete command found at '^' position.",
+            "Error:",
         ],
         "textfsm_platform": "huawei_vrp",
         "genie_platform": "",
