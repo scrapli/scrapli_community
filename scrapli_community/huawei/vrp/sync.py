@@ -1,4 +1,6 @@
 """scrapli_community.huawei.vrp.sync"""
+from typing import Any
+
 from scrapli.driver import NetworkDriver
 
 
@@ -37,3 +39,14 @@ def default_sync_on_close(conn: NetworkDriver) -> None:
     conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
     conn.transport.write(channel_input="exit")
     conn.transport.write(channel_input=conn.channel.comms_return_char)
+
+
+class HuaweiVRPDriver(NetworkDriver):
+    def __init__(self, **kwargs: Any) -> None:
+        # *if* using anything but system transport pop out ptyprocess transport options, leaving
+        # anything else
+        transport_plugin = kwargs.get("transport", "system")
+        if transport_plugin != "system":
+            kwargs.get("transport_options", {}).pop("ptyprocess")
+
+        super().__init__(**kwargs)
