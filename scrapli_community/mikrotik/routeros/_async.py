@@ -30,7 +30,6 @@ class AsyncMikrotikRouterOSDriver(AsyncGenericDriver):
         Mikrotik RouterOS platform class
 
         Args:
-            args: positional args
             kwargs: keyword args
 
         Returns:

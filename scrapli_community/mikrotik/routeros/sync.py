@@ -30,7 +30,6 @@ class MikrotikRouterOSDriver(GenericDriver):
         Mikrotik RouterOS platform class
 
         Args:
-            args: positional args
             kwargs: keyword args
 
         Returns:

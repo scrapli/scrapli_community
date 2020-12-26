@@ -43,6 +43,19 @@ def default_sync_on_close(conn: NetworkDriver) -> None:
 
 class HuaweiVRPDriver(NetworkDriver):
     def __init__(self, **kwargs: Any) -> None:
+        """
+        Huawei VRP platform class
+
+        Args:
+            kwargs: keyword args
+
+        Returns:
+            N/A  # noqa: DAR202
+
+        Raises:
+            N/A
+
+        """
         # *if* using anything but system transport pop out ptyprocess transport options, leaving
         # anything else
         transport_plugin = kwargs.get("transport", "system")
