@@ -25,12 +25,11 @@ def default_sync_on_close(conn: GenericDriver) -> None:
 
 
 class MikrotikRouterOSDriver(GenericDriver):
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
+    def __init__(self, **kwargs: Any) -> None:
         """
         Mikrotik RouterOS platform class
 
         Args:
-            args: positional args
             kwargs: keyword args
 
         Returns:
@@ -45,7 +44,7 @@ class MikrotikRouterOSDriver(GenericDriver):
         # https://wiki.mikrotik.com/wiki/Manual:Console_login_process
         kwargs["auth_username"] += "+cet511w4098h"
 
-        super().__init__(*args, **kwargs)
+        super().__init__(**kwargs)
 
     def send_command(
         self,

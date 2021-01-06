@@ -1,5 +1,4 @@
 """scrapli_community.mikrotik.routeros.mikrotik_routeros"""
-
 from scrapli_community.mikrotik.routeros._async import (
     AsyncMikrotikRouterOSDriver,
     default_async_on_close,
