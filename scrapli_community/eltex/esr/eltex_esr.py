@@ -1,10 +1,7 @@
 """scrapli_community.eltex.esr.exltex_esr"""
 from scrapli.driver.base_network_driver import PrivilegeLevel
 
-from scrapli_community.eltex.esr._async import (
-    default_async_on_close,
-    default_async_on_open,
-)
+from scrapli_community.eltex.esr._async import default_async_on_close, default_async_on_open
 from scrapli_community.eltex.esr.sync import default_sync_on_close, default_sync_on_open
 
 DEFAULT_PRIVILEGE_LEVELS = {
