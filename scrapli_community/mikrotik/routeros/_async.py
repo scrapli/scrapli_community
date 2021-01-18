@@ -49,9 +49,9 @@ class AsyncMikrotikRouterOSDriver(AsyncGenericDriver):
     async def send_command(
         self,
         command: str,
+        *,
         strip_prompt: bool = True,
         failed_when_contains: Optional[Union[str, List[str]]] = None,
-        *,
         timeout_ops: Optional[float] = None,
     ) -> Response:
         """
@@ -84,7 +84,10 @@ class AsyncMikrotikRouterOSDriver(AsyncGenericDriver):
         )
 
         response = await super().send_command(
-            command, strip_prompt, failed_when_contains, timeout_ops=timeout_ops
+            command,
+            strip_prompt=strip_prompt,
+            failed_when_contains=failed_when_contains,
+            timeout_ops=timeout_ops,
         )
 
         # Change the prompt pattern back to the original one.

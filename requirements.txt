@@ -1,1 +1,1 @@
-scrapli>=2020.11.15
+-e git+https://github.com/carlmontanari/scrapli@overhaul#egg=scrapli
