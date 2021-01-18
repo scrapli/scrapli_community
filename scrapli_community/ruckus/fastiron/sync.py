@@ -35,5 +35,5 @@ def default_sync_on_close(conn: NetworkDriver) -> None:
     # write exit directly to the transport as channel would fail to find the prompt after sending
     # the exit command!
     conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
-    conn.transport.write(channel_input="exit")
-    conn.transport.write(channel_input=conn.channel.comms_return_char)
+    conn.channel.write(channel_input="exit")
+    conn.channel.send_return()

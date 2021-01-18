@@ -43,6 +43,7 @@ def default_sync_on_open(conn: NetworkDriver) -&gt; None:
 
     Raises:
         N/A
+
     &#34;&#34;&#34;
     conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
 
@@ -63,12 +64,10 @@ def default_sync_on_close(conn: NetworkDriver) -&gt; None:
     Raises:
         N/A
     &#34;&#34;&#34;
-    # write exit directly to the transport as channel would fail to find the prompt after sending
-    # the exit command!
     conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
 
-    conn.transport.write(channel_input=&#34;exit&#34;)
-    conn.transport.write(channel_input=conn.channel.comms_return_char)</code></pre>
+    conn.channel.write(channel_input=&#34;exit&#34;)
+    conn.channel.send_return()</code></pre>
 </details>
 </section>
 <section>
@@ -110,12 +109,10 @@ def default_sync_on_close(conn: NetworkDriver) -&gt; None:
     Raises:
         N/A
     &#34;&#34;&#34;
-    # write exit directly to the transport as channel would fail to find the prompt after sending
-    # the exit command!
     conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
 
-    conn.transport.write(channel_input=&#34;exit&#34;)
-    conn.transport.write(channel_input=conn.channel.comms_return_char)</code></pre>
+    conn.channel.write(channel_input=&#34;exit&#34;)
+    conn.channel.send_return()</code></pre>
 </details>
 </dd>
 <dt id="scrapli_community.edgecore.ecs.sync.default_sync_on_open"><code class="name flex">
@@ -149,6 +146,7 @@ def default_sync_on_close(conn: NetworkDriver) -&gt; None:
 
     Raises:
         N/A
+
     &#34;&#34;&#34;
     conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
 
