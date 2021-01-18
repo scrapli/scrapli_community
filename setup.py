@@ -12,7 +12,7 @@ with open("requirements.txt", "r") as f:
 
 setuptools.setup(
     name="scrapli_community",
-    version="2020.11.15",
+    version="2021.01.18",
     author=__author__,
     author_email="carl.r.montanari@gmail.com",
     description="",
