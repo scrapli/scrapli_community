@@ -25,6 +25,8 @@ setuptools.setup(
     license="MIT",
     packages=setuptools.find_packages(),
     install_requires=INSTALL_REQUIRES,
+    # temporary until scrapli overhaul is released
+    dependency_links=["git+https://github.com/carlmontanari/scrapli@overhaul#egg=scrapli"],
     extras_require={},
     classifiers=[
         "License :: OSI Approved :: MIT License",
