@@ -12,7 +12,7 @@ with open("requirements.txt", "r") as f:
 
 setuptools.setup(
     name="scrapli_community",
-    version="2020.11.15",
+    version="2021.01.30a1",
     author=__author__,
     author_email="carl.r.montanari@gmail.com",
     description="",
@@ -25,6 +25,7 @@ setuptools.setup(
     license="MIT",
     packages=setuptools.find_packages(),
     install_requires=INSTALL_REQUIRES,
+    dependency_links=[],
     extras_require={},
     classifiers=[
         "License :: OSI Approved :: MIT License",

@@ -116,7 +116,7 @@ def pylama(session):
         N/A
 
     """
-    session.install("-e", ".")
+    session.install(".")
     session.install("-r", "requirements-dev.txt")
     session.run("pylama", ".")
 

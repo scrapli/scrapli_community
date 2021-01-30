@@ -1,5 +1,5 @@
 """scrapli_community.huawei.vrp.huawei_vrp"""
-from scrapli.driver.base_network_driver import PrivilegeLevel
+from scrapli.driver.network.base_driver import PrivilegeLevel
 
 from scrapli_community.huawei.vrp._async import (
     AsyncHuaweiVRPDriver,

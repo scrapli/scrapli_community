@@ -1,5 +1,5 @@
 """scrapli_community.scrapli.genericdriver._ansync"""
-import time
+import asyncio
 
 from scrapli.driver import AsyncNetworkDriver
 
@@ -19,12 +19,12 @@ async def default_async_on_open(conn: AsyncNetworkDriver) -> None:
     Raises:
         N/A
     """
-    time.sleep(0.25)
-    conn.transport.write(channel_input=conn.transport.auth_username)
-    conn.transport.write(channel_input=conn.channel.comms_return_char)
-    time.sleep(0.25)
-    conn.transport.write(channel_input=conn.transport.auth_password)
-    conn.transport.write(channel_input=conn.channel.comms_return_char)
+    await asyncio.sleep(0.25)
+    conn.channel.write(channel_input=conn.transport.auth_username)
+    conn.channel.send_return()
+    await asyncio.sleep(0.25)
+    conn.channel.write(channel_input=conn.transport.auth_password)
+    conn.channel.send_return()
 
 
 async def default_async_on_close(conn: AsyncNetworkDriver) -> None:
@@ -39,8 +39,7 @@ async def default_async_on_close(conn: AsyncNetworkDriver) -> None:
 
     Raises:
         N/A
+
     """
-    # write exit directly to the transport as channel would fail to find the prompt after sending
-    # the exit command!
-    conn.transport.write(channel_input="logout")
-    conn.transport.write(channel_input=conn.channel.comms_return_char)
+    conn.channel.write(channel_input="logout")
+    conn.channel.send_return()

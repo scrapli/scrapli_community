@@ -14,6 +14,7 @@ async def default_async_on_open(conn: AsyncNetworkDriver) -> None:
 
     Raises:
         N/A
+
     """
     await conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
 
@@ -33,10 +34,9 @@ async def default_async_on_close(conn: AsyncNetworkDriver) -> None:
 
     Raises:
         N/A
+
     """
-    # write exit directly to the transport as channel would fail to find the prompt after sending
-    # the exit command!
     await conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
 
-    await conn.transport.write(channel_input="exit")
-    await conn.transport.write(channel_input=conn.channel.comms_return_char)
+    await conn.channel.write(channel_input="exit")
+    conn.channel.send_return()

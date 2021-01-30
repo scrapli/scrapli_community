@@ -17,11 +17,10 @@ def default_sync_on_close(conn: GenericDriver) -> None:
 
     Raises:
         N/A
+
     """
-    # write exit directly to the transport as channel would fail to find the prompt after sending
-    # the exit command!
-    conn.transport.write(channel_input="/quit")
-    conn.transport.write(channel_input=conn.channel.comms_return_char)
+    conn.channel.write(channel_input="/quit")
+    conn.channel.send_return()
 
 
 class MikrotikRouterOSDriver(GenericDriver):
@@ -49,9 +48,9 @@ class MikrotikRouterOSDriver(GenericDriver):
     def send_command(
         self,
         command: str,
+        *,
         strip_prompt: bool = True,
         failed_when_contains: Optional[Union[str, List[str]]] = None,
-        *,
         timeout_ops: Optional[float] = None,
     ) -> Response:
         """
@@ -78,17 +77,18 @@ class MikrotikRouterOSDriver(GenericDriver):
         #
         # [user@HOSTNAME]> /command\r\n[user@HOSTNAME]> /command\r\nOUTPUT...
         #
-        old_comms_prompt_pattern = self.channel.comms_prompt_pattern
-        self.channel.comms_prompt_pattern = (
-            f"{old_comms_prompt_pattern}.*{old_comms_prompt_pattern}"
-        )
+        old_comms_prompt_pattern = self.comms_prompt_pattern
+        self.comms_prompt_pattern = f"{old_comms_prompt_pattern}.*{old_comms_prompt_pattern}"
 
         response = super().send_command(
-            command, strip_prompt, failed_when_contains, timeout_ops=timeout_ops
+            command,
+            strip_prompt=strip_prompt,
+            failed_when_contains=failed_when_contains,
+            timeout_ops=timeout_ops,
         )
 
         # Change the prompt pattern back to the original one.
-        self.channel.comms_prompt_pattern = old_comms_prompt_pattern
+        self.comms_prompt_pattern = old_comms_prompt_pattern
 
         # Since the command is echoed twice, and scrapli only removes it once, we need to
         # manually remove the second command echo by stripping the first line from the output.
