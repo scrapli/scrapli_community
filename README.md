@@ -106,6 +106,7 @@ The following are the currently supported platforms:
 | fortinet_wlc          | Fortinet        | WLC           | [Alex Lardschneider](https://github.com/AlexLardschneider) | 2020.11.15  | For the Meru-based OS, not the same as FortiOS                                        |
 | aethra_atosnt         | Aethra          | ATOSNT        | [Alex Lardschneider](https://github.com/AlexLardschneider) | 2020.11.15  | Tested on ATOS NT, ranging from 6.3.X up to 6.5.X:                                    |
 | aethra_atosnt         | Mikrotik        | RouterOS      | [Alex Lardschneider](https://github.com/AlexLardschneider) | 2020.11.15  |                                                                                       |
+| siemens_roxii         | Siemens         | ROX II        | [Khiem Nguyen](https://github.com/kn-winter)               | 2021.01.30  |                                                                                       |
 
 
 # Why add a Platform
@@ -131,13 +132,11 @@ def wlc_on_open(cls):
     # time.sleeps here are just because my test device was a bit sluggish, without these scrapli is
     #  just going to send the username/password right away
     time.sleep(0.25)
-    # since the channel isn't fully setup, we access the transport and send the commands directly
-    #  note that when accessing the transport directly we need to manually send the return char
-    cls.transport.write(cls.transport.auth_username)
-    cls.transport.write(cls.channel.comms_return_char)
+    cls.channel.write(cls.auth_username)
+    cls.channel.send_return()
     time.sleep(0.25)
-    cls.transport.write(cls.transport.auth_password)
-    cls.transport.write(cls.channel.comms_return_char)
+    cls.channel.write(cls.auth_password)
+    cls.channel.send_return()
 
 
 wlc = {

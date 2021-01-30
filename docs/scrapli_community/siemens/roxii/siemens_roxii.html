@@ -36,7 +36,7 @@ from scrapli_community.siemens.roxii.sync import default_sync_on_close, default_
 DEFAULT_PRIVILEGE_LEVELS = {
     &#34;privilege_exec&#34;: (
         PrivilegeLevel(
-            pattern=r&#34;^[a-z0-9-]{1,48}#\s*$&#34;,
+            pattern=r&#34;^[a-z0-9\-_]{1,48}#\s*$&#34;,
             name=&#34;privilege_exec&#34;,
             previous_priv=&#34;&#34;,
             deescalate=&#34;&#34;,
@@ -47,7 +47,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     &#34;configuration&#34;: (
         PrivilegeLevel(
-            pattern=r&#34;^[a-z0-9-]{1,48}\(conf[a-z0-9.\-@/:\+]{0,32}\)#\s*$&#34;,
+            pattern=r&#34;^[a-z0-9\-_]{1,63}\(conf[a-z0-9.\-@/:\+]{0,32}\)#\s*$&#34;,
             name=&#34;configuration&#34;,
             previous_priv=&#34;privilege_exec&#34;,
             deescalate=&#34;top; exit&#34;,

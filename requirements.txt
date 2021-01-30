@@ -1,1 +1,1 @@
-scrapli@git+https://github.com/carlmontanari/scrapli@overhaul#egg=scrapli
+scrapli>=2021.01.30a1

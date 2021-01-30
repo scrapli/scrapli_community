@@ -77,10 +77,8 @@ class AsyncMikrotikRouterOSDriver(AsyncGenericDriver):
         #
         # [user@HOSTNAME]> /command\r\n[user@HOSTNAME]> /command\r\nOUTPUT...
         #
-        old_comms_prompt_pattern = self.channel.comms_prompt_pattern
-        self.channel.comms_prompt_pattern = (
-            f"{old_comms_prompt_pattern}.*{old_comms_prompt_pattern}"
-        )
+        old_comms_prompt_pattern = self.comms_prompt_pattern
+        self.comms_prompt_pattern = f"{old_comms_prompt_pattern}.*{old_comms_prompt_pattern}"
 
         response = await super().send_command(
             command,
@@ -90,7 +88,7 @@ class AsyncMikrotikRouterOSDriver(AsyncGenericDriver):
         )
 
         # Change the prompt pattern back to the original one.
-        self.channel.comms_prompt_pattern = old_comms_prompt_pattern
+        self.comms_prompt_pattern = old_comms_prompt_pattern
 
         # Since the command is echoed twice, and scrapli only removes it once, we need to
         # manually remove the second command echo by stripping the first line from the output.
