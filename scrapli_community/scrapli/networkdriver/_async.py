@@ -38,8 +38,8 @@ async def default_async_on_close(conn: AsyncNetworkDriver) -> None:
     # write exit directly to the transport as channel would fail to find the prompt after sending
     # the exit command!
     await conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
-    conn.transport.write(channel_input="exit")
-    conn.transport.write(channel_input=conn.channel.comms_return_char)
+    conn.channel.write(channel_input="exit")
+    conn.channel.send_return()
 
 
 class AsyncScrapliNetworkDriverWithMethods(AsyncNetworkDriver):
@@ -74,6 +74,6 @@ class AsyncScrapliNetworkDriverWithMethods(AsyncNetworkDriver):
             N/A
 
         """
-        self.transport.write("\n")
-        result = await self.transport.read()
+        self.channel.send_return()
+        result = await self.channel.read()
         print(result)

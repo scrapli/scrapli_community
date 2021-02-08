@@ -28,7 +28,6 @@
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">&#34;&#34;&#34;scrapli_community.mikrotik.routeros.mikrotik_routeros&#34;&#34;&#34;
-
 from scrapli_community.mikrotik.routeros._async import (
     AsyncMikrotikRouterOSDriver,
     default_async_on_close,
@@ -41,7 +40,7 @@ SCRAPLI_PLATFORM = {
         &#34;async&#34;: AsyncMikrotikRouterOSDriver,
     },
     &#34;defaults&#34;: {
-        &#34;comms_prompt_pattern&#34;: r&#34;\[[a-z0-9.\-_+]{1,48}@[a-z0-9.\-_]{1,64}\].{1,16}&gt;&#34;,
+        &#34;comms_prompt_pattern&#34;: r&#34;\[[a-z0-9.\-_+\s]{1,48}@[a-z0-9.\-_\s]{1,64}\].{1,16}&gt;&#34;,
         &#34;comms_return_char&#34;: &#34;\r\n&#34;,  # Mikrotik ROS uses &#39;\r\n&#39; as newline character.
         &#34;sync_on_open&#34;: None,
         &#34;async_on_open&#34;: None,

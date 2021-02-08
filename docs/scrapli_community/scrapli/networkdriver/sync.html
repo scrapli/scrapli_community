@@ -67,8 +67,8 @@ def default_sync_on_close(conn: NetworkDriver) -&gt; None:
     # write exit directly to the transport as channel would fail to find the prompt after sending
     # the exit command!
     conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
-    conn.transport.write(channel_input=&#34;exit&#34;)
-    conn.transport.write(channel_input=conn.channel.comms_return_char)
+    conn.channel.write(channel_input=&#34;exit&#34;)
+    conn.channel.send_return()
 
 
 class ScrapliNetworkDriverWithMethods(NetworkDriver):
@@ -103,8 +103,8 @@ class ScrapliNetworkDriverWithMethods(NetworkDriver):
             N/A
 
         &#34;&#34;&#34;
-        self.transport.write(&#34;\n&#34;)
-        print(self.transport.read())</code></pre>
+        self.channel.send_return()
+        print(self.channel.read())</code></pre>
 </details>
 </section>
 <section>
@@ -115,7 +115,7 @@ class ScrapliNetworkDriverWithMethods(NetworkDriver):
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
 <dt id="scrapli_community.scrapli.networkdriver.sync.default_sync_on_close"><code class="name flex">
-<span>def <span class="ident">default_sync_on_close</span></span>(<span>conn: scrapli.driver.network_driver.NetworkDriver) ‑> NoneType</span>
+<span>def <span class="ident">default_sync_on_close</span></span>(<span>conn: scrapli.driver.network.sync_driver.NetworkDriver) ‑> NoneType</span>
 </code></dt>
 <dd>
 <div class="desc"><p>scrapli_example default on_close callable</p>
@@ -149,12 +149,12 @@ class ScrapliNetworkDriverWithMethods(NetworkDriver):
     # write exit directly to the transport as channel would fail to find the prompt after sending
     # the exit command!
     conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
-    conn.transport.write(channel_input=&#34;exit&#34;)
-    conn.transport.write(channel_input=conn.channel.comms_return_char)</code></pre>
+    conn.channel.write(channel_input=&#34;exit&#34;)
+    conn.channel.send_return()</code></pre>
 </details>
 </dd>
 <dt id="scrapli_community.scrapli.networkdriver.sync.default_sync_on_open"><code class="name flex">
-<span>def <span class="ident">default_sync_on_open</span></span>(<span>conn: scrapli.driver.network_driver.NetworkDriver) ‑> NoneType</span>
+<span>def <span class="ident">default_sync_on_open</span></span>(<span>conn: scrapli.driver.network.sync_driver.NetworkDriver) ‑> NoneType</span>
 </code></dt>
 <dd>
 <div class="desc"><p>scrapli_example default on_open callable</p>
@@ -200,15 +200,7 @@ class ScrapliNetworkDriverWithMethods(NetworkDriver):
 <span>(</span><span>*args: Any, **kwargs: Any)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>GenericDriverBase Object</p>
-<p>A generic network driver that will <em>hopefully</em> work for a broad variety of devices with
-minimal to no modifications and provide a normal NetworkDriver type experience with
-<code>send_command(s)</code>, <code>get_prompt</code> and <code>send_interactive</code> methods instead of forcing users to
-call Channel methods directly.</p>
-<p>This driver doesn't know anything about privilege levels (or any type of "config modes",
-disabling paging, gracefully exiting, or anything like that, and as such should be treated
-similar to the base <code>Scrape</code> object from that perspective.</p>
-<p>Example scrapli community platform class</p>
+<div class="desc"><p>Example scrapli community platform class</p>
 <h2 id="args">Args</h2>
 <dl>
 <dt><strong><code>args</code></strong></dt>
@@ -257,17 +249,17 @@ similar to the base <code>Scrape</code> object from that perspective.</p>
             N/A
 
         &#34;&#34;&#34;
-        self.transport.write(&#34;\n&#34;)
-        print(self.transport.read())</code></pre>
+        self.channel.send_return()
+        print(self.channel.read())</code></pre>
 </details>
 <h3>Ancestors</h3>
 <ul class="hlist">
-<li>scrapli.driver.network_driver.NetworkDriver</li>
-<li>scrapli.driver.generic_driver.GenericDriver</li>
-<li>scrapli.driver.driver.Scrape</li>
-<li>scrapli.driver.base_driver.ScrapeBase</li>
-<li>scrapli.driver.base_generic_driver.GenericDriverBase</li>
-<li>scrapli.driver.base_network_driver.NetworkDriverBase</li>
+<li>scrapli.driver.network.sync_driver.NetworkDriver</li>
+<li>scrapli.driver.generic.sync_driver.GenericDriver</li>
+<li>scrapli.driver.base.sync_driver.Driver</li>
+<li>scrapli.driver.base.base_driver.BaseDriver</li>
+<li>scrapli.driver.generic.base_driver.BaseGenericDriver</li>
+<li>scrapli.driver.network.base_driver.BaseNetworkDriver</li>
 </ul>
 <h3>Methods</h3>
 <dl>
@@ -301,8 +293,8 @@ similar to the base <code>Scrape</code> object from that perspective.</p>
         N/A
 
     &#34;&#34;&#34;
-    self.transport.write(&#34;\n&#34;)
-    print(self.transport.read())</code></pre>
+    self.channel.send_return()
+    print(self.channel.read())</code></pre>
 </details>
 </dd>
 </dl>

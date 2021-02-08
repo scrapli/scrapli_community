@@ -28,10 +28,18 @@
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">&#34;&#34;&#34;scrapli_community.huawei.vrp.huawei_vrp&#34;&#34;&#34;
-from scrapli.driver.base_network_driver import PrivilegeLevel
+from scrapli.driver.network.base_driver import PrivilegeLevel
 
-from scrapli_community.huawei.vrp._async import default_async_on_close, default_async_on_open
-from scrapli_community.huawei.vrp.sync import default_sync_on_close, default_sync_on_open
+from scrapli_community.huawei.vrp._async import (
+    AsyncHuaweiVRPDriver,
+    default_async_on_close,
+    default_async_on_open,
+)
+from scrapli_community.huawei.vrp.sync import (
+    HuaweiVRPDriver,
+    default_sync_on_close,
+    default_sync_on_open,
+)
 
 DEFAULT_PRIVILEGE_LEVELS = {
     &#34;privilege_exec&#34;: (
@@ -77,7 +85,10 @@ DEFAULT_PRIVILEGE_LEVELS = {
 }
 
 SCRAPLI_PLATFORM = {
-    &#34;driver_type&#34;: &#34;network&#34;,
+    &#34;driver_type&#34;: {
+        &#34;sync&#34;: HuaweiVRPDriver,
+        &#34;async&#34;: AsyncHuaweiVRPDriver,
+    },
     &#34;defaults&#34;: {
         &#34;privilege_levels&#34;: DEFAULT_PRIVILEGE_LEVELS,
         &#34;default_desired_privilege_level&#34;: &#34;privilege_exec&#34;,
@@ -86,9 +97,7 @@ SCRAPLI_PLATFORM = {
         &#34;sync_on_close&#34;: default_sync_on_close,
         &#34;async_on_close&#34;: default_async_on_close,
         &#34;failed_when_contains&#34;: [
-            &#34;Error: Unrecognized command found at &#39;^&#39; position.&#34;,
-            &#34;Error: Wrong parameter found at &#39;^&#39; position.&#34;,
-            &#34;Error:Incomplete command found at &#39;^&#39; position.&#34;,
+            &#34;Error:&#34;,
         ],
         &#34;textfsm_platform&#34;: &#34;huawei_vrp&#34;,
         &#34;genie_platform&#34;: &#34;&#34;,

@@ -46,20 +46,18 @@ def default_sync_on_close(conn: GenericDriver) -&gt; None:
 
     Raises:
         N/A
+
     &#34;&#34;&#34;
-    # write exit directly to the transport as channel would fail to find the prompt after sending
-    # the exit command!
-    conn.transport.write(channel_input=&#34;/quit&#34;)
-    conn.transport.write(channel_input=conn.channel.comms_return_char)
+    conn.channel.write(channel_input=&#34;/quit&#34;)
+    conn.channel.send_return()
 
 
 class MikrotikRouterOSDriver(GenericDriver):
-    def __init__(self, *args: Any, **kwargs: Any) -&gt; None:
+    def __init__(self, **kwargs: Any) -&gt; None:
         &#34;&#34;&#34;
         Mikrotik RouterOS platform class
 
         Args:
-            args: positional args
             kwargs: keyword args
 
         Returns:
@@ -74,14 +72,14 @@ class MikrotikRouterOSDriver(GenericDriver):
         # https://wiki.mikrotik.com/wiki/Manual:Console_login_process
         kwargs[&#34;auth_username&#34;] += &#34;+cet511w4098h&#34;
 
-        super().__init__(*args, **kwargs)
+        super().__init__(**kwargs)
 
     def send_command(
         self,
         command: str,
+        *,
         strip_prompt: bool = True,
         failed_when_contains: Optional[Union[str, List[str]]] = None,
-        *,
         timeout_ops: Optional[float] = None,
     ) -&gt; Response:
         &#34;&#34;&#34;
@@ -108,17 +106,18 @@ class MikrotikRouterOSDriver(GenericDriver):
         #
         # [user@HOSTNAME]&gt; /command\r\n[user@HOSTNAME]&gt; /command\r\nOUTPUT...
         #
-        old_comms_prompt_pattern = self.channel.comms_prompt_pattern
-        self.channel.comms_prompt_pattern = (
-            f&#34;{old_comms_prompt_pattern}.*{old_comms_prompt_pattern}&#34;
-        )
+        old_comms_prompt_pattern = self.comms_prompt_pattern
+        self.comms_prompt_pattern = f&#34;{old_comms_prompt_pattern}.*{old_comms_prompt_pattern}&#34;
 
         response = super().send_command(
-            command, strip_prompt, failed_when_contains, timeout_ops=timeout_ops
+            command,
+            strip_prompt=strip_prompt,
+            failed_when_contains=failed_when_contains,
+            timeout_ops=timeout_ops,
         )
 
         # Change the prompt pattern back to the original one.
-        self.channel.comms_prompt_pattern = old_comms_prompt_pattern
+        self.comms_prompt_pattern = old_comms_prompt_pattern
 
         # Since the command is echoed twice, and scrapli only removes it once, we need to
         # manually remove the second command echo by stripping the first line from the output.
@@ -136,7 +135,7 @@ class MikrotikRouterOSDriver(GenericDriver):
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
 <dt id="scrapli_community.mikrotik.routeros.sync.default_sync_on_close"><code class="name flex">
-<span>def <span class="ident">default_sync_on_close</span></span>(<span>conn: scrapli.driver.generic_driver.GenericDriver) ‑> NoneType</span>
+<span>def <span class="ident">default_sync_on_close</span></span>(<span>conn: scrapli.driver.generic.sync_driver.GenericDriver) ‑> NoneType</span>
 </code></dt>
 <dd>
 <div class="desc"><p>mikrotik_routeros default on_close callable</p>
@@ -166,11 +165,10 @@ class MikrotikRouterOSDriver(GenericDriver):
 
     Raises:
         N/A
+
     &#34;&#34;&#34;
-    # write exit directly to the transport as channel would fail to find the prompt after sending
-    # the exit command!
-    conn.transport.write(channel_input=&#34;/quit&#34;)
-    conn.transport.write(channel_input=conn.channel.comms_return_char)</code></pre>
+    conn.channel.write(channel_input=&#34;/quit&#34;)
+    conn.channel.send_return()</code></pre>
 </details>
 </dd>
 </dl>
@@ -180,22 +178,12 @@ class MikrotikRouterOSDriver(GenericDriver):
 <dl>
 <dt id="scrapli_community.mikrotik.routeros.sync.MikrotikRouterOSDriver"><code class="flex name class">
 <span>class <span class="ident">MikrotikRouterOSDriver</span></span>
-<span>(</span><span>*args: Any, **kwargs: Any)</span>
+<span>(</span><span>**kwargs: Any)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>GenericDriverBase Object</p>
-<p>A generic network driver that will <em>hopefully</em> work for a broad variety of devices with
-minimal to no modifications and provide a normal NetworkDriver type experience with
-<code>send_command(s)</code>, <code>get_prompt</code> and <code>send_interactive</code> methods instead of forcing users to
-call Channel methods directly.</p>
-<p>This driver doesn't know anything about privilege levels (or any type of "config modes",
-disabling paging, gracefully exiting, or anything like that, and as such should be treated
-similar to the base <code>Scrape</code> object from that perspective.</p>
-<p>Mikrotik RouterOS platform class</p>
+<div class="desc"><p>Mikrotik RouterOS platform class</p>
 <h2 id="args">Args</h2>
 <dl>
-<dt><strong><code>args</code></strong></dt>
-<dd>positional args</dd>
 <dt><strong><code>kwargs</code></strong></dt>
 <dd>keyword args</dd>
 </dl>
@@ -209,12 +197,11 @@ similar to the base <code>Scrape</code> object from that perspective.</p>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">class MikrotikRouterOSDriver(GenericDriver):
-    def __init__(self, *args: Any, **kwargs: Any) -&gt; None:
+    def __init__(self, **kwargs: Any) -&gt; None:
         &#34;&#34;&#34;
         Mikrotik RouterOS platform class
 
         Args:
-            args: positional args
             kwargs: keyword args
 
         Returns:
@@ -229,14 +216,14 @@ similar to the base <code>Scrape</code> object from that perspective.</p>
         # https://wiki.mikrotik.com/wiki/Manual:Console_login_process
         kwargs[&#34;auth_username&#34;] += &#34;+cet511w4098h&#34;
 
-        super().__init__(*args, **kwargs)
+        super().__init__(**kwargs)
 
     def send_command(
         self,
         command: str,
+        *,
         strip_prompt: bool = True,
         failed_when_contains: Optional[Union[str, List[str]]] = None,
-        *,
         timeout_ops: Optional[float] = None,
     ) -&gt; Response:
         &#34;&#34;&#34;
@@ -263,17 +250,18 @@ similar to the base <code>Scrape</code> object from that perspective.</p>
         #
         # [user@HOSTNAME]&gt; /command\r\n[user@HOSTNAME]&gt; /command\r\nOUTPUT...
         #
-        old_comms_prompt_pattern = self.channel.comms_prompt_pattern
-        self.channel.comms_prompt_pattern = (
-            f&#34;{old_comms_prompt_pattern}.*{old_comms_prompt_pattern}&#34;
-        )
+        old_comms_prompt_pattern = self.comms_prompt_pattern
+        self.comms_prompt_pattern = f&#34;{old_comms_prompt_pattern}.*{old_comms_prompt_pattern}&#34;
 
         response = super().send_command(
-            command, strip_prompt, failed_when_contains, timeout_ops=timeout_ops
+            command,
+            strip_prompt=strip_prompt,
+            failed_when_contains=failed_when_contains,
+            timeout_ops=timeout_ops,
         )
 
         # Change the prompt pattern back to the original one.
-        self.channel.comms_prompt_pattern = old_comms_prompt_pattern
+        self.comms_prompt_pattern = old_comms_prompt_pattern
 
         # Since the command is echoed twice, and scrapli only removes it once, we need to
         # manually remove the second command echo by stripping the first line from the output.
@@ -284,15 +272,15 @@ similar to the base <code>Scrape</code> object from that perspective.</p>
 </details>
 <h3>Ancestors</h3>
 <ul class="hlist">
-<li>scrapli.driver.generic_driver.GenericDriver</li>
-<li>scrapli.driver.driver.Scrape</li>
-<li>scrapli.driver.base_driver.ScrapeBase</li>
-<li>scrapli.driver.base_generic_driver.GenericDriverBase</li>
+<li>scrapli.driver.generic.sync_driver.GenericDriver</li>
+<li>scrapli.driver.base.sync_driver.Driver</li>
+<li>scrapli.driver.base.base_driver.BaseDriver</li>
+<li>scrapli.driver.generic.base_driver.BaseGenericDriver</li>
 </ul>
 <h3>Methods</h3>
 <dl>
 <dt id="scrapli_community.mikrotik.routeros.sync.MikrotikRouterOSDriver.send_command"><code class="name flex">
-<span>def <span class="ident">send_command</span></span>(<span>self, command: str, strip_prompt: bool = True, failed_when_contains: Union[str, List[str], NoneType] = None, *, timeout_ops: Union[float, NoneType] = None) ‑> scrapli.response.Response</span>
+<span>def <span class="ident">send_command</span></span>(<span>self, command: str, *, strip_prompt: bool = True, failed_when_contains: Union[str, List[str], NoneType] = None, timeout_ops: Union[float, NoneType] = None) ‑> scrapli.response.Response</span>
 </code></dt>
 <dd>
 <div class="desc"><p>mikrotik_routeros send_command method</p>
@@ -323,9 +311,9 @@ completed</dd>
 <pre><code class="python">def send_command(
     self,
     command: str,
+    *,
     strip_prompt: bool = True,
     failed_when_contains: Optional[Union[str, List[str]]] = None,
-    *,
     timeout_ops: Optional[float] = None,
 ) -&gt; Response:
     &#34;&#34;&#34;
@@ -352,17 +340,18 @@ completed</dd>
     #
     # [user@HOSTNAME]&gt; /command\r\n[user@HOSTNAME]&gt; /command\r\nOUTPUT...
     #
-    old_comms_prompt_pattern = self.channel.comms_prompt_pattern
-    self.channel.comms_prompt_pattern = (
-        f&#34;{old_comms_prompt_pattern}.*{old_comms_prompt_pattern}&#34;
-    )
+    old_comms_prompt_pattern = self.comms_prompt_pattern
+    self.comms_prompt_pattern = f&#34;{old_comms_prompt_pattern}.*{old_comms_prompt_pattern}&#34;
 
     response = super().send_command(
-        command, strip_prompt, failed_when_contains, timeout_ops=timeout_ops
+        command,
+        strip_prompt=strip_prompt,
+        failed_when_contains=failed_when_contains,
+        timeout_ops=timeout_ops,
     )
 
     # Change the prompt pattern back to the original one.
-    self.channel.comms_prompt_pattern = old_comms_prompt_pattern
+    self.comms_prompt_pattern = old_comms_prompt_pattern
 
     # Since the command is echoed twice, and scrapli only removes it once, we need to
     # manually remove the second command echo by stripping the first line from the output.

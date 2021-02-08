@@ -1,8 +1,16 @@
 """scrapli_community.huawei.vrp.huawei_vrp"""
-from scrapli.driver.base_network_driver import PrivilegeLevel
+from scrapli.driver.network.base_driver import PrivilegeLevel
 
-from scrapli_community.huawei.vrp._async import default_async_on_close, default_async_on_open
-from scrapli_community.huawei.vrp.sync import default_sync_on_close, default_sync_on_open
+from scrapli_community.huawei.vrp._async import (
+    AsyncHuaweiVRPDriver,
+    default_async_on_close,
+    default_async_on_open,
+)
+from scrapli_community.huawei.vrp.sync import (
+    HuaweiVRPDriver,
+    default_sync_on_close,
+    default_sync_on_open,
+)
 
 DEFAULT_PRIVILEGE_LEVELS = {
     "privilege_exec": (
@@ -48,7 +56,10 @@ DEFAULT_PRIVILEGE_LEVELS = {
 }
 
 SCRAPLI_PLATFORM = {
-    "driver_type": "network",
+    "driver_type": {
+        "sync": HuaweiVRPDriver,
+        "async": AsyncHuaweiVRPDriver,
+    },
     "defaults": {
         "privilege_levels": DEFAULT_PRIVILEGE_LEVELS,
         "default_desired_privilege_level": "privilege_exec",
@@ -57,9 +68,7 @@ SCRAPLI_PLATFORM = {
         "sync_on_close": default_sync_on_close,
         "async_on_close": default_async_on_close,
         "failed_when_contains": [
-            "Error: Unrecognized command found at '^' position.",
-            "Error: Wrong parameter found at '^' position.",
-            "Error:Incomplete command found at '^' position.",
+            "Error:",
         ],
         "textfsm_platform": "huawei_vrp",
         "genie_platform": "",
