@@ -20,9 +20,7 @@ cov:
 
 .PHONY: docs
 docs:
-	rm -rf docs/scrapli_community
-	python -m pdoc \
-	--html \
-	--output-dir docs \
-	scrapli_community \
-	--force
+	python docs/generate/generate_docs.py
+
+deploy_docs:
+	mkdocs gh-deploy
