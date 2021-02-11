@@ -1,0 +1,947 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Scrapli: Community Platforms">
+      
+      
+      
+        <meta name="author" content="Carl Montanari">
+      
+      
+        <link rel="canonical" href="https://github.com/scrapli/scrapli_community/user_guide/basic_usage/">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>Basic Usage - Scrapli Community</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="teal">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#basic-usage" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://github.com/scrapli/scrapli_community" title="Scrapli Community" class="md-header-nav__button md-logo" aria-label="Scrapli Community">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Scrapli Community
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Basic Usage
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/scrapli/scrapli_community" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    scrapli/scrapli_community
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://github.com/scrapli/scrapli_community" title="Scrapli Community" class="md-nav__button md-logo" aria-label="Scrapli Community">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Scrapli Community
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/scrapli/scrapli_community" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    scrapli/scrapli_community
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Scrapli Community
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      
+      <label class="md-nav__link" for="nav-2">
+        User Guide
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="User Guide" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart/" class="md-nav__link">
+        Quick Start Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project_details/" class="md-nav__link">
+        Project Details
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../versioning/" class="md-nav__link">
+        Versioning
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Basic Usage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Basic Usage
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-platform" class="md-nav__link">
+    Adding a Platform
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#driver-type" class="md-nav__link">
+    Driver Type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defaults" class="md-nav__link">
+    Defaults
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variants" class="md-nav__link">
+    Variants
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privilege-levels" class="md-nav__link">
+    Privilege Levels
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sync-and-asyncio" class="md-nav__link">
+    Sync and Asyncio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-and-close-callables" class="md-nav__link">
+    Open and Close Callables
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+      
+      <label class="md-nav__link" for="nav-4">
+        More Scrapli
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="More Scrapli" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          More Scrapli
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../more_scrapli/scrapli/" class="md-nav__link">
+        Scrapli
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../more_scrapli/nornir_scrapli/" class="md-nav__link">
+        Nornir Scrapli
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../more_scrapli/scrapli_netconf/" class="md-nav__link">
+        Scrapli Netconf
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../more_scrapli/scrapli_stubs/" class="md-nav__link">
+        Scrapli Stubs
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+      
+      <label class="md-nav__link" for="nav-5">
+        Other
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Other" data-md-level="1">
+        <label class="md-nav__title" for="nav-5">
+          <span class="md-nav__icon md-icon"></span>
+          Other
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/contributing/" class="md-nav__link">
+        Contributing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/code_of_conduct/" class="md-nav__link">
+        Code of Conduct
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-platform" class="md-nav__link">
+    Adding a Platform
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#driver-type" class="md-nav__link">
+    Driver Type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defaults" class="md-nav__link">
+    Defaults
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variants" class="md-nav__link">
+    Variants
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privilege-levels" class="md-nav__link">
+    Privilege Levels
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sync-and-asyncio" class="md-nav__link">
+    Sync and Asyncio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-and-close-callables" class="md-nav__link">
+    Open and Close Callables
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="basic-usage">Basic Usage<a class="headerlink" href="#basic-usage" title="Permanent link">&para;</a></h1>
+<h2 id="adding-a-platform">Adding a Platform<a class="headerlink" href="#adding-a-platform" title="Permanent link">&para;</a></h2>
+<p>Adding a platform to be supported by scrapli is a fairly straight forward process! Before getting started there are a
+ few things to understand about scrapli:</p>
+<ol>
+<li>scrapli is fairly low level -- this means that it is assumed that the user will deal with most* platform specific
+ things such as saving configurations, copying files, and things like that.</li>
+<li>scrapli assumes that the ssh channel/session will behave "normally" -- as in look and feel like a typical network
+ operating system ssh session (just like all the "core" platforms behave).</li>
+</ol>
+<p>* scrapli <em>does</em> however handle privilege levels/escalation/deescalation</p>
+<p>Before jumping into how to build a platform, it is best to start off with rehashing what exactly a platform is! A
+ platform is simply a collection of arguments/callables (functions) defined in a dictionary. This <code>SCRAPLI_PLATFORM</code>
+ dictionary is loaded up by the scrapli factory classes (<code>Scrapli</code> and <code>AsyncScrapli</code>) and used to instantiate an
+  object built on the <code>GenericDriver</code> or <code>NetworkDriver</code> classes in scrapli.</p>
+<p>The reasoning behind platforms <em>not</em> being simply classes that inherit from the <code>GenericDriver</code> or <code>NetworkDriver</code> as
+ the current "core" platforms do, is to keep scrapli core as loosely coupled to the platforms as is possible
+ /practical -- this is hugely important to help ensure that scrapli core as as little "cruft" as possible, and stays
+  well tested/documented/etc., while still allowing users to adapt scrapli to work with various platforms easily.</p>
+<p>A <code>SCRAPLI_PLATFORM</code> dictionary (the dictionary defining the platform) is made up of only three main top level keys:</p>
+<ol>
+<li><code>driver_type</code> -- simply <code>generic</code> or <code>network</code>, no other options are allowed</li>
+<li><code>defaults</code> -- a dictionary containing all required arguments to create a connection object</li>
+<li><code>variants</code> -- a dictionary of dictionaries containing any types of variations to the "defaults" section -- this
+ allows users to have different "profiles" for a specific device type; for example there may be a variant that has a
+  different "on_open" callable that disables paging differently for newer versions of a platform or something like that</li>
+</ol>
+<p>Before jumping into details about what these all mean/do, here is an example platform dictionary:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">SCRAPLI_PLATFORM</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;driver_type&quot;</span><span class="p">:</span> <span class="s2">&quot;network&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;defaults&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;privilege_levels&quot;</span><span class="p">:</span> <span class="n">DEFAULT_PRIVILEGE_LEVELS</span><span class="p">,</span>
+        <span class="s2">&quot;default_desired_privilege_level&quot;</span><span class="p">:</span> <span class="s2">&quot;privilege_exec&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sync_on_open&quot;</span><span class="p">:</span> <span class="n">default_sync_on_open</span><span class="p">,</span>
+        <span class="s2">&quot;async_on_open&quot;</span><span class="p">:</span> <span class="n">default_async_on_open</span><span class="p">,</span>
+        <span class="s2">&quot;sync_on_close&quot;</span><span class="p">:</span> <span class="n">default_sync_on_close</span><span class="p">,</span>
+        <span class="s2">&quot;async_on_close&quot;</span><span class="p">:</span> <span class="n">default_async_on_close</span><span class="p">,</span>
+        <span class="s2">&quot;failed_when_contains&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;% Ambiguous command&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;% Incomplete command&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;% Invalid input detected&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;% Unknown command&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;textfsm_platform&quot;</span><span class="p">:</span> <span class="s2">&quot;cisco_iosxe&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;genie_platform&quot;</span><span class="p">:</span> <span class="s2">&quot;iosxe&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;variants&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="c1"># not useful, just an example</span>
+        <span class="s2">&quot;test_variant1&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;default_desired_privilege_level&quot;</span><span class="p">:</span> <span class="s2">&quot;configuration&quot;</span><span class="p">}</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>The following sections will outline each of these values and what they mean/how they are used.</p>
+<h2 id="driver-type">Driver Type<a class="headerlink" href="#driver-type" title="Permanent link">&para;</a></h2>
+<p>As mentioned above, there are only two primary values for the <code>driver_type</code> argument, this can be either "generic"
+ or "network" and indicates which base driver class to use in scrapli core. If your device platform has the concept
+ of different privilege levels then you should select "network", otherwise "generic". Most network specific platforms
+  will likely be built with the "network" option selected (probably).</p>
+<p>You can also create your own class (inheriting from either the <code>NetworkDriver</code> or <code>GenericDriver</code> or their asyncio
+ counterparts) if you wish to be able to override any methods of those classes or to implement your own methods.</p>
+<p>Note that depending on the type selected for <code>driver_type</code> there will be slightly different required arguments
+ -- please see the example/test generic and network drivers in the <a href="scrapli_community/scrapli">scrapli vendor directory</a>
+ directory. Note that the docs here in the README will focus on the "network" type as that is likely going to be more
+  common and is slightly more involved.</p>
+<h2 id="defaults">Defaults<a class="headerlink" href="#defaults" title="Permanent link">&para;</a></h2>
+<p>The "defaults" section contains all of the most "normal" or common arguments/settings for a given platform. All
+ scrapli <code>NetworkDriver</code> or <code>GenericDriver</code> (depending on the platform you selected) arguments are valid here. Here
+  are the most commonly needed arguments, see the scrapli core docs for all available options.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>privilege_levels</td>
+<td>Dict [str: PrivilegeLevel]</td>
+<td>True</td>
+<td>dictionary defining device priv levels</td>
+</tr>
+<tr>
+<td>default_desired_privilege_level</td>
+<td>str</td>
+<td>True</td>
+<td>string of desired default priv level</td>
+</tr>
+<tr>
+<td>sync_on_open</td>
+<td>Callable</td>
+<td>False</td>
+<td>callable to run "on open"</td>
+</tr>
+<tr>
+<td>async_on_open</td>
+<td>Callable</td>
+<td>False</td>
+<td>asyncio callable to run "on open"</td>
+</tr>
+<tr>
+<td>sync_on_close</td>
+<td>Callable</td>
+<td>False</td>
+<td>callable to run "on close"</td>
+</tr>
+<tr>
+<td>async_on_close</td>
+<td>Callable</td>
+<td>False</td>
+<td>asyncio callable to run "on close"</td>
+</tr>
+<tr>
+<td>failed_when_contains</td>
+<td>List [str]</td>
+<td>False</td>
+<td>list of strings indicating command failure</td>
+</tr>
+<tr>
+<td>textfsm_platform</td>
+<td>str</td>
+<td>False</td>
+<td>platform name for textfms/ntc parser</td>
+</tr>
+<tr>
+<td>genie_platform</td>
+<td>str</td>
+<td>False</td>
+<td>platform name for genie parser</td>
+</tr>
+</tbody>
+</table>
+<p>Any arguments provided here in the "defaults" section are simply passed to the <code>NetworkDriver</code> or <code>GenericDriver</code>. The reason this section is called "defaults" is that the arguments set here should apply to the broadest number of
+ devices of a given platform. That said, it is of course possible that there are sometimes variations within even a
+  single platform type (i.e. Cisco IOSXE) that may cause some of the default arguments to fail. That is where
+   variants come in! </p>
+<h2 id="variants">Variants<a class="headerlink" href="#variants" title="Permanent link">&para;</a></h2>
+<p>The "variants" section is nearly identical to the "defaults" section in that it provides arguments that will be
+ passed to the underlying scrapli driver. There are two big differences for this section though; firstly, there is
+  one extra level of nesting here -- "variants" is a dict of dicts with the top level keys of those dicts being the
+   name of the variant, and the values of that dict being the actual values for the driver arguments. Here is an
+    example:</p>
+<div class="codehilite"><pre><span></span><code>    <span class="s2">&quot;variants&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;test_variant1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;comms_prompt_pattern&quot;</span><span class="p">:</span> <span class="sa">r</span><span class="s2">&quot;^\(BLAH\) &gt;$&quot;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+</code></pre></div>
+
+
+<p>The next thing you may notice is that there are many fewer arguments here! The reason being is that the "variants
+" are merged with the arguments in the "defaults" section. The idea here is that there may be some vendor "Acme" that
+ has an operating system called "Tacocat", but that os "Tacocat" has a few different options for login prompts for
+  example. In most cases the "Acme Tacocat" operating system has a "normal" login process that just prompts for
+   authentication and then lets you onto the router as per usual, but there may be a "variant"(!) that has a banner
+    or some kind of prompt that the user must enter "OK" or "I ACCEPT" or something like that before being able to
+     log on. This is what the "variant" is designed to handle -- nothing needs to change for this variant to work
+      other than passing a new <code>on_open</code> method that is designed to deal with this different logon prompt.</p>
+<h2 id="privilege-levels">Privilege Levels<a class="headerlink" href="#privilege-levels" title="Permanent link">&para;</a></h2>
+<p>Privilege levels are critically important for any platform using the <code>network</code> driver_type -- this dictionary of
+ <code>PrivilegeLevel</code> objects tells scrapli about the different "modes"/privilege levels of the platform, and how to get
+  into and out of each of them. Below is an example taken from the <code>scrapli_networkdriver</code> example/test platform:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">    &quot;configuration&quot;: (</span>
+<span class="err">        PrivilegeLevel(</span>
+<span class="err">            pattern=r&quot;^[a-z0-9.\-_@/:]{1,63}\(conf[a-z0-9.\-@/:\+]{0,32}\)#$&quot;,</span>
+<span class="err">            name=&quot;configuration&quot;,</span>
+<span class="err">            previous_priv=&quot;privilege_exec&quot;,</span>
+<span class="err">            deescalate=&quot;end&quot;,</span>
+<span class="err">            escalate=&quot;configure terminal&quot;,</span>
+<span class="err">            escalate_auth=False,</span>
+<span class="err">            escalate_prompt=&quot;&quot;,</span>
+<span class="err">        )</span>
+<span class="err">    ),</span>
+</code></pre></div>
+
+
+<p>The key of the dictionary is "configuration" (the name of the privilege level), and the value is a <code>PrivilegeLevel</code> object. You can read more about privilege levels in the main scrapli README <a href="https://github.com/carlmontanari/scrapli#driver-privilege-levels">here</a>.</p>
+<p>The main takeaway is that it is vitally important to get the privilege levels correct, so take care to ensure these
+ are very accurate -- especially the <code>pattern</code> argument -- it is very easy to miss a character/symbol that is valid
+  for a prompt pattern, and this will cause scrapli to fail!</p>
+<h2 id="sync-and-asyncio">Sync and Asyncio<a class="headerlink" href="#sync-and-asyncio" title="Permanent link">&para;</a></h2>
+<p>Regardless of your requirements of sync vs asyncio, all community platforms must include both synchronous and aysncio
+ support or they will not be merged. Even if you have never done anything with asyncio, this is a pretty small and
+  straight forward requirement to satisfy. At the moment the only place that requires any special attention to sync
+   and asyncio differences is for the "on open" and "on close" callables, please see the following section for details.</p>
+<h2 id="open-and-close-callables">Open and Close Callables<a class="headerlink" href="#open-and-close-callables" title="Permanent link">&para;</a></h2>
+<p>Scrapli provides the option for users to pass in their own callables to be executed after authentication and prior to
+ closing the connection, you can read more about these in the README of the main scrapli repo <a href="https://github.com/carlmontanari/scrapli#on-open">here</a>.</p>
+<p>In order to create a new scrapli-community platform, you almost certainly will need to provide these callables -- and
+ if they are required are required in both sync and asyncio form. In general the on open callable needs to acquire
+  the default desired privilege level (ex: "privilege exec" in IOSXE terms) and disable any kind of width/height
+   settings on the terminal (disable pagination). Some other platforms may have differing requirements here such as
+    handling login prompts/banners, performing additional authentication, or disabling other terminal behavior such
+     as "complete on space" in Junos. </p>
+<p>The on close callable is much less important, but is nice to have to ensure that connections are "cleanly" closed
+ -- this callable should generally handle the graceful exit/logout only.</p>
+<p>If you have never written asyncio code and are interested in submitting a platform, please see the example platform
+ code, the asycnio needed for creating these callables is very minimal and is essentially just using <code>async def</code> instead of <code>def</code> for function definitions and adding the <code>await</code> keyword to any inputs/output commands.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../installation/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Installation
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../changelog/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Changelog
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/carlmontanari/scrapli" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/carlrmontanari" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.linkedin.com/in/carl-montanari-47888931/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://montanari.io" target="_blank" rel="noopener" title="montanari.io" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
