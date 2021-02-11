@@ -8,8 +8,7 @@ pdoc.link_inheritance(context)
 tpl_lookup.directories.insert(0, "docs/generate")
 
 # maybe will add api docs for this but not for now!
-doc_map = {
-}
+doc_map = {}
 
 
 def recursive_mds(module):  # noqa
