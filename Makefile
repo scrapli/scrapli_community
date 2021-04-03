@@ -3,7 +3,7 @@ lint:
 	python -m black .
 	python -m pylama .
 	python -m pydocstyle .
-	python -m mypy scrapli_community/
+	python -m mypy scrapli_community/ --strict
 
 test:
 	python -m pytest \

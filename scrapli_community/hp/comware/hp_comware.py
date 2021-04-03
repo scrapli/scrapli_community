@@ -1,6 +1,5 @@
 """scrapli_community.hp.comware.hp_comware"""
 from scrapli.driver.network.base_driver import PrivilegeLevel
-
 from scrapli_community.hp.comware._async import (
     AsyncHPComwareDriver,
     default_async_on_close,
