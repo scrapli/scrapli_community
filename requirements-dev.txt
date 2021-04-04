@@ -8,5 +8,5 @@ pydocstyle==6.0.0
 pylama==7.7.1
 pylint==2.7.4
 pytest-cov==2.11.1
-pytest==6.2.2
+pytest==6.2.3
 -r requirements.txt
