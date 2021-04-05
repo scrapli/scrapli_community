@@ -105,7 +105,7 @@ The following are the currently supported platforms:
 | edgecore_ecs          | Edgecore        | ECS           | [Alex Lardschneider](https://github.com/AlexLardschneider) | 2020.09.19  | For the firmware shipped by Edgecore itself                                           |
 | fortinet_wlc          | Fortinet        | WLC           | [Alex Lardschneider](https://github.com/AlexLardschneider) | 2020.11.15  | For the Meru-based OS, not the same as FortiOS                                        |
 | aethra_atosnt         | Aethra          | ATOSNT        | [Alex Lardschneider](https://github.com/AlexLardschneider) | 2020.11.15  | Tested on ATOS NT, ranging from 6.3.X up to 6.5.X:                                    |
-| aethra_atosnt         | Mikrotik        | RouterOS      | [Alex Lardschneider](https://github.com/AlexLardschneider) | 2020.11.15  |                                                                                       |
+| mikrotik_routeros     | Mikrotik        | RouterOS      | [Alex Lardschneider](https://github.com/AlexLardschneider) | 2020.11.15  |                                                                                       |
 | siemens_roxii         | Siemens         | ROX II        | [Khiem Nguyen](https://github.com/kn-winter)               | 2021.01.30  |                                                                                       |
 
 
