@@ -1,6 +1,5 @@
 """scrapli_community.ruckus.fastiron.ruckus_fastiron"""
 from scrapli.driver.network.base_driver import PrivilegeLevel
-
 from scrapli_community.ruckus.fastiron._async import default_async_on_close, default_async_on_open
 from scrapli_community.ruckus.fastiron.sync import default_sync_on_close, default_sync_on_open
 

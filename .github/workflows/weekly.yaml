@@ -62,4 +62,3 @@ jobs:
           # needed to make the terminal a tty (i think? without this system ssh is super broken)
           TERM: xterm
         run: python -m nox -p $FRIENDLY_PYTHON_VERSION -k "not darglint"
-

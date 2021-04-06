@@ -23,7 +23,7 @@ with open("requirements-dev.txt") as f:
 
 for requirement in dev_requirements_lines:
     parsed_requirement = re.match(
-        pattern=r"^([a-z0-9\-]+)([><=]{1,2}\S*)(?:.*)$", string=requirement, flags=re.I | re.M
+        pattern=r"^([a-z0-9\-\_]+)([><=]{1,2}\S*)(?:.*)$", string=requirement, flags=re.I | re.M
     )
     DEV_REQUIREMENTS[parsed_requirement.groups()[0]] = parsed_requirement.groups()[1]
 
@@ -100,8 +100,7 @@ def black(session):
     session.run("black", "--check", ".")
 
 
-# holding this back to 3.8 due to bug: https://github.com/PyCQA/pylint/issues/3882
-@nox.session(python=["3.8"])
+@nox.session(python=["3.9"])
 def pylama(session):
     """
     Nox run pylama
@@ -155,9 +154,8 @@ def mypy(session):
         N/A
 
     """
+    session.install("-e", ".")
     session.install(f"mypy{DEV_REQUIREMENTS['mypy']}")
-    session.install("-e", DEV_REQUIREMENTS["scrapli_stubs"].split()[1])
-    session.env["MYPYPATH"] = f"{session.virtualenv.location}/src/scrapli-stubs"
     session.run("mypy", "--strict", "scrapli_community/")
 
 
