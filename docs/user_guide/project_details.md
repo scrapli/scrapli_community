@@ -94,7 +94,7 @@ This repo is the "community" platform repository for scrapli, you can find more 
 libraries, including scrapli "core", below:
 
 
-- [scrapli](/more_scrapli/scrpali)
+- [scrapli](/more_scrapli/scrapli)
 - [scrapli_netconf](/more_scrapli/scrapli_netconf)
 - [nornir_scrapli](/more_scrapli/nornir_scrapli)
 - [scrapli_stubs](/more_scrapli/scrapli_stubs)

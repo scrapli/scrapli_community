@@ -72,7 +72,7 @@ You can also create your own class (inheriting from either the `NetworkDriver` o
  counterparts) if you wish to be able to override any methods of those classes or to implement your own methods.
 
 Note that depending on the type selected for `driver_type` there will be slightly different required arguments
- -- please see the example/test generic and network drivers in the [scrapli vendor directory](scrapli_community/scrapli)
+ -- please see the example/test generic and network drivers in the [scrapli vendor directory](https://github.com/scrapli/scrapli_community/tree/master/scrapli_community/scrapli)
  directory. Note that the docs here in the README will focus on the "network" type as that is likely going to be more
   common and is slightly more involved.
 
