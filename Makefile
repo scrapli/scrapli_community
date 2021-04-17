@@ -3,7 +3,10 @@ lint:
 	python -m black .
 	python -m pylama .
 	python -m pydocstyle .
-	python -m mypy scrapli_community/ --strict
+	python -m mypy --strict scrapli_community/
+
+darglint:
+	find scrapli_cfg -type f \( -iname "*.py"\) | xargs darglint -x
 
 test:
 	python -m pytest \
@@ -15,6 +18,20 @@ cov:
 	--cov-report html \
 	--cov-report term \
 	tests/
+
+test_unit:
+	python -m pytest \
+	--cov=scrapli_community \
+	--cov-report html \
+	--cov-report term \
+	tests/unit/
+
+cov_unit:
+	python -m pytest \
+	--cov=scrapli_community \
+	--cov-report html \
+	--cov-report term \
+	tests/unit/
 
 .PHONY: docs
 docs:
