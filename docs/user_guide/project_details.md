@@ -96,5 +96,6 @@ libraries, including scrapli "core", below:
 
 - [scrapli](/more_scrapli/scrapli)
 - [scrapli_netconf](/more_scrapli/scrapli_netconf)
+- [scrapli_cfg](/more_scrapli/scrapli_cfg)
+- [scrapli_replay](/more_scrapli/scrapli_replay)  
 - [nornir_scrapli](/more_scrapli/nornir_scrapli)
-- [scrapli_stubs](/more_scrapli/scrapli_stubs)
