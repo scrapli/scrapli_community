@@ -28,7 +28,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "exec": (
         PrivilegeLevel(
-            pattern=r"^\[(?!ex|ro|gl|pr).*\]\n[abcd]:[\w]+@[\w]+#\s?$",
+            pattern=r"^(?!\(ex\)|\(ro\)|\(gl\)|\(pr\))\[.*\]\n[abcd]:[\w]+@[\w]+#\s?$",
             name="exec",
             previous_priv="classic_exec",
             deescalate="//",
@@ -39,11 +39,22 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "configuration": (
         PrivilegeLevel(
-            pattern=r"^\*?\[ex:.*\]\n[\w\:@]+#\s?$",
+            pattern=r"^\*?\(ex\)\[/\]\n\*?[abcd]:[\w]+@[\w]+#\s?$",
             name="configuration",
             previous_priv="exec",
+            deescalate="quit-config",
+            escalate="edit-config exclusive",
+            escalate_auth=False,
+            escalate_prompt="",
+        )
+    ),
+    "configuration_with_path": (
+        PrivilegeLevel(
+            pattern=r"^\*?\(ex\)\[/.+\]\n\*?[abcd]:[\w]+@[\w]+#\s?$",
+            name="configuration_with_path",
+            previous_priv="exec",
             deescalate="exit all",
-            escalate="configure exclusive",
+            escalate="",
             escalate_auth=False,
             escalate_prompt="",
         )
