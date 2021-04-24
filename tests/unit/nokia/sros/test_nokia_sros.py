@@ -2,7 +2,10 @@ import re
 
 import pytest
 
-from scrapli_community.nokia.sros.nokia_sros import DEFAULT_PRIVILEGE_LEVELS, CLASSIC_DEFAULT_PRIVILEGE_LEVELS
+from scrapli_community.nokia.sros.nokia_sros import (
+    CLASSIC_DEFAULT_PRIVILEGE_LEVELS,
+    DEFAULT_PRIVILEGE_LEVELS,
+)
 
 
 @pytest.mark.parametrize(
