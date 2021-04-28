@@ -4,7 +4,7 @@ CHANGELOG
 
 # 2021.07.30 (in development)
 - Add HP Comware (thank you to Julien!) -- see #36
-- Add Nokia SROS (thank you to Roman Dodin for the suport!) -- see # 51
+- Add Nokia SROS (thank you to Roman Dodin!) -- see # 51
 
 
 # 2021.01.30
