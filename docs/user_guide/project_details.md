@@ -23,8 +23,8 @@ The following are the currently supported platforms:
 | aethra_atosnt         | Aethra          | ATOSNT        | [Alex Lardschneider](https://github.com/AlexLardschneider) | 2020.11.15  | Tested on ATOS NT, ranging from 6.3.X up to 6.5.X:                                    |
 | mikrotik_routeros     | Mikrotik        | RouterOS      | [Alex Lardschneider](https://github.com/AlexLardschneider) | 2020.11.15  |                                                                                       |
 | siemens_roxii         | Siemens         | ROX II        | [Khiem Nguyen](https://github.com/kn-winter)               | 2021.01.30  |                                                                                       |
-| hp_comware            | HP              | Comware       | [Julien Corsini](https://github.com/juliencorsini)         | 2021.XX.XX  |                                                                                       |
-
+| hp_comware            | HP              | Comware       | [Julien Corsini](https://github.com/juliencorsini)         | 2021.07.30  |                                                                                       |
+| nokia_sros            | Nokia           | SROS          | [Roman Dodin](https://github.com/hellt)                    | 2021.07.30  |                                                                                       |
 
 
 ## Why add a Platform
