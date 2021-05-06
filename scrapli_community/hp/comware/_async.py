@@ -60,6 +60,6 @@ class AsyncHPComwareDriver(AsyncNetworkDriver):
         # anything else
         transport_plugin = kwargs.get("transport", "system")
         if transport_plugin != "system":
-            kwargs.get("transport_options", {}).pop("ptyprocess")
+            kwargs.get("transport_options", {}).pop("ptyprocess", None)
 
         super().__init__(**kwargs)
