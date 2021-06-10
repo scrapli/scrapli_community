@@ -12,6 +12,5 @@ SCRAPLI_PLATFORM = {
         "async_on_open": None,
         "sync_on_close": default_sync_on_close,
         "async_on_close": default_async_on_close,
-        "transport": "ssh2",
     },
 }
