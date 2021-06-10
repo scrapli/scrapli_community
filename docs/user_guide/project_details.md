@@ -25,6 +25,8 @@ The following are the currently supported platforms:
 | siemens_roxii         | Siemens         | ROX II        | [Khiem Nguyen](https://github.com/kn-winter)               | 2021.01.30  |                                                                                       |
 | hp_comware            | HP              | Comware       | [Julien Corsini](https://github.com/juliencorsini)         | 2021.07.30  |                                                                                       |
 | nokia_sros            | Nokia           | SROS          | [Roman Dodin](https://github.com/hellt)                    | 2021.07.30  |                                                                                       |
+| nokia_sros            | Nokia           | SROS          | [Roman Dodin](https://github.com/hellt)                    | 2021.07.30  |                                                                                       |
+| alcatel_aos           | Alcatel-Lucent  | AOS6 & AOS8   | [Jef Vantongerloo](https://github.com/jefvantongerloo)     | 2021.07.30  | Tested on aos6 - 6.7.2.89.R06 and aos8 - 8.6.289.R01                                  |
 
 
 ## Why add a Platform
