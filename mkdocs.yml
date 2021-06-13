@@ -2,6 +2,7 @@
 site_name: Scrapli Community
 site_description: Easily add support for 'non-core' platforms to scrapli
 site_author: Carl Montanari
+site_url: https://scrapli.github.io/
 
 repo_name: scrapli/scrapli_community
 repo_url: https://github.com/scrapli/scrapli_community
