@@ -5,8 +5,8 @@
 Adding a platform to be supported by scrapli is a fairly straight forward process! Before getting started there are a
  few things to understand about scrapli:
 
-1. scrapli is fairly low level -- this means that it is assumed that the user will deal with most\* platform specific
- things such as saving configurations, copying files, and things like that.
+1. scrapli is fairly low level -- this means that the assumption is that the user will deal with most\* platform 
+   specific things such as saving configurations, copying files, and things like that.
 2. scrapli assumes that the ssh channel/session will behave "normally" -- as in look and feel like a typical network
  operating system ssh session (just like all the "core" platforms behave).
 
@@ -19,7 +19,7 @@ Before jumping into how to build a platform, it is best to start off with rehash
 
 The reasoning behind platforms *not* being simply classes that inherit from the `GenericDriver` or `NetworkDriver` as
  the current "core" platforms do, is to keep scrapli core as loosely coupled to the platforms as is possible
- /practical -- this is hugely important to help ensure that scrapli core as as little "cruft" as possible, and stays
+ /practical -- this is hugely important to help ensure that scrapli core has as little "cruft" as possible, and stays
   well tested/documented/etc., while still allowing users to adapt scrapli to work with various platforms easily.
 
 A `SCRAPLI_PLATFORM` dictionary (the dictionary defining the platform) is made up of only three main top level keys:
@@ -149,7 +149,7 @@ Privilege levels are critically important for any platform using the `network` d
 ```
 
 The key of the dictionary is "configuration" (the name of the privilege level), and the value is a `PrivilegeLevel
-` object. You can read more about privilege levels in the main scrapli README [here](https://github.com/carlmontanari/scrapli#driver-privilege-levels).
+` object. You can read more about privilege levels in the scrapli docs [here](https://carlmontanari.github.io/scrapli/user_guide/advanced_usage/#driver-privilege-levels).
 
 The main takeaway is that it is vitally important to get the privilege levels correct, so take care to ensure these
  are very accurate -- especially the `pattern` argument -- it is very easy to miss a character/symbol that is valid
@@ -167,7 +167,7 @@ Regardless of your requirements of sync vs asyncio, all community platforms must
 ## Open and Close Callables
 
 Scrapli provides the option for users to pass in their own callables to be executed after authentication and prior to
- closing the connection, you can read more about these in the README of the main scrapli repo [here](https://github.com/carlmontanari/scrapli#on-open).
+ closing the connection, you can read more about these in the scrapli docs [here](https://carlmontanari.github.io/scrapli/user_guide/advanced_usage/#on-open).
  
 In order to create a new scrapli-community platform, you almost certainly will need to provide these callables -- and
  if they are required are required in both sync and asyncio form. In general the on open callable needs to acquire
