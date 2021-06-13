@@ -6,14 +6,14 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Scrapli: Community Platforms">
+        <meta name="description" content="Easily add support for 'non-core' platforms to scrapli">
       
       
       
         <meta name="author" content="Carl Montanari">
       
       
-        <link rel="canonical" href="https://github.com/scrapli/scrapli_community/user_guide/project_details/">
+        <link rel="canonical" href="https://scrapli.github.io/user_guide/project_details/">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
@@ -81,7 +81,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="https://github.com/scrapli/scrapli_community" title="Scrapli Community" class="md-header__button md-logo" aria-label="Scrapli Community">
+    <a href="https://scrapli.github.io/" title="Scrapli Community" class="md-header__button md-logo" aria-label="Scrapli Community">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -177,7 +177,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://github.com/scrapli/scrapli_community" title="Scrapli Community" class="md-nav__button md-logo" aria-label="Scrapli Community">
+    <a href="https://scrapli.github.io/" title="Scrapli Community" class="md-nav__button md-logo" aria-label="Scrapli Community">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -423,18 +423,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../more_scrapli/nornir_scrapli/" class="md-nav__link">
-        Nornir Scrapli
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../more_scrapli/scrapli_netconf/" class="md-nav__link">
         Scrapli Netconf
       </a>
@@ -447,8 +435,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../more_scrapli/scrapli_stubs/" class="md-nav__link">
-        Scrapli Stubs
+      <a href="../../more_scrapli/scrapli_cfg/" class="md-nav__link">
+        Scrapli Cfg
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../more_scrapli/scrapli_replay/" class="md-nav__link">
+        Scrapli Replay
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../more_scrapli/nornir_scrapli/" class="md-nav__link">
+        Nornir Scrapli
       </a>
     </li>
   
@@ -661,8 +673,32 @@
 <td>HP</td>
 <td>Comware</td>
 <td><a href="https://github.com/juliencorsini">Julien Corsini</a></td>
-<td>2021.XX.XX</td>
+<td>2021.07.30</td>
 <td></td>
+</tr>
+<tr>
+<td>nokia_sros</td>
+<td>Nokia</td>
+<td>SROS</td>
+<td><a href="https://github.com/hellt">Roman Dodin</a></td>
+<td>2021.07.30</td>
+<td></td>
+</tr>
+<tr>
+<td>nokia_sros</td>
+<td>Nokia</td>
+<td>SROS</td>
+<td><a href="https://github.com/hellt">Roman Dodin</a></td>
+<td>2021.07.30</td>
+<td></td>
+</tr>
+<tr>
+<td>alcatel_aos</td>
+<td>Alcatel-Lucent</td>
+<td>AOS6 &amp; AOS8</td>
+<td><a href="https://github.com/jefvantongerloo">Jef Vantongerloo</a></td>
+<td>2021.07.30</td>
+<td>Tested on aos6 - 6.7.2.89.R06 and aos8 - 8.6.289.R01</td>
 </tr>
 </tbody>
 </table>
@@ -679,35 +715,67 @@
     as host and authentication information to your object instantiation. </p>
 <p>For example, (from the non core device example link above) without a scrapli community platform we may have to create
  our device connection like so:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">wlc_on_open</span><span class="p">(</span><span class="n">cls</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;</span><span class="se">&quot;&quot;</span><span class="s2">Example `on_open` function for use with cisco wlc</span><span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
-    <span class="c1"># time.sleeps here are just because my test device was a bit sluggish, without these scrapli is</span>
-    <span class="c1">#  just going to send the username/password right away</span>
-    <span class="kt">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
-    <span class="n">cls</span><span class="p">.</span><span class="k">channel</span><span class="p">.</span><span class="k">write</span><span class="p">(</span><span class="n">cls</span><span class="p">.</span><span class="n">auth_username</span><span class="p">)</span>
-    <span class="n">cls</span><span class="p">.</span><span class="k">channel</span><span class="p">.</span><span class="n">send_return</span><span class="p">()</span>
-    <span class="kt">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
-    <span class="n">cls</span><span class="p">.</span><span class="k">channel</span><span class="p">.</span><span class="k">write</span><span class="p">(</span><span class="n">cls</span><span class="p">.</span><span class="n">auth_password</span><span class="p">)</span>
-    <span class="n">cls</span><span class="p">.</span><span class="k">channel</span><span class="p">.</span><span class="n">send_return</span><span class="p">()</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>def wlc_on_open(cls):
+    &quot;&quot;&quot;Example `on_open` function for use with cisco wlc&quot;&quot;&quot;
+    # time.sleeps here are just because my test device was a bit sluggish, without these scrapli is
+    #  just going to send the username/password right away
+    time.sleep(0.25)
+    cls.channel.write(cls.auth_username)
+    cls.channel.send_return()
+    time.sleep(0.25)
+    cls.channel.write(cls.auth_password)
+    cls.channel.send_return()
 
 
-<span class="n">wlc</span> <span class="o">=</span> <span class="err">{</span>
-    <span class="s2">&quot;host&quot;</span><span class="o">:</span> <span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;auth_username&quot;</span><span class="o">:</span> <span class="s2">&quot;some_username&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;auth_password&quot;</span><span class="o">:</span> <span class="s2">&quot;some_password&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;auth_strict_key&quot;</span><span class="o">:</span> <span class="no">False</span><span class="p">,</span>
-    <span class="s2">&quot;auth_bypass&quot;</span><span class="o">:</span> <span class="no">True</span><span class="p">,</span>
-    <span class="c1"># set a custom &quot;on_open&quot; function to deal with the non-standard login</span>
-    <span class="s2">&quot;on_open&quot;</span><span class="o">:</span> <span class="n">wlc_on_open</span><span class="p">,</span>
-    <span class="c1"># set a custom &quot;comms_prompt_pattern&quot; to deal with the non-standard prompt pattern</span>
-    <span class="s2">&quot;comms_prompt_pattern&quot;</span><span class="o">:</span> <span class="n">r</span><span class="s2">&quot;^</span><span class="err">\</span><span class="s2">(Cisco Controller</span><span class="err">\</span><span class="s2">) &gt;$&quot;</span><span class="p">,</span>
-<span class="err">}</span>
+wlc = {
+    &quot;host&quot;: &quot;1.2.3.4&quot;,
+    &quot;auth_username&quot;: &quot;some_username&quot;,
+    &quot;auth_password&quot;: &quot;some_password&quot;,
+    &quot;auth_strict_key&quot;: False,
+    &quot;auth_bypass&quot;: True,
+    # set a custom &quot;on_open&quot; function to deal with the non-standard login
+    &quot;on_open&quot;: wlc_on_open,
+    # set a custom &quot;comms_prompt_pattern&quot; to deal with the non-standard prompt pattern
+    &quot;comms_prompt_pattern&quot;: r&quot;^\(Cisco Controller\) &gt;$&quot;,
+}
 
-<span class="n">conn</span> <span class="o">=</span> <span class="n">GenericDriver</span><span class="p">(</span><span class="o">**</span><span class="n">wlc</span><span class="p">)</span>
+conn = GenericDriver(**wlc)
 </code></pre></div>
-
+</td></tr></table>
 <p>With a community platform created our connection creation may end up being as simple as:</p>
-<div class="codehilite"><pre><span></span><code>wlc = {
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>wlc = {
     &quot;host&quot;: &quot;1.2.3.4&quot;,
     &quot;auth_username&quot;: &quot;some_username&quot;,
     &quot;auth_password&quot;: &quot;some_password&quot;,
@@ -717,15 +785,16 @@
 
 conn = Scrapli(**wlc)
 </code></pre></div>
-
+</td></tr></table>
 <h2 id="related-scrapli-libraries">Related Scrapli Libraries<a class="headerlink" href="#related-scrapli-libraries" title="Permanent link">&para;</a></h2>
 <p>This repo is the "community" platform repository for scrapli, you can find more out about the other scrapli 
 libraries, including scrapli "core", below:</p>
 <ul>
-<li><a href="/more_scrapli/scrpali">scrapli</a></li>
+<li><a href="/more_scrapli/scrapli">scrapli</a></li>
 <li><a href="/more_scrapli/scrapli_netconf">scrapli_netconf</a></li>
+<li><a href="/more_scrapli/scrapli_cfg">scrapli_cfg</a></li>
+<li><a href="/more_scrapli/scrapli_replay">scrapli_replay</a>  </li>
 <li><a href="/more_scrapli/nornir_scrapli">nornir_scrapli</a></li>
-<li><a href="/more_scrapli/scrapli_stubs">scrapli_stubs</a></li>
 </ul>
                 
               
@@ -792,7 +861,7 @@ libraries, including scrapli "core", below:</p>
         
         
       
-      <a href="https://github.com/carlmontanari/scrapli" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+      <a href="https://github.com/carlmontanari/" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
       </a>
     
