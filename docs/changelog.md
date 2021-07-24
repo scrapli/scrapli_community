@@ -5,6 +5,7 @@ CHANGELOG
 # 2021.07.30 (in development)
 - Add HP Comware (thank you to Julien!) -- see #36
 - Add Nokia SROS (thank you to Roman Dodin!) -- see # 51
+- Fixed silly naming of the sync/async module in each package to match scrapli core naming standard
 
 
 # 2021.01.30

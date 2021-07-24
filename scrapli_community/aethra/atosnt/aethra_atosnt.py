@@ -1,7 +1,7 @@
 """scrapli_community.aethra.atosnt.aethra_atosnt"""
 
-from scrapli_community.aethra.atosnt._async import default_async_on_close
-from scrapli_community.aethra.atosnt.sync import default_sync_on_close
+from scrapli_community.aethra.atosnt.async_diver import default_async_on_close
+from scrapli_community.aethra.atosnt.sync_driver import default_sync_on_close
 
 SCRAPLI_PLATFORM = {
     "driver_type": "generic",

@@ -1,11 +1,11 @@
 """scrapli_community.nokia.sros.nokia_sros"""
 from scrapli.driver.network.base_driver import PrivilegeLevel
-from scrapli_community.nokia.sros._async import (
+from scrapli_community.nokia.sros.async_driver import (
     classic_default_async_on_open,
     default_async_on_close,
     default_async_on_open,
 )
-from scrapli_community.nokia.sros.sync import (
+from scrapli_community.nokia.sros.sync_driver import (
     classic_default_sync_on_open,
     default_sync_on_close,
     default_sync_on_open,
