@@ -1,7 +1,10 @@
 """scrapli_community.siemens.roxii.siemens_roxii"""
 from scrapli.driver.network.base_driver import PrivilegeLevel
-from scrapli_community.siemens.roxii._async import default_async_on_close, default_async_on_open
-from scrapli_community.siemens.roxii.sync import default_sync_on_close, default_sync_on_open
+from scrapli_community.siemens.roxii.async_driver import (
+    default_async_on_close,
+    default_async_on_open,
+)
+from scrapli_community.siemens.roxii.sync_driver import default_sync_on_close, default_sync_on_open
 
 DEFAULT_PRIVILEGE_LEVELS = {
     "privilege_exec": (

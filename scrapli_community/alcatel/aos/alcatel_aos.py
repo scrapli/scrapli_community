@@ -1,7 +1,7 @@
 """scrapli_community.alcatel.aos.alcatel_aos"""
 
-from scrapli_community.alcatel.aos._async import default_async_on_close
-from scrapli_community.alcatel.aos.sync import default_sync_on_close
+from scrapli_community.alcatel.aos.async_driver import default_async_on_close
+from scrapli_community.alcatel.aos.sync_driver import default_sync_on_close
 
 SCRAPLI_PLATFORM = {
     "driver_type": "generic",

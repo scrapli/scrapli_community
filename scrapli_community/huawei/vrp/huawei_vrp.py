@@ -1,11 +1,11 @@
 """scrapli_community.huawei.vrp.huawei_vrp"""
 from scrapli.driver.network.base_driver import PrivilegeLevel
-from scrapli_community.huawei.vrp._async import (
+from scrapli_community.huawei.vrp.async_driver import (
     AsyncHuaweiVRPDriver,
     default_async_on_close,
     default_async_on_open,
 )
-from scrapli_community.huawei.vrp.sync import (
+from scrapli_community.huawei.vrp.sync_driver import (
     HuaweiVRPDriver,
     default_sync_on_close,
     default_sync_on_open,
