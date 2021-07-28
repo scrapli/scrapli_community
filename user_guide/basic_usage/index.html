@@ -638,8 +638,8 @@
 <p>Adding a platform to be supported by scrapli is a fairly straight forward process! Before getting started there are a
  few things to understand about scrapli:</p>
 <ol>
-<li>scrapli is fairly low level -- this means that it is assumed that the user will deal with most* platform specific
- things such as saving configurations, copying files, and things like that.</li>
+<li>scrapli is fairly low level -- this means that the assumption is that the user will deal with most* platform 
+   specific things such as saving configurations, copying files, and things like that.</li>
 <li>scrapli assumes that the ssh channel/session will behave "normally" -- as in look and feel like a typical network
  operating system ssh session (just like all the "core" platforms behave).</li>
 </ol>
@@ -650,7 +650,7 @@
   object built on the <code>GenericDriver</code> or <code>NetworkDriver</code> classes in scrapli.</p>
 <p>The reasoning behind platforms <em>not</em> being simply classes that inherit from the <code>GenericDriver</code> or <code>NetworkDriver</code> as
  the current "core" platforms do, is to keep scrapli core as loosely coupled to the platforms as is possible
- /practical -- this is hugely important to help ensure that scrapli core as as little "cruft" as possible, and stays
+ /practical -- this is hugely important to help ensure that scrapli core has as little "cruft" as possible, and stays
   well tested/documented/etc., while still allowing users to adapt scrapli to work with various platforms easily.</p>
 <p>A <code>SCRAPLI_PLATFORM</code> dictionary (the dictionary defining the platform) is made up of only three main top level keys:</p>
 <ol>
@@ -846,7 +846,7 @@
     ),
 </code></pre></div>
 </td></tr></table>
-<p>The key of the dictionary is "configuration" (the name of the privilege level), and the value is a <code>PrivilegeLevel</code> object. You can read more about privilege levels in the main scrapli README <a href="https://github.com/carlmontanari/scrapli#driver-privilege-levels">here</a>.</p>
+<p>The key of the dictionary is "configuration" (the name of the privilege level), and the value is a <code>PrivilegeLevel</code> object. You can read more about privilege levels in the scrapli docs <a href="https://carlmontanari.github.io/scrapli/user_guide/advanced_usage/#driver-privilege-levels">here</a>.</p>
 <p>The main takeaway is that it is vitally important to get the privilege levels correct, so take care to ensure these
  are very accurate -- especially the <code>pattern</code> argument -- it is very easy to miss a character/symbol that is valid
   for a prompt pattern, and this will cause scrapli to fail!</p>
@@ -857,7 +857,7 @@
    and asyncio differences is for the "on open" and "on close" callables, please see the following section for details.</p>
 <h2 id="open-and-close-callables">Open and Close Callables<a class="headerlink" href="#open-and-close-callables" title="Permanent link">&para;</a></h2>
 <p>Scrapli provides the option for users to pass in their own callables to be executed after authentication and prior to
- closing the connection, you can read more about these in the README of the main scrapli repo <a href="https://github.com/carlmontanari/scrapli#on-open">here</a>.</p>
+ closing the connection, you can read more about these in the scrapli docs <a href="https://carlmontanari.github.io/scrapli/user_guide/advanced_usage/#on-open">here</a>.</p>
 <p>In order to create a new scrapli-community platform, you almost certainly will need to provide these callables -- and
  if they are required are required in both sync and asyncio form. In general the on open callable needs to acquire
   the default desired privilege level (ex: "privilege exec" in IOSXE terms) and disable any kind of width/height
