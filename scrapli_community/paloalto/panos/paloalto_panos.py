@@ -44,6 +44,7 @@ SCRAPLI_PLATFORM = {
         "failed_when_contains": [
             "Unknown command:",
             "Invalid Syntax.",
+            "Validation Error:",
         ],
         "textfsm_platform": "paloalto_panos",
         "genie_platform": "",
