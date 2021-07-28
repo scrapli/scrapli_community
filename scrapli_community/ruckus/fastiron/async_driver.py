@@ -1,4 +1,4 @@
-"""scrapli_community.ruckus.fastiron._ansync"""
+"""scrapli_community.ruckus.fastiron.ansync_driver"""
 from scrapli.driver import AsyncNetworkDriver
 
 
@@ -7,10 +7,10 @@ async def default_async_on_open(conn: AsyncNetworkDriver) -> None:
     Async ruckus_fastiron default on_open callable
 
     Args:
-        conn: NetworkDriver object
+        conn: AsyncNetworkDriver object
 
     Returns:
-        N/A  # noqa: DAR202
+        N/A
 
     Raises:
         N/A
@@ -24,10 +24,10 @@ async def default_async_on_close(conn: AsyncNetworkDriver) -> None:
     Async ruckus_fastiron default on_close callable
 
     Args:
-        conn: NetworkDriver object
+        conn: AsyncNetworkDriver object
 
     Returns:
-        N/A  # noqa: DAR202
+        N/A
 
     Raises:
         N/A

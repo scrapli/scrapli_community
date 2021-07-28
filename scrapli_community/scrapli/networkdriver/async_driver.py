@@ -1,4 +1,4 @@
-"""scrapli_community.scrapli.networkdriver._ansync"""
+"""scrapli_community.scrapli.networkdriver.ansync_driver"""
 from typing import Any
 
 from scrapli.driver import AsyncNetworkDriver
@@ -9,10 +9,10 @@ async def default_async_on_open(conn: AsyncNetworkDriver) -> None:
     Async scrapli_example default on_open callable
 
     Args:
-        conn: NetworkDriver object
+        conn: AsyncNetworkDriver object
 
     Returns:
-        N/A  # noqa: DAR202
+        N/A
 
     Raises:
         N/A
@@ -27,10 +27,10 @@ async def default_async_on_close(conn: AsyncNetworkDriver) -> None:
     Async scrapli_example default on_close callable
 
     Args:
-        conn: NetworkDriver object
+        conn: AsyncNetworkDriver object
 
     Returns:
-        N/A  # noqa: DAR202
+        N/A
 
     Raises:
         N/A
@@ -52,7 +52,7 @@ class AsyncScrapliNetworkDriverWithMethods(AsyncNetworkDriver):
             kwargs: keyword args
 
         Returns:
-            N/A  # noqa: DAR202
+            N/A
 
         Raises:
             N/A
@@ -68,7 +68,7 @@ class AsyncScrapliNetworkDriverWithMethods(AsyncNetworkDriver):
             N/A
 
         Returns:
-            N/A  # noqa: DAR202
+            N/A
 
         Raises:
             N/A

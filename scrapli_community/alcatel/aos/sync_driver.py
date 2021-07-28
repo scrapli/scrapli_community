@@ -1,4 +1,4 @@
-"""scrapli_community.alcatel.aos.sync"""
+"""scrapli_community.alcatel.aos.sync_driver"""
 from scrapli.driver import GenericDriver
 
 
@@ -7,7 +7,7 @@ def default_sync_on_close(conn: GenericDriver) -> None:
     alcatel_aos default on_close callable
 
     Args:
-        conn: NetworkDriver object
+        conn: GenericDriver object
 
     Returns:
         N/A

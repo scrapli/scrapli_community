@@ -1,4 +1,4 @@
-"""scrapli_community.eltex.esr.sync"""
+"""scrapli_community.eltex.esr.sync_driver"""
 from scrapli.driver import NetworkDriver
 
 
@@ -10,7 +10,7 @@ def default_sync_on_open(conn: NetworkDriver) -> None:
         conn: NetworkDriver object
 
     Returns:
-        N/A  # noqa: DAR202
+        N/A
 
     Raises:
         N/A
@@ -28,7 +28,7 @@ def default_sync_on_close(conn: NetworkDriver) -> None:
         conn: NetworkDriver object
 
     Returns:
-        N/A  # noqa: DAR202
+        N/A
 
     Raises:
         N/A

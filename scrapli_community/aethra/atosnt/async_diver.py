@@ -1,4 +1,4 @@
-"""scrapli_community.aethra.atosnt._async"""
+"""scrapli_community.aethra.atosnt.async_driver"""
 from scrapli.driver import AsyncGenericDriver
 
 
@@ -7,10 +7,10 @@ async def default_async_on_close(conn: AsyncGenericDriver) -> None:
     Async aethra_atosnt default on_close callable
 
     Args:
-        conn: NetworkDriver object
+        conn: AsyncGenericDriver object
 
     Returns:
-        N/A  # noqa: DAR202
+        N/A
 
     Raises:
         N/A

@@ -1,20 +1,20 @@
-"""scrapli_community.scrapli.genericdriver.sync"""
+"""scrapli_community.scrapli.genericdriver.sync_driver"""
 import time
 
-from scrapli.driver import NetworkDriver
+from scrapli.driver import GenericDriver
 
 
-def default_sync_on_open(conn: NetworkDriver) -> None:
+def default_sync_on_open(conn: GenericDriver) -> None:
     """
     scrapli_genericdriver default on_open callable
 
     This is tested with a cisco wlc using auth_bypass so we have to send creds during on open
 
     Args:
-        conn: NetworkDriver object
+        conn: GenericDriver object
 
     Returns:
-        N/A  # noqa: DAR202
+        N/A
 
     Raises:
         N/A
@@ -27,15 +27,15 @@ def default_sync_on_open(conn: NetworkDriver) -> None:
     conn.channel.send_return()
 
 
-def default_sync_on_close(conn: NetworkDriver) -> None:
+def default_sync_on_close(conn: GenericDriver) -> None:
     """
     scrapli_genericdriver default on_close callable
 
     Args:
-        conn: NetworkDriver object
+        conn: GenericDriver object
 
     Returns:
-        N/A  # noqa: DAR202
+        N/A
 
     Raises:
         N/A

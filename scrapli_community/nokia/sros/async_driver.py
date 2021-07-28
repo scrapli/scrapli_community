@@ -1,4 +1,4 @@
-"""scrapli_community.nokia.sros._async"""
+"""scrapli_community.nokia.sros.async_driver"""
 from scrapli.driver import AsyncNetworkDriver
 
 
@@ -7,7 +7,7 @@ async def default_async_on_open(conn: AsyncNetworkDriver) -> None:
     nokia_sros on_open callable
 
     Args:
-        conn: NetworkDriver object
+        conn: AsyncNetworkDriver object
 
     Returns:
         None
@@ -27,7 +27,7 @@ async def classic_default_async_on_open(conn: AsyncNetworkDriver) -> None:
     nokia_sros classic on_open callable
 
     Args:
-        conn: NetworkDriver object
+        conn: AsyncNetworkDriver object
 
     Returns:
         None
@@ -44,7 +44,7 @@ async def default_async_on_close(conn: AsyncNetworkDriver) -> None:
     nokia_sros default on_close callable
 
     Args:
-        conn: NetworkDriver object
+        conn: AsyncNetworkDriver object
 
     Returns:
         None

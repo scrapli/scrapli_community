@@ -1,4 +1,4 @@
-"""scrapli_community.mikrotik.routeros.sync"""
+"""scrapli_community.mikrotik.routeros.sync_driver"""
 from typing import Any, List, Optional, Union
 
 from scrapli.driver import GenericDriver
@@ -10,10 +10,10 @@ def default_sync_on_close(conn: GenericDriver) -> None:
     mikrotik_routeros default on_close callable
 
     Args:
-        conn: NetworkDriver object
+        conn: GenericDriver object
 
     Returns:
-        N/A  # noqa: DAR202
+        N/A
 
     Raises:
         N/A
@@ -32,7 +32,7 @@ class MikrotikRouterOSDriver(GenericDriver):
             kwargs: keyword args
 
         Returns:
-            N/A  # noqa: DAR202
+            N/A
 
         Raises:
             N/A

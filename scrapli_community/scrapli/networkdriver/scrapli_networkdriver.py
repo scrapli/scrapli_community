@@ -1,11 +1,11 @@
 """scrapli_community.scrapli.networkdriver.scrapli_example"""
 from scrapli.driver.network.base_driver import PrivilegeLevel
-from scrapli_community.scrapli.networkdriver._async import (
+from scrapli_community.scrapli.networkdriver.async_driver import (
     AsyncScrapliNetworkDriverWithMethods,
     default_async_on_close,
     default_async_on_open,
 )
-from scrapli_community.scrapli.networkdriver.sync import (
+from scrapli_community.scrapli.networkdriver.sync_driver import (
     ScrapliNetworkDriverWithMethods,
     default_sync_on_close,
     default_sync_on_open,

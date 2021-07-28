@@ -1,20 +1,20 @@
-"""scrapli_community.scrapli.genericdriver._ansync"""
+"""scrapli_community.scrapli.genericdriver.ansync_driver"""
 import asyncio
 
-from scrapli.driver import AsyncNetworkDriver
+from scrapli.driver import AsyncGenericDriver
 
 
-async def default_async_on_open(conn: AsyncNetworkDriver) -> None:
+async def default_async_on_open(conn: AsyncGenericDriver) -> None:
     """
     Async scrapli_genericdriver default on_open callable
 
     This is tested with a cisco wlc using auth_bypass so we have to send creds during on open
 
     Args:
-        conn: NetworkDriver object
+        conn: AsyncGenericDriver object
 
     Returns:
-        N/A  # noqa: DAR202
+        N/A
 
     Raises:
         N/A
@@ -27,15 +27,15 @@ async def default_async_on_open(conn: AsyncNetworkDriver) -> None:
     conn.channel.send_return()
 
 
-async def default_async_on_close(conn: AsyncNetworkDriver) -> None:
+async def default_async_on_close(conn: AsyncGenericDriver) -> None:
     """
     Async scrapli_genericdriver default on_close callable
 
     Args:
-        conn: NetworkDriver object
+        conn: AsyncGenericDriver object
 
     Returns:
-        N/A  # noqa: DAR202
+        N/A
 
     Raises:
         N/A

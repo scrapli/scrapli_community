@@ -1,4 +1,4 @@
-"""scrapli_community.nokia.sros.sync"""
+"""scrapli_community.nokia.sros.sync_driver"""
 from scrapli.driver import NetworkDriver
 
 

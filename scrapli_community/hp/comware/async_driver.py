@@ -1,4 +1,4 @@
-"""scrapli_community.hp.comware._async"""
+"""scrapli_community.hp.comware.async_driver"""
 from typing import Any
 
 from scrapli.driver import AsyncNetworkDriver
@@ -9,10 +9,10 @@ async def default_async_on_open(conn: AsyncNetworkDriver) -> None:
     Async hp_comware default on_open callable
 
     Args:
-        conn: NetworkDriver object
+        conn: AsyncNetworkDriver object
 
     Returns:
-        N/A  # noqa: DAR202
+        N/A
 
     Raises:
         N/A
@@ -27,10 +27,10 @@ async def default_async_on_close(conn: AsyncNetworkDriver) -> None:
     Async hp_comware default on_close callable
 
     Args:
-        conn: NetworkDriver object
+        conn: AsyncNetworkDriver object
 
     Returns:
-        N/A  # noqa: DAR202
+        N/A
 
     Raises:
         N/A
@@ -50,7 +50,7 @@ class AsyncHPComwareDriver(AsyncNetworkDriver):
             kwargs: keyword args
 
         Returns:
-            N/A  # noqa: DAR202
+            N/A
 
         Raises:
             N/A

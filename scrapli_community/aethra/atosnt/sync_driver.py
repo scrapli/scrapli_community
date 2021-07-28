@@ -1,4 +1,4 @@
-"""scrapli_community.aethra.atosnt.sync"""
+"""scrapli_community.aethra.atosnt.sync_driver"""
 from scrapli.driver import GenericDriver
 
 
@@ -7,10 +7,10 @@ def default_sync_on_close(conn: GenericDriver) -> None:
     aethra_atosnt default on_close callable
 
     Args:
-        conn: NetworkDriver object
+        conn: GenericDriver object
 
     Returns:
-        N/A  # noqa: DAR202
+        N/A
 
     Raises:
         N/A

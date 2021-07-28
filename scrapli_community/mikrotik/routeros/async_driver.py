@@ -1,4 +1,4 @@
-"""scrapli_community.mikrotik.routeros._async"""
+"""scrapli_community.mikrotik.routeros.async_driver"""
 from typing import Any, List, Optional, Union
 
 from scrapli.driver import AsyncGenericDriver
@@ -10,10 +10,10 @@ async def default_async_on_close(conn: AsyncGenericDriver) -> None:
     Async mikrotik_routeros default on_close callable
 
     Args:
-        conn: NetworkDriver object
+        conn: AsyncGenericDriver object
 
     Returns:
-        N/A  # noqa: DAR202
+        N/A
 
     Raises:
         N/A
@@ -32,7 +32,7 @@ class AsyncMikrotikRouterOSDriver(AsyncGenericDriver):
             kwargs: keyword args
 
         Returns:
-            N/A  # noqa: DAR202
+            N/A
 
         Raises:
             N/A

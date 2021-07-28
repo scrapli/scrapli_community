@@ -1,4 +1,4 @@
-"""scrapli_community.scrapli.networkdriver.sync"""
+"""scrapli_community.scrapli.networkdriver.sync_driver"""
 from typing import Any
 
 from scrapli.driver import NetworkDriver
@@ -12,7 +12,7 @@ def default_sync_on_open(conn: NetworkDriver) -> None:
         conn: NetworkDriver object
 
     Returns:
-        N/A  # noqa: DAR202
+        N/A
 
     Raises:
         N/A
@@ -30,7 +30,7 @@ def default_sync_on_close(conn: NetworkDriver) -> None:
         conn: NetworkDriver object
 
     Returns:
-        N/A  # noqa: DAR202
+        N/A
 
     Raises:
         N/A
@@ -52,7 +52,7 @@ class ScrapliNetworkDriverWithMethods(NetworkDriver):
             kwargs: keyword args
 
         Returns:
-            N/A  # noqa: DAR202
+            N/A
 
         Raises:
             N/A
@@ -68,7 +68,7 @@ class ScrapliNetworkDriverWithMethods(NetworkDriver):
             N/A
 
         Returns:
-            N/A  # noqa: DAR202
+            N/A
 
         Raises:
             N/A
