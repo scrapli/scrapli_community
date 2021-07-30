@@ -1,9 +1,12 @@
 """scrapli_community.scrapli.genericdriver.scrapli_example"""
-from scrapli_community.scrapli.genericdriver._async import (
+from scrapli_community.scrapli.genericdriver.async_driver import (
     default_async_on_close,
     default_async_on_open,
 )
-from scrapli_community.scrapli.genericdriver.sync import default_sync_on_close, default_sync_on_open
+from scrapli_community.scrapli.genericdriver.sync_driver import (
+    default_sync_on_close,
+    default_sync_on_open,
+)
 
 SCRAPLI_PLATFORM = {
     "driver_type": "generic",

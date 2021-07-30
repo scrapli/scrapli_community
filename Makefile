@@ -1,11 +1,12 @@
 lint:
-	python -m isort scrapli_community/
-	python -m isort tests/
-	python -m black scrapli_community/
-	python -m black tests/
-	python -m pylama scrapli_community/
-	python -m pydocstyle scrapli_community/
-	python -m mypy scrapli_community/
+	python -m isort .
+	python -m black .
+	python -m pylama .
+	python -m pydocstyle .
+	python -m mypy --strict scrapli_community/
+
+darglint:
+	find scrapli_community -type f \( -iname "*.py"\ ) | xargs darglint -x
 
 test:
 	python -m pytest \
@@ -18,11 +19,25 @@ cov:
 	--cov-report term \
 	tests/
 
+test_unit:
+	python -m pytest \
+	tests/unit/
+
+cov_unit:
+	python -m pytest \
+	--cov=scrapli_community \
+	--cov-report html \
+	--cov-report term \
+	tests/unit/
+
 .PHONY: docs
 docs:
-	rm -rf docs/scrapli_community
-	python -m pdoc \
-	--html \
-	--output-dir docs \
-	scrapli_community \
-	--force
+	python docs/generate/generate_docs.py
+
+test_docs:
+	mkdocs build --clean --strict
+	htmltest -c docs/htmltest.yml -s
+	rm -rf tmp
+
+deploy_docs:
+	mkdocs gh-deploy

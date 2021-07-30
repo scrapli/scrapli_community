@@ -1,7 +1,10 @@
 #!/usr/bin/env python
-"""scrapli_community - scrapli community platforms"""
+"""scrapli_community"""
+from pathlib import Path
+
 import setuptools
 
+__version__ = "2021.07.30"
 __author__ = "Carl Montanari"
 
 with open("README.md", "r", encoding="utf-8") as f:
@@ -10,23 +13,42 @@ with open("README.md", "r", encoding="utf-8") as f:
 with open("requirements.txt", "r") as f:
     INSTALL_REQUIRES = f.read().splitlines()
 
+EXTRAS_REQUIRE = {}
+
+for extra in EXTRAS_REQUIRE:
+    with open(f"requirements-{extra}.txt", "r") as f:
+        EXTRAS_REQUIRE[extra] = f.read().splitlines()
+
+full_requirements = [requirement for extra in EXTRAS_REQUIRE.values() for requirement in extra]
+EXTRAS_REQUIRE["full"] = full_requirements
+
+
+def get_packages(package):
+    """Return root package and all sub-packages"""
+    return [str(path.parent) for path in Path(package).glob("**/__init__.py")]
+
+
 setuptools.setup(
     name="scrapli_community",
-    version="2021.01.30",
+    version=__version__,
     author=__author__,
     author_email="carl.r.montanari@gmail.com",
-    description="",
+    description="Easily add support for 'non-core' platforms to scrapli",
     long_description=README,
     long_description_content_type="text/markdown",
+    keywords="ssh telnet netconf automation network cisco iosxr iosxe nxos arista eos juniper "
+    "junos",
     url="https://github.com/scrapli/scrapli_community",
     project_urls={
-        "Changelog": "https://github.com/scrapli/scrapli_community/blob/master/CHANGELOG.md"
+        "Changelog": "https://scrapli.github.io/scrapli_community/changelog/",
+        "Docs": "https://scrapli.github.io/scrapli_community/",
     },
     license="MIT",
-    packages=setuptools.find_packages(),
+    package_data={"scrapli_community": ["py.typed"]},
+    packages=get_packages("scrapli_community"),
     install_requires=INSTALL_REQUIRES,
     dependency_links=[],
-    extras_require={},
+    extras_require=EXTRAS_REQUIRE,
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Operating System :: POSIX :: Linux",
@@ -36,6 +58,7 @@ setuptools.setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3 :: Only",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
