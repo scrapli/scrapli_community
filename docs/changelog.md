@@ -6,6 +6,7 @@ CHANGELOG
 - Add HP Comware (thank you to Julien!) -- see #36
 - Add Nokia SROS (thank you to Roman Dodin!) -- see # 51
 - Fixed silly naming of the sync/async module in each package to match scrapli core naming standard
+- Add Palo Alto PanOS (thank you to Bryan Bartik) -- see #69
 
 
 # 2021.01.30
