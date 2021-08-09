@@ -61,7 +61,7 @@ CLASSIC_DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "configuration": (
         PrivilegeLevel(
-            pattern=r"^\*?[abcd]:[\w]+>config#\s?$",
+            pattern=r"\*?[abcd]:[\w\s-]+>config[\w>]*(#|\$)\s?$",
             name="configuration",
             previous_priv="exec",
             deescalate="exit all",
@@ -95,7 +95,10 @@ SCRAPLI_PLATFORM = {
             "sync_on_open": classic_default_sync_on_open,
             "async_on_open": classic_default_async_on_open,
             "failed_when_contains": [
+                "MINOR:",
+                "MAJOR:",
                 "Error:",
+                "Bad Command:",
             ],
         },
     },
