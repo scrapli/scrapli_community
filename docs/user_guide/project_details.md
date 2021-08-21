@@ -28,6 +28,7 @@ The following are the currently supported platforms:
 | nokia_sros            | Nokia           | SROS          | [Roman Dodin](https://github.com/hellt)                    | 2021.07.30  |                                                                                       |
 | alcatel_aos           | Alcatel-Lucent  | AOS6 & AOS8   | [Jef Vantongerloo](https://github.com/jefvantongerloo)     | 2021.07.30  | Tested on aos6 - 6.7.2.89.R06 and aos8 - 8.6.289.R01                                  |
 | paloalto_panos        | PaloAlto        | PanOS         | [Bryan Bartik](https://github.com/jefvantongerloo)         | 2021.07.30  | Tested on PanOS 9.x and 10.x                                                          |
+| cisco_cbs             | Cisco           | CBS           | [Andrey Grechin](https://github.com/andreygrechin)         | 2021.XX.XX  | Tested on SG250-08, 2.5.7.85                                                          |
 
 
 ## Why add a Platform
