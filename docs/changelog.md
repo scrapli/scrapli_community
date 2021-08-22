@@ -1,6 +1,9 @@
 CHANGELOG
 =======
 
+# 2021.XX.XX
+- Add Cisco CBS -- see #76
+
 
 # 2021.07.30
 - Add HP Comware (thank you to Julien!) -- see #36
