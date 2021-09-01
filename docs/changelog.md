@@ -2,6 +2,11 @@ CHANGELOG
 =======
 
 # 2021.XX.XX
+- Add Aruba AOSCX -- see #80
+
+
+
+# 2021.XX.XX
 - Add Cisco CBS -- see #76
 
 
