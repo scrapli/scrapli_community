@@ -50,7 +50,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
 CLASSIC_DEFAULT_PRIVILEGE_LEVELS = {
     "exec": (
         PrivilegeLevel(
-            pattern=r"^\*?[abcd]:[\w]+#\s?$",
+            pattern=r"^\*?[abcd]:[\w\-]+#\s?$",
             name="exec",
             previous_priv="",
             deescalate="",
@@ -61,7 +61,7 @@ CLASSIC_DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "configuration": (
         PrivilegeLevel(
-            pattern=r"^\*?[abcd]:[\w]+>config#\s?$",
+            pattern=r"^\*?[abcd]:[\w\-]+>config#\s?$",
             name="configuration",
             previous_priv="exec",
             deescalate="exit all",
