@@ -30,7 +30,9 @@ The following are the currently supported platforms:
 | paloalto_panos        | PaloAlto        | PanOS         | [Bryan Bartik](https://github.com/jefvantongerloo)         | 2021.07.30  | Tested on PanOS 9.x and 10.x                                                          |
 | cisco_cbs             | Cisco           | CBS           | [Andrey Grechin](https://github.com/andreygrechin)         | 2021.XX.XX  | Tested on SG250-08, 2.5.7.85                                                          |
 | aruba_aoscx             | Aruba           | AOSCX           | [Luke Bates](https://github.com/lukebates123)         | 2021.XX.XX  | Tested on ArubaOS-CX 10.05.x - 10.08.x                                                          |
-
+| cisco_asa             | Cisco           | ASA           | [Daniel Teycheney](https://github.com/writememe)         | 2021.XX.XX  | Tested on ASA 9.12.x                                                           |
+| cisco_aireos             | Cisco           | AireOS           | [Daniel Teycheney](https://github.com/writememe)         | 2021.XX.XX  | Tested on AireOS 8.5.x
+                                                           |
 ## Why add a Platform
 
 Why add a platform!? Because you think scrapli is awesome and want to be able to use it with whatever platform
