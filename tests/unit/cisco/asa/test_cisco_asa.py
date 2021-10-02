@@ -10,13 +10,13 @@ from scrapli_community.cisco.asa.cisco_asa import DEFAULT_PRIVILEGE_LEVELS
     "priv_pattern",
     [
         ("exec", "ACME-FIREWALL>"),
-        ("exec", "ACME_FIREWALL>"),
+        ("exec", "ACME_FIREWALL> "),
         ("exec", "ACME_FIREWALL/act/pri>"),
         ("privilege_exec", "ACME-FIREWALL#"),
         ("configuration", "ACME-FIREWALL(config)#"),
         ("configuration", "ACME-FIREWALL(config-if)#"),
-        ("privilege_exec", "ACME_FIREWALL#"),
-        ("configuration", "ACME_FIREWALL(config)#"),
+        ("privilege_exec", "ACME_FIREWALL# "),
+        ("configuration", "ACME_FIREWALL(config)# "),
     ],
     ids=[
         "base_prompt_exec",
