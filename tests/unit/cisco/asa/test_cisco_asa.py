@@ -5,7 +5,6 @@ import pytest
 from scrapli_community.cisco.asa.cisco_asa import DEFAULT_PRIVILEGE_LEVELS
 
 
-# TODO
 @pytest.mark.parametrize(
     "priv_pattern",
     [

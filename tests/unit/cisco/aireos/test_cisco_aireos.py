@@ -5,8 +5,6 @@ import pytest
 from scrapli_community.cisco.aireos.cisco_aireos import DEFAULT_PRIVILEGE_LEVELS
 
 
-
-
 @pytest.mark.parametrize(
     "priv_pattern",
     [
