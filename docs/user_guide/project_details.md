@@ -50,6 +50,7 @@ So, again, why build a platform? Convenience and community mostly! Without a scr
 For example, (from the non core device example link above) without a scrapli community platform we may have to create
  our device connection like so:
 
+
 ```
 def wlc_on_open(cls):
     """Example `on_open` function for use with cisco wlc"""
