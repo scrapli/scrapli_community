@@ -47,5 +47,6 @@ SCRAPLI_PLATFORM = {
         ],
         "textfsm_platform": "cisco_wlc_ssh",
         "genie_platform": "",
+        "auth_bypass": True,
     },
 }
