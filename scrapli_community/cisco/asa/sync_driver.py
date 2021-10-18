@@ -18,6 +18,7 @@ def default_sync_on_open(conn: NetworkDriver) -> None:
     """
     conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
     conn.send_command(command="terminal pager 0")
+    conn.send_config(config="terminal width 511")
 
 
 def default_sync_on_close(conn: NetworkDriver) -> None:
