@@ -31,7 +31,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
         PrivilegeLevel(
             pattern=r"^[\w.\-@\:]{1,63}\([\w.\-@\:+]{0,32}\)#\s?$",
             name="configuration",
-            previous_priv="exec",
+            previous_priv="privilege_exec",
             deescalate="exit",
             escalate="configure terminal",
             escalate_auth=False,
