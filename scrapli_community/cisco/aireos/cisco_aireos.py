@@ -10,7 +10,7 @@ from scrapli_community.cisco.aireos.sync_driver import default_sync_on_close, de
 DEFAULT_PRIVILEGE_LEVELS = {
     "exec": (
         PrivilegeLevel(
-            pattern=r"^\([\w.-]{1,31}\) >$",
+            pattern=r"^\([\w. -]{1,31}\) >$",
             name="exec",
             previous_priv="",
             deescalate="",
@@ -21,7 +21,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "configuration": (
         PrivilegeLevel(
-            pattern=r"^\([\w.-]{1,31}\) config>$",
+            pattern=r"^\([\w. -]{1,31}\) config>$",
             name="configuration",
             previous_priv="exec",
             deescalate="exit",
