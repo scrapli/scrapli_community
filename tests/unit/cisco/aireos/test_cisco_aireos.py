@@ -10,14 +10,18 @@ from scrapli_community.cisco.aireos.cisco_aireos import DEFAULT_PRIVILEGE_LEVELS
     [
         ("exec", "(Cisco Controller) >"),
         ("exec", "(something_fun) >"),
+        ("exec", "(host-name) >"),
         ("configuration", "(Cisco Controller) config>"),
         ("configuration", "(Its interestin) config>"),
+        ("configuration", "(host-name) config>"),
     ],
     ids=[
         "base_prompt_exec",
         "base_prompt_exec_non_default",
+        "base_prompt_hyphen",
         "base_prompt_configuration",
         "base_prompt_configuration_non_default",
+        "base_prompt_configuration_hyphen",
     ],
 )
 def test_default_prompt_patterns(priv_pattern):
