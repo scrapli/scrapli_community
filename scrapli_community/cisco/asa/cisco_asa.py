@@ -2,10 +2,14 @@
 
 from scrapli.driver.network.base_driver import PrivilegeLevel
 from scrapli_community.cisco.asa.async_driver import (
-    default_async_on_close, default_async_on_open, read_only_async_on_open
+    default_async_on_close,
+    default_async_on_open,
+    read_only_async_on_open,
 )
 from scrapli_community.cisco.asa.sync_driver import (
-    default_sync_on_close, default_sync_on_open, read_only_sync_on_open
+    default_sync_on_close,
+    default_sync_on_open,
+    read_only_sync_on_open,
 )
 
 DEFAULT_PRIVILEGE_LEVELS = {
@@ -68,5 +72,5 @@ SCRAPLI_PLATFORM = {
             "sync_on_open": read_only_sync_on_open,
             "async_on_open": read_only_async_on_open,
         }
-    }
+    },
 }
