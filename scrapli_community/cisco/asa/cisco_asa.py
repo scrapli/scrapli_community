@@ -11,7 +11,7 @@ from scrapli_community.cisco.asa.sync_driver import (
 DEFAULT_PRIVILEGE_LEVELS = {
     "exec": (
         PrivilegeLevel(
-            pattern=r"^[\w-]{1,63}>\s?$",
+            pattern=r"^[\w/-]{1,63}>\s?$",
             name="exec",
             previous_priv="",
             deescalate="",
@@ -22,7 +22,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "privilege_exec": (
         PrivilegeLevel(
-            pattern=r"^[\w-]{1,63}#\s?$",
+            pattern=r"^[\w/-]{1,63}#\s?$",
             name="privilege_exec",
             previous_priv="exec",
             deescalate="disable",
@@ -33,7 +33,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "configuration": (
         PrivilegeLevel(
-            pattern=r"^[\w-]{1,63}\([\w-]{0,32}\)#\s?$",
+            pattern=r"^[\w/-]{1,63}\([\w-]{0,32}\)#\s?$",
             name="configuration",
             previous_priv="privilege_exec",
             deescalate="exit",
