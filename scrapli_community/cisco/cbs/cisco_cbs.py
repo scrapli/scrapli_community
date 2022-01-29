@@ -1,12 +1,12 @@
-"""scrapli_community.eltex.esr.exltex_esr"""
+"""scrapli_community.cisco.cbs.cisco_cbs"""
 from scrapli.driver.network.base_driver import PrivilegeLevel
-from scrapli_community.eltex.esr.async_driver import default_async_on_close, default_async_on_open
-from scrapli_community.eltex.esr.sync_driver import default_sync_on_close, default_sync_on_open
+from scrapli_community.cisco.cbs.async_driver import default_async_on_close, default_async_on_open
+from scrapli_community.cisco.cbs.sync_driver import default_sync_on_close, default_sync_on_open
 
 DEFAULT_PRIVILEGE_LEVELS = {
     "exec": (
         PrivilegeLevel(
-            pattern=r"^(\\n)?[a-z0-9.\-_@/:]{1,63}>\s*$",
+            pattern=r"^[a-zA-Z0-9-.]{1,58}>$",
             name="exec",
             previous_priv="",
             deescalate="",
@@ -17,18 +17,18 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "privilege_exec": (
         PrivilegeLevel(
-            pattern=r"^(\\n)?[a-z0-9.\-_@/:]{1,63}#\s*$",
+            pattern=r"^[a-zA-Z0-9-.]{1,58}#$",
             name="privilege_exec",
             previous_priv="exec",
-            deescalate="",
+            deescalate="disable",
             escalate="enable",
             escalate_auth=True,
-            escalate_prompt=r"^\s*[pP]assword:\s*$",
+            escalate_prompt=r"^(?:enable\s){0,1}Password:\s?$",
         )
     ),
     "configuration": (
         PrivilegeLevel(
-            pattern=r"^(\\n)?[a-z0-9.\-_@/:]{1,63}\(conf[a-z0-9.\-@/:\+]{0,32}\)#\s*$",
+            pattern=r"^[a-zA-Z0-9-.]{1,58}\([\w.\-@/:+]{1,32}\)#$",
             name="configuration",
             previous_priv="privilege_exec",
             deescalate="end",
@@ -40,7 +40,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
 }
 
 SCRAPLI_PLATFORM = {
-    "driver_type": "network",  # generic|network
+    "driver_type": "network",
     "defaults": {
         "privilege_levels": DEFAULT_PRIVILEGE_LEVELS,
         "default_desired_privilege_level": "privilege_exec",
@@ -48,8 +48,14 @@ SCRAPLI_PLATFORM = {
         "async_on_open": default_async_on_open,
         "sync_on_close": default_sync_on_close,
         "async_on_close": default_async_on_close,
-        "failed_when_contains": ["Syntax error:"],
-        "textfsm_platform": "",
+        "failed_when_contains": [
+            "% Incomplete command",
+            "% Unrecognized command",
+            "% missing mandatory parameter",
+            "% bad parameter value",
+            "% Ambiguous command",
+        ],
+        "textfsm_platform": "cisco_s300",
         "genie_platform": "",
     },
 }

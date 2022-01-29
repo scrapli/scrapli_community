@@ -45,10 +45,12 @@ def test_default_prompt_patterns(priv_pattern):
     "priv_pattern",
     [
         ("exec", "*A:sr1#"),
+        ("exec", "*B:DEV02-XY2#"),
         ("configuration", "*A:sr1>config#"),
     ],
     ids=[
         "exec",
+        "exec-hyphen",
         "configuration",
     ],
 )

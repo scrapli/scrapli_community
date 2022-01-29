@@ -1,16 +1,16 @@
-"""scrapli_community.paloalto.panos.paloalto_panos"""
+"""scrapli_community.cisco.aireos.cisco_aireos"""
 
 from scrapli.driver.network.base_driver import PrivilegeLevel
-from scrapli_community.paloalto.panos.async_driver import (
+from scrapli_community.cisco.aireos.async_driver import (
     default_async_on_close,
     default_async_on_open,
 )
-from scrapli_community.paloalto.panos.sync_driver import default_sync_on_close, default_sync_on_open
+from scrapli_community.cisco.aireos.sync_driver import default_sync_on_close, default_sync_on_open
 
 DEFAULT_PRIVILEGE_LEVELS = {
     "exec": (
         PrivilegeLevel(
-            pattern=r"^[\w\._-]+@[\w\.\(\)_-]+>\s?$",
+            pattern=r"^\([\w. -]{1,31}\) >$",
             name="exec",
             previous_priv="",
             deescalate="",
@@ -21,11 +21,11 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "configuration": (
         PrivilegeLevel(
-            pattern=r"^[\w\._-]+@[\w\.\(\)_-]+#\s?$",
+            pattern=r"^\([\w. -]{1,31}\) config>$",
             name="configuration",
             previous_priv="exec",
             deescalate="exit",
-            escalate="configure",
+            escalate="config",
             escalate_auth=False,
             escalate_prompt="",
         )
@@ -42,11 +42,11 @@ SCRAPLI_PLATFORM = {
         "sync_on_close": default_sync_on_close,
         "async_on_close": default_async_on_close,
         "failed_when_contains": [
-            "Unknown command:",
-            "Invalid Syntax.",
-            "Validation Error:",
+            "Incorrect Usage. Use the '?' or <TAB> key to list commands.",
+            "Incorrect input!",
         ],
-        "textfsm_platform": "paloalto_panos",
+        "textfsm_platform": "cisco_wlc_ssh",
         "genie_platform": "",
+        "auth_bypass": True,
     },
 }

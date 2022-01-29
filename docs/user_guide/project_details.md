@@ -23,13 +23,16 @@ The following are the currently supported platforms:
 | aethra_atosnt         | Aethra          | ATOSNT        | [Alex Lardschneider](https://github.com/AlexLardschneider) | 2020.11.15  | Tested on ATOS NT, ranging from 6.3.X up to 6.5.X:                                    |
 | mikrotik_routeros     | Mikrotik        | RouterOS      | [Alex Lardschneider](https://github.com/AlexLardschneider) | 2020.11.15  |                                                                                       |
 | siemens_roxii         | Siemens         | ROX II        | [Khiem Nguyen](https://github.com/kn-winter)               | 2021.01.30  |                                                                                       |
+| eltex_esr             | Eltex           | —             | [Artem Kotik](https://github.com/miaow2)                   | 2021.01.30  | Tested on Eltex ESR 1000, 1200, 1700 models with 1.11 software version                |
 | hp_comware            | HP              | Comware       | [Julien Corsini](https://github.com/juliencorsini)         | 2021.07.30  |                                                                                       |
-| nokia_sros            | Nokia           | SROS          | [Roman Dodin](https://github.com/hellt)                    | 2021.07.30  |                                                                                       |
 | nokia_sros            | Nokia           | SROS          | [Roman Dodin](https://github.com/hellt)                    | 2021.07.30  |                                                                                       |
 | alcatel_aos           | Alcatel-Lucent  | AOS6 & AOS8   | [Jef Vantongerloo](https://github.com/jefvantongerloo)     | 2021.07.30  | Tested on aos6 - 6.7.2.89.R06 and aos8 - 8.6.289.R01                                  |
 | paloalto_panos        | PaloAlto        | PanOS         | [Bryan Bartik](https://github.com/jefvantongerloo)         | 2021.07.30  | Tested on PanOS 9.x and 10.x                                                          |
-
-
+| cisco_cbs             | Cisco           | CBS           | [Andrey Grechin](https://github.com/andreygrechin)         | 2021.XX.XX  | Tested on SG250-08, 2.5.7.85                                                          |
+| aruba_aoscx             | Aruba           | AOSCX           | [Luke Bates](https://github.com/lukebates123)         | 2021.XX.XX  | Tested on ArubaOS-CX 10.05.x - 10.08.x                                                          |
+| cisco_asa             | Cisco           | ASA           | [Daniel Teycheney](https://github.com/writememe)         | 2021.XX.XX  | Tested on ASA 9.12.x                                                           |
+| cisco_aireos             | Cisco           | AireOS           | [Daniel Teycheney](https://github.com/writememe)         | 2021.XX.XX  | Tested on AireOS 8.5.x
+                                                           |
 ## Why add a Platform
 
 Why add a platform!? Because you think scrapli is awesome and want to be able to use it with whatever platform
