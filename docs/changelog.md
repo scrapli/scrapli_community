@@ -1,7 +1,7 @@
 CHANGELOG
 =======
 
-# 2022.01.30 (in development)
+# 2022.01.30
 - Add Cisco CBS -- see #76
 - Add Aruba AOSCX -- see #80
 - Dropped Python3.6 support as it is now EOL! Of course, scrapli probably still works just fine with 3.6 (if you 
