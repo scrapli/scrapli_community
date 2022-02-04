@@ -55,10 +55,9 @@ SCRAPLI_PLATFORM = {
         "sync_on_close": default_sync_on_close,
         "async_on_close": default_async_on_close,
         "failed_when_contains": [
-            "% Ambiguous command",
-            "% Incomplete command",
-            "% Invalid input detected",
-            "% Unknown command",
+            "Error input in the position marked by '^'.",
+            "Ambiguous input in the position marked by '^'",
+            "%  Incomplete command.",
         ],
         "textfsm_platform": "",
         "genie_platform": "",
