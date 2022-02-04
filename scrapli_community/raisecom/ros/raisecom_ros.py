@@ -26,10 +26,10 @@ DEFAULT_PRIVILEGE_LEVELS = {
             pattern=r"^[a-z0-9.\-_@/:]{1,63}#$",
             name="privilege_exec",
             previous_priv="exec",
-            deescalate="disable",
+            deescalate="",
             escalate="enable",
             escalate_auth=True,
-            escalate_prompt=r"^[pP]assword:\s?$",
+            escalate_prompt=r"[pP]assword:\s?$",
         )
     ),
     "configuration": (
