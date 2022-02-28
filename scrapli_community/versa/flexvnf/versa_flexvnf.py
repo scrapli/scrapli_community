@@ -4,10 +4,7 @@ from scrapli_community.versa.flexvnf.async_driver import (
     default_async_on_close,
     default_async_on_open,
 )
-from scrapli_community.versa.flexvnf.sync_driver import (
-    default_sync_on_close,
-    default_sync_on_open,
-)
+from scrapli_community.versa.flexvnf.sync_driver import default_sync_on_close, default_sync_on_open
 
 DEFAULT_PRIVILEGE_LEVELS = {
     "shell": (

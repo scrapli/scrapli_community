@@ -18,7 +18,7 @@ async def default_async_on_open(conn: AsyncNetworkDriver) -> None:
     await conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
     await conn.send_command(command="set complete-on-space false")
     await conn.send_command(command="set paginate false")
-    await conn.send_command(command="set screen width 512")    
+    await conn.send_command(command="set screen width 512")
 
 
 async def default_async_on_close(conn: AsyncNetworkDriver) -> None:
