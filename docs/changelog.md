@@ -1,6 +1,12 @@
 CHANGELOG
 =======
 
+# 2022.07.30
+- Add Versa Flex VNF -- see #119
+- Add Vyos -- see #134
+- UPdated Huawei prompt for config mode -- see #118
+
+
 # 2022.01.30
 - Add Cisco CBS -- see #76
 - Add Aruba AOSCX -- see #80
