@@ -11,11 +11,15 @@ from scrapli_community.huawei.vrp.huawei_vrp import DEFAULT_PRIVILEGE_LEVELS
         ("privilege_exec", "<SCRAPLI_HUAWEI-VRP_TEST_SW1>"),
         ("configuration", "[SCRAPLI_HUAWEI-VRP_TEST_SW1]"),
         ("configuration", "[SCRAPLI_HUAWEI-VRP_TEST_SW1-GigabitEthernet0/0/1]"),
+        ("configuration", "[~SCRAPLI_HUAWEI-VRP_TEST_SW1]"),
+        ("configuration", "[*SCRAPLI_HUAWEI-VRP_TEST_SW1]"),
     ],
     ids=[
         "ssh_prompt_privilege_exec",
         "ssh_prompt_configuration",
         "ssh_prompt_configuration_interface",
+        "ssh_prompt_configuration",
+        "ssh_prompt_configuration",
     ],
 )
 def test_default_prompt_patterns(priv_pattern):

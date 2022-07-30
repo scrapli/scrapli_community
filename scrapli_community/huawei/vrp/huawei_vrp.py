@@ -43,7 +43,8 @@ DEFAULT_PRIVILEGE_LEVELS = {
             # lookahead to exclude '[V***R***C**]' from the prompt pattern, but still match
             # a regular hostname.
             #
-            pattern=r"^(?!\[V\d{3}R\d{3}C\d{2,3}.*\])(?=\[[a-z0-9.\-_@/:]{1,64}\]$).*$",
+            pattern=r"^(?!\[V\d{3}R\d{3}C\d{2,3}.*\])"
+            r"(?=\[\~{0,1}\*{0,1}[a-z0-9.\-_@/:]{1,64}\]$).*$",
             name="configuration",
             previous_priv="privilege_exec",
             deescalate="quit",
