@@ -1,10 +1,14 @@
 CHANGELOG
 =======
 
+# 2023.01.30 _(in development)_
+- Add Ruckus Unleashed -- see #143
+
+
 # 2022.07.30
 - Add Versa Flex VNF -- see #119
 - Add Vyos -- see #134
-- UPdated Huawei prompt for config mode -- see #118
+- Updated Huawei prompt for config mode -- see #118
 
 
 # 2022.01.30
@@ -34,7 +38,7 @@ CHANGELOG
 
 
 # 2020.09.19
-- Add Ruckus Fastiron Platform (thank you Brett!)
+- Add Ruckus FastIron Platform (thank you Brett!)
 - Add Edgecore ECS Platform (thank you Alex!)
 - Add some bits to the example scrapli driver for testing purposes for scrapli core ++ supporting users creating
  their own device classes so they can build custom methods/override existing methods
