@@ -3,6 +3,7 @@ CHANGELOG
 
 # 2023.01.30 _(in development)_
 - Add Ruckus Unleashed -- see #143
+- Add Cumulus Linux & vtysh -- see #144
 
 
 # 2022.07.30
