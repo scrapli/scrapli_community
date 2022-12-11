@@ -14,7 +14,7 @@ from scrapli_community.huawei.vrp.sync_driver import (
 DEFAULT_PRIVILEGE_LEVELS = {
     "privilege_exec": (
         PrivilegeLevel(
-            pattern=r"^<[a-z0-9.\-_@()/:]{1,48}>\s*$",
+            pattern=r"^(?:hrp_[a|m|s])?<[a-z0-9.\-_@()/:]{1,48}>\s*$",
             name="privilege_exec",
             previous_priv="",
             deescalate="",
@@ -43,7 +43,8 @@ DEFAULT_PRIVILEGE_LEVELS = {
             # lookahead to exclude '[V***R***C**]' from the prompt pattern, but still match
             # a regular hostname.
             #
-            pattern=r"^(?!\[V\d{3}R\d{3}C\d{2,3}.*\])(?=\[[a-z0-9.\-_@/:]{1,64}\]$).*$",
+            pattern=r"^(?!\[V\d{3}R\d{3}C\d{2,3}.*\])"
+            r"(?=(?:hrp_[a|m|s])?\[\~{0,1}\*{0,1}[a-z0-9.\-_@/:]{1,64}\]$).*$",
             name="configuration",
             previous_priv="privilege_exec",
             deescalate="quit",

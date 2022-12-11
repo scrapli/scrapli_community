@@ -1,6 +1,9 @@
 """scrapli_community.raisecom.ros.sync_driver"""
+<<<<<<< HEAD
 from typing import Any
 
+=======
+>>>>>>> d972283771137a6ddbd3af8b49eb32f842d19eb1
 from scrapli.driver import NetworkDriver
 
 
