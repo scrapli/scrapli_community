@@ -34,8 +34,10 @@ The following are the currently supported platforms:
 | cisco_aireos      | Cisco          | AireOS      | [Daniel Teycheney](https://github.com/writememe)           | 2021.XX.XX  | Tested on AireOS 8.5.x                                                                                                                                                                                                    |
 | vyos              | Open source    | VyOS        | [goodNETnick](https://github.com/goodNETnick)              | 2022.06.20  | Tested on VyOS 1.4-rolling-202206200217, VyOS 1.3.1-S1, VyOS 1.2.8                                                                                                                                                        |
 | ruckus_unleashed  | Ruckus         | Unleashed   | [Brett Canter](https://github.com/wonderbred)              | 2022.09.13  | Tested on Ruckus and Access Networks branded Unleashed wireless access points, version 200.12.x                                                                                                                           |
-| cumulus_linux     | Nvidia         | Linux | [Ilmari Aho](https://github.com/ohai89)                  | 2022.09.28  | Tested on Cumulus Linux 3.7.x and 4.3.0
-| cumulus_vtysh     | Nvidia         | vtysh | [Ilmari Aho](https://github.com/ohai89)                  | 2022.09.28  | Tested on Cumulus Linux 3.7.x and 4.3.0
+| cumulus_linux     | Nvidia         | Linux       | [Ilmari Aho](https://github.com/ohai89)                    | 2022.09.28  | Tested on Cumulus Linux 3.7.x and 4.3.0                                                                                                                                                                                   |
+| cumulus_vtysh     | Nvidia         | vtysh       | [Ilmari Aho](https://github.com/ohai89)                    | 2022.09.28  | Tested on Cumulus Linux 3.7.x and 4.3.0                                                                                                                                                                                   |
+| raisecom_ros      | Raiscome       | ROS         | [ikievite](https://github.com/ikievite)                    | 2023.01.30  |                                                                                                                                                                                                                           |
+
 
 ## Why add a Platform
 

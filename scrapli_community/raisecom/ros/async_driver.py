@@ -1,6 +1,4 @@
 """scrapli_community.raisecom.ros.ansync_driver"""
-from typing import Any
-
 from scrapli.driver import AsyncNetworkDriver
 
 
