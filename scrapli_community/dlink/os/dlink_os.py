@@ -1,15 +1,12 @@
 """scrapli_community.dlink.os.dlink_os"""
 from scrapli.driver.network.base_driver import PrivilegeLevel
-from scrapli_community.dlink.os.async_driver import (
-    default_async_on_close,
-    default_async_on_open,
-)
+from scrapli_community.dlink.os.async_driver import default_async_on_close, default_async_on_open
 from scrapli_community.dlink.os.sync_driver import default_sync_on_close, default_sync_on_open
 
 DEFAULT_PRIVILEGE_LEVELS = {
     "exec": (
         PrivilegeLevel(
-            pattern=r"^[a-z0-9.\-_@()/:]{1,63}#$",
+            pattern=r"^[a-z0-9.\-_@()/:]{1,63}:(user|oper|puser)#$",
             name="exec",
             previous_priv="",
             deescalate="",
@@ -20,18 +17,18 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "privilege_exec": (
         PrivilegeLevel(
-            pattern=r"^[a-z0-9.\-_@/:]{1,63}#$",
+            pattern=r"^[a-z0-9.\-_@/:]{1,63}:admin#$",
             name="privilege_exec",
             previous_priv="exec",
             deescalate="",
-            escalate="enable",
+            escalate="enable admin",
             escalate_auth=True,
-            escalate_prompt=r"[pP]assword:\s?$",
+            escalate_prompt=r"[pP]ass[wW]ord:\s?$",
         )
     ),
     "configuration": (
         PrivilegeLevel(
-            pattern=r"^[\w.\-@/:]{1,63}\([\w.\-@/:+]{0,32}\)#$",
+            pattern=r"^[a-z0-9.\-_@/:]{1,63}:admin#$",
             name="configuration",
             previous_priv="privilege_exec",
             deescalate="",
