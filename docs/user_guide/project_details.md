@@ -38,7 +38,7 @@ The following are the currently supported platforms:
 | cumulus_vtysh     | Nvidia         | vtysh       | [Ilmari Aho](https://github.com/ohai89)                    | 2022.09.28  | Tested on Cumulus Linux 3.7.x and 4.3.0                                                                                                                                                                                   |
 | raisecom_ros      | Raisecome       | ROS         | [ikievite](https://github.com/ikievite)                    | 2023.01.30  |                                                                                                                                                                                                                           |
 | dlink_os          | D-Link         | OS          | [ikievite](https://github.com/ikievite)                    | 2023.01.30  | Tested on D-Link DES-3028, DES-3200-XX (rev. A, B, C), DES-3526, DGS-3000-XX, DGS-3120-24SC, DGS-3612G
-                                                                                                                |
+                                                                                                                
 
 
 ## Why add a Platform
