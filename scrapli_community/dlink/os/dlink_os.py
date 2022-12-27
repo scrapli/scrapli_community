@@ -23,7 +23,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
             deescalate="",
             escalate="enable admin",
             escalate_auth=True,
-            escalate_prompt=r"[pP]ass[wW]ord:\s?$",
+            escalate_prompt=r"^[pP]ass[wW]ord:$",
         )
     ),
     "configuration": (
