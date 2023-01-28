@@ -1,10 +1,12 @@
 CHANGELOG
 =======
 
-# 2023.01.30 _(in development)_
+# 2023.01.30
 - Add Ruckus Unleashed -- see #143
 - Add Cumulus Linux & vtysh -- see #144
-- Add Raisecom ROS (thank you to @ikievite)
+- Add Raisecom ROS (thank you to @ikievite) -- see #149
+- Add dlink OS (thank you to @ikievite) -- see #151
+- Improve Huawei VRP prompt pattern in #146
 
 
 # 2022.07.30

@@ -1,0 +1,1 @@
+::: scrapli.genericdriver.sync_driver
