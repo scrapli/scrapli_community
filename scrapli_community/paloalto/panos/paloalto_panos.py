@@ -43,7 +43,8 @@ SCRAPLI_PLATFORM = {
         "async_on_close": default_async_on_close,
         "failed_when_contains": [
             "Unknown command:",
-            "Invalid Syntax.",
+            "Invalid syntax.",
+            "Server error",
             "Validation Error:",
         ],
         "textfsm_platform": "paloalto_panos",
