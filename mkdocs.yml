@@ -25,6 +25,7 @@ nav:
       - Installation: user_guide/installation.md
       - Basic Usage: user_guide/basic_usage.md
   - Changelog: changelog.md
+  - Reference: reference/
   - More Scrapli:
     - Scrapli: more_scrapli/scrapli.md
     - Scrapli Netconf: more_scrapli/scrapli_netconf.md
@@ -74,5 +75,4 @@ plugins:
         watch:
         - scrapli_community
     - section-index
-    - literate-nav:
-        nav_file: SUMMARY.md
+    - literate-nav
