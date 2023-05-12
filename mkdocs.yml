@@ -72,7 +72,8 @@ plugins:
             paths: [ scrapli_community ]
             options:
               show_signature_annotations: true
-        watch:
-        - scrapli_community
     - section-index
     - literate-nav
+
+watch:
+  - scrapli_community
