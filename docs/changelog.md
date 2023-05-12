@@ -1,6 +1,10 @@
 CHANGELOG
 =======
 
+# 2023.05.12
+- Add Fortinet FortiOS -- see #155
+
+
 # 2023.01.30
 - Add Ruckus Unleashed -- see #143
 - Add Cumulus Linux & vtysh -- see #144
