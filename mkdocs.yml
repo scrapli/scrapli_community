@@ -24,14 +24,15 @@ nav:
       - Versioning: user_guide/versioning.md
       - Installation: user_guide/installation.md
       - Basic Usage: user_guide/basic_usage.md
+  - API Reference: reference/
   - Changelog: changelog.md
-  - Reference: reference/
   - More Scrapli:
     - Scrapli: more_scrapli/scrapli.md
     - Scrapli Netconf: more_scrapli/scrapli_netconf.md
     - Scrapli Cfg: more_scrapli/scrapli_cfg.md
     - Scrapli Replay: more_scrapli/scrapli_replay.md
     - Nornir Scrapli: more_scrapli/nornir_scrapli.md
+    - Scrapli SCP: more_scrapli/scrapli_scp.md
   - Other:
     - Contributing: about/contributing.md
     - Code of Conduct: about/code_of_conduct.md
@@ -76,4 +77,4 @@ plugins:
     - literate-nav
 
 watch:
-  - scrapli_community
+    - scrapli_community
