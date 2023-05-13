@@ -2,697 +2,717 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://scrapli.github.io/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/changelog/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/about/code_of_conduct/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/about/contributing/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/more_scrapli/nornir_scrapli/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/more_scrapli/scrapli/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/more_scrapli/scrapli_cfg/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/more_scrapli/scrapli_netconf/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/more_scrapli/scrapli_replay/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://scrapli.github.io/reference/SUMMARY/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <loc>https://scrapli.github.io/more_scrapli/scrapli_scp/</loc>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/aethra/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/aethra/atosnt/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/aethra/atosnt/aethra_atosnt/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/aethra/atosnt/async_diver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/aethra/atosnt/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/alcatel/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/alcatel/aos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/alcatel/aos/alcatel_aos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/alcatel/aos/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/alcatel/aos/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/aruba/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/aruba/aoscx/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/aruba/aoscx/aruba_aoscx/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/aruba/aoscx/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/aruba/aoscx/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cisco/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cisco/aireos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cisco/aireos/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cisco/aireos/cisco_aireos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cisco/aireos/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cisco/asa/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cisco/asa/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cisco/asa/cisco_asa/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cisco/asa/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cisco/cbs/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cisco/cbs/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cisco/cbs/cisco_cbs/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cisco/cbs/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cumulus/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cumulus/linux/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cumulus/linux/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cumulus/linux/cumulus_linux/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cumulus/linux/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cumulus/vtysh/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cumulus/vtysh/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cumulus/vtysh/cumulus_vtysh/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/cumulus/vtysh/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/dlink/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/dlink/os/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/dlink/os/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/dlink/os/dlink_os/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/dlink/os/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/edgecore/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/edgecore/ecs/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/edgecore/ecs/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/edgecore/ecs/edgecore_ecs/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/edgecore/ecs/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/eltex/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/eltex/esr/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/eltex/esr/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/eltex/esr/eltex_esr/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/eltex/esr/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/fortinet/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://scrapli.github.io/reference/fortinet/fortios/</loc>
+         <lastmod>2023-05-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://scrapli.github.io/reference/fortinet/fortios/async_driver/</loc>
+         <lastmod>2023-05-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://scrapli.github.io/reference/fortinet/fortios/fortinet_fortios/</loc>
+         <lastmod>2023-05-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://scrapli.github.io/reference/fortinet/fortios/sync_driver/</loc>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/fortinet/wlc/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/fortinet/wlc/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/fortinet/wlc/fortinet_wlc/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/fortinet/wlc/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/hp/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/hp/comware/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/hp/comware/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/hp/comware/hp_comware/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/hp/comware/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/huawei/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/huawei/vrp/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/huawei/vrp/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/huawei/vrp/huawei_vrp/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/huawei/vrp/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/mikrotik/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/mikrotik/routeros/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/mikrotik/routeros/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/mikrotik/routeros/mikrotik_routeros/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/mikrotik/routeros/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/nokia/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/nokia/srlinux/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/nokia/srlinux/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/nokia/srlinux/nokia_srlinux/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/nokia/srlinux/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/nokia/sros/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/nokia/sros/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/nokia/sros/nokia_sros/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/nokia/sros/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/paloalto/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/paloalto/panos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/paloalto/panos/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/paloalto/panos/paloalto_panos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/paloalto/panos/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/raisecom/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/raisecom/ros/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/raisecom/ros/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/raisecom/ros/raisecom_ros/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/raisecom/ros/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/ruckus/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/ruckus/fastiron/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/ruckus/fastiron/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/ruckus/fastiron/ruckus_fastiron/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/ruckus/fastiron/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/ruckus/unleashed/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/ruckus/unleashed/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/ruckus/unleashed/ruckus_unleashed/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/ruckus/unleashed/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/scrapli/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/scrapli/genericdriver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/scrapli/genericdriver/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/scrapli/genericdriver/scrapli_genericdriver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/scrapli/genericdriver/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/scrapli/networkdriver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/scrapli/networkdriver/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/scrapli/networkdriver/scrapli_networkdriver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/scrapli/networkdriver/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/siemens/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/siemens/roxii/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/siemens/roxii/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/siemens/roxii/siemens_roxii/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/siemens/roxii/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/versa/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/versa/flexvnf/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/versa/flexvnf/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/versa/flexvnf/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/versa/flexvnf/versa_flexvnf/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/vyos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/vyos/vyos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/vyos/vyos/async_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/vyos/vyos/sync_driver/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/reference/vyos/vyos/vyos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/user_guide/basic_usage/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/user_guide/installation/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/user_guide/project_details/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/user_guide/quickstart/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scrapli.github.io/user_guide/versioning/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-05-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
