@@ -60,6 +60,8 @@ class AsyncFortinetFortiOSDriver(AsyncGenericDriver):
             if self._vdoms_enabled:  # we exit from global too
                 disable_paging += "\nend"
             await self.send_commands(disable_paging.splitlines())
+        elif self._vdoms_enabled:
+            await self.context("system")
 
     async def cleanup_session(self) -> None:
         """Restore paging if necessary"""
