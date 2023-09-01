@@ -9,7 +9,7 @@ from scrapli_community.versa.flexvnf.sync_driver import default_sync_on_close, d
 DEFAULT_PRIVILEGE_LEVELS = {
     "shell": (
         PrivilegeLevel(
-            pattern=r"^\[\w+\@\S+ \S+\] \$ $",
+            pattern=r"^\[\w+\@\S+ \S+\] \$ ?$",
             name="shell",
             previous_priv="",
             deescalate="",
@@ -20,7 +20,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "cli": (
         PrivilegeLevel(
-            pattern=r"^\w+@\S+-cli> $",
+            pattern=r"^\w+@\S+-cli> ?$",
             name="cli",
             previous_priv="shell",
             deescalate="exit",
@@ -31,7 +31,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "configuration": (
         PrivilegeLevel(
-            pattern=r"^\w+@\S+-cli\(\S+\)% $",
+            pattern=r"^\w+@\S+-cli\(\S+\)% ?$",
             name="configuration",
             previous_priv="cli",
             deescalate="exit",
