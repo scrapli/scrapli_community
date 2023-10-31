@@ -54,6 +54,8 @@ def test_default_prompt_patterns(priv_pattern):
         "exec",
         "exec-hyphen",
         "configuration",
+        "exec-period",
+        "configuration-period",
     ],
 )
 def test_default_prompt_patterns_classic_variant(priv_pattern):
