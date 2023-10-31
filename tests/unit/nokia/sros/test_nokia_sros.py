@@ -47,6 +47,8 @@ def test_default_prompt_patterns(priv_pattern):
         ("exec", "*A:sr1#"),
         ("exec", "*B:DEV02-XY2#"),
         ("configuration", "*A:sr1>config#"),
+        ("exec", "*A:ear1.sr7s-1# "),
+        ("configuration", "*A:ear1.sr7s-1>config>port# "),
     ],
     ids=[
         "exec",
