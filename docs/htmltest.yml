@@ -4,9 +4,17 @@ DirectoryPath: ./site
 IgnoreURLs:
   - fonts.gstatic.com
   - linkedin.com
+  # ignoring due to too many 429 even w/ concurrency set to 1
+  - github.com
 IgnoreDirectoryMissingTrailingSlash: true
 IgnoreAltMissing: true
 IgnoreSSLVerify: true
 IgnoreDirs:
   - overrides
 IgnoreInternalEmptyHash: true
+ExternalTimeout: 60
+HTTPHeaders:
+  "Range": "bytes=0-10"
+  "Accept": "*/*"
+CacheExpires: "96h"
+HTTPConcurrencyLimit: 1

@@ -12,7 +12,7 @@ from scrapli_community.ruckus.fastiron.sync_driver import (
 DEFAULT_PRIVILEGE_LEVELS = {
     "exec": (
         PrivilegeLevel(
-            pattern=r"^[a-z0-9.\-_@()/:]{1,63}>$",
+            pattern=r"^[a-z0-9 .\-_@()/:]{1,63}>$",
             name="exec",
             previous_priv="",
             deescalate="",
@@ -23,7 +23,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "privilege_exec": (
         PrivilegeLevel(
-            pattern=r"^[a-z0-9.\-_@/:]{1,63}#$",
+            pattern=r"^[a-z0-9 .\-_@/:]{1,63}#$",
             name="privilege_exec",
             previous_priv="exec",
             deescalate="quit",
@@ -34,7 +34,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "configuration": (
         PrivilegeLevel(
-            pattern=r"^[a-z0-9.\-_@/:]{1,63}\(conf[a-z0-9.\-@/:\+]{0,32}\)#$",
+            pattern=r"^[a-z0-9 .\-_@/:]{1,63}\(conf[a-z0-9.\-@/:\+]{0,32}\)#$",
             name="configuration",
             previous_priv="privilege_exec",
             deescalate="end",
@@ -55,7 +55,7 @@ SCRAPLI_PLATFORM = {
         "sync_on_close": default_sync_on_close,
         "async_on_close": default_async_on_close,
         "failed_when_contains": ["Error -", "Invalid input -"],
-        "textfsm_platform": "brocade_fastiron",
+        "textfsm_platform": "ruckus_fastiron",
         "genie_platform": "",
     },
     "variants": {},

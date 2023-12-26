@@ -14,7 +14,7 @@ from scrapli_community.nokia.sros.sync_driver import (
 DEFAULT_PRIVILEGE_LEVELS = {
     "exec": (
         PrivilegeLevel(
-            pattern=r"^(?!\(ex\)|\(ro\)|\(gl\)|\(pr\))\[.*\]\n[abcd]:[\w]+@[\w]+#\s?$",
+            pattern=r"^(?!\(ex\)|\(ro\)|\(gl\)|\(pr\))\[.*\]\n[abcd]:[\w\._]+@[\w\s_.-]+#\s?$",
             name="exec",
             previous_priv="",
             deescalate="",
@@ -25,7 +25,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "configuration": (
         PrivilegeLevel(
-            pattern=r"^(?:!|\*)?\(ex\)\[/?\]\n\*?[abcd]:[\w]+@[\w]+#\s?$",
+            pattern=r"^(?:!|\*)?\(ex\)\[\/?\]\n\*?[abcd]:[\w\._]+@[\w\s_.-]+#\s?$",
             name="configuration",
             previous_priv="exec",
             deescalate="quit-config",
@@ -36,7 +36,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "configuration_with_path": (
         PrivilegeLevel(
-            pattern=r"^(?:!|\*)?\(ex\)\[\S{2,}\]\n\*?[abcd]:[\w]+@[\w]+#\s?$",
+            pattern=r"^(?:!|\*)?\(ex\)\[(\S|\s){2,}\]\n\*?[abcd]:[\w\._]+@[\w\s_.-]+#\s?$",
             name="configuration_with_path",
             previous_priv="exec",
             deescalate="exit all",
@@ -50,7 +50,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
 CLASSIC_DEFAULT_PRIVILEGE_LEVELS = {
     "exec": (
         PrivilegeLevel(
-            pattern=r"^\*?[abcd]:[\w]+#\s?$",
+            pattern=r"^\*?[abcd]:[\w\s_.-]+#\s?$",
             name="exec",
             previous_priv="",
             deescalate="",
@@ -61,7 +61,7 @@ CLASSIC_DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "configuration": (
         PrivilegeLevel(
-            pattern=r"^\*?[abcd]:[\w]+>config#\s?$",
+            pattern=r"^\*?[abcd]:[\w\s_.-]+>config[\w>]*(#|\$)\s?$",
             name="configuration",
             previous_priv="exec",
             deescalate="exit all",
@@ -95,7 +95,10 @@ SCRAPLI_PLATFORM = {
             "sync_on_open": classic_default_sync_on_open,
             "async_on_open": classic_default_async_on_open,
             "failed_when_contains": [
+                "MINOR:",
+                "MAJOR:",
                 "Error:",
+                "Bad Command:",
             ],
         },
     },
