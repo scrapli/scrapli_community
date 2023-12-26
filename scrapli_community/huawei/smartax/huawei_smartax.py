@@ -12,6 +12,17 @@ from scrapli_community.huawei.smartax.sync_driver import (
 )
 
 DEFAULT_PRIVILEGE_LEVELS = {
+    "exec": (
+        PrivilegeLevel(
+            pattern=r"^[\w\./-]{1,63}>\s?$",
+            name="exec",
+            previous_priv="",
+            deescalate="",
+            escalate="",
+            escalate_auth=False,
+            escalate_prompt="",
+        )
+    ),
     "privilege_exec": (
         PrivilegeLevel(
             pattern=r"^(\S{1,48})#$",
