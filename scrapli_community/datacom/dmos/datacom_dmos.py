@@ -12,24 +12,13 @@ from scrapli_community.datacom.dmos.sync_driver import (
 )
 
 DEFAULT_PRIVILEGE_LEVELS = {
-    "linux": (
-        PrivilegeLevel(
-            pattern=r"^\S+@\S+:\S+:\S+[\$|#]\s*$",
-            name="linux",
-            previous_priv="",
-            deescalate="",
-            escalate="",
-            escalate_auth=False,
-            escalate_prompt="",
-        )
-    ),
     "exec": (
         PrivilegeLevel(
             pattern=r"^[\w\.\-]+#\s*$",
             name="exec",
-            previous_priv="linux",
-            deescalate="exit",
-            escalate="vtysh",
+            previous_priv="",
+            deescalate="",
+            escalate="",
             escalate_auth=False,
             escalate_prompt="",
         )
@@ -54,7 +43,7 @@ SCRAPLI_PLATFORM = {
     },
     "defaults": {
         "privilege_levels": DEFAULT_PRIVILEGE_LEVELS,
-        "default_desired_privilege_level": "privilege_exec",
+        "default_desired_privilege_level": "exec",
         "sync_on_open": default_sync_on_open,
         "async_on_open": default_async_on_open,
         "sync_on_close": default_sync_on_close,
