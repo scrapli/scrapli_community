@@ -14,7 +14,7 @@ from scrapli_community.huawei.smartax.sync_driver import (
 DEFAULT_PRIVILEGE_LEVELS = {
     "exec": (
         PrivilegeLevel(
-            pattern=r"^[\w\./-]{1,63}>\s?$",
+            pattern=r"^\S{1,48}>\s?$",
             name="exec",
             previous_priv="",
             deescalate="",
@@ -25,18 +25,18 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "privilege_exec": (
         PrivilegeLevel(
-            pattern=r"^(\S{1,48})#$",
+            pattern=r"^\S{1,48}#$",
             name="privilege_exec",
-            previous_priv="",
-            deescalate="",
-            escalate="",
+            previous_priv="exec",
+            deescalate="quit",
+            escalate="enable",
             escalate_auth=False,
             escalate_prompt="",
         )
     ),
     "configuration": (
         PrivilegeLevel(
-            pattern=r"^(\S{1,48})\(config(\-\S+)+\)|\(config\)#$",
+            pattern=r"^\S{1,48}\(config(\-\S+)+\)|\(config\)#$",
             name="configuration",
             previous_priv="privilege_exec",
             deescalate="quit",
@@ -59,9 +59,7 @@ SCRAPLI_PLATFORM = {
         "async_on_open": default_async_on_open,
         "sync_on_close": default_sync_on_close,
         "async_on_close": default_async_on_close,
-        "failed_when_contains": [
-            "Error:",
-        ],
+        "failed_when_contains": ["Error:"],
         "textfsm_platform": "huawei_vrp",
         "genie_platform": "",
         # Force the screen to be 256 characters wide.
