@@ -26,9 +26,9 @@ def parse_requirements(dev: bool = True) -> Dict[str, str]:
 
     """
     requirements = {}
-    requirements_file = "requirements.txt" if dev is False else "requirements-dev.txt"
+    requirements_file = "requirements.txt" if not dev else "requirements-dev.txt"
 
-    with open(requirements_file, "r") as f:
+    with open(requirements_file, "r", encoding="utf-8") as f:
         requirements_file_lines = f.readlines()
 
     requirements_lines: List[str] = [
@@ -42,7 +42,7 @@ def parse_requirements(dev: bool = True) -> Dict[str, str]:
 
     for requirement in requirements_lines:
         parsed_requirement = re.match(
-            pattern=r"^([a-z0-9\-\_\.]+)([><=]{1,2}\S*)(?:.*)$",
+            pattern=r"^([a-z0-9\-\_\.\[\]]+)([><=]{1,2}\S*)(?:.*)$",
             string=requirement,
             flags=re.I | re.M,
         )
@@ -63,7 +63,7 @@ PLATFORM: str = sys.platform
 SKIP_LIST: List[str] = []
 
 
-@nox.session(python=["3.6", "3.7", "3.8", "3.9", "3.10"])
+@nox.session(python=["3.8", "3.9", "3.10", "3.11", "3.12"])
 def unit_tests(session):
     """
     Nox run unit tests
@@ -81,8 +81,8 @@ def unit_tests(session):
     if f"unit_tests-{PLATFORM}-{session.python}" in SKIP_LIST:
         return
 
-    session.install("-r", "requirements-dev.txt")
-    session.install(".")
+    session.install("-U", "setuptools", "wheel", "pip")
+    session.install(".[dev]")
     session.run(
         "python",
         "-m",
@@ -97,7 +97,7 @@ def unit_tests(session):
     )
 
 
-@nox.session(python=["3.9"])
+@nox.session(python=["3.11"])
 def isort(session):
     """
     Nox run isort
@@ -112,11 +112,12 @@ def isort(session):
         N/A
 
     """
+    session.install(f"toml{DEV_REQUIREMENTS['toml']}")
     session.install(f"isort{DEV_REQUIREMENTS['isort']}")
     session.run("python", "-m", "isort", "-c", ".")
 
 
-@nox.session(python=["3.9"])
+@nox.session(python=["3.11"])
 def black(session):
     """
     Nox run black
@@ -131,11 +132,12 @@ def black(session):
         N/A
 
     """
+    session.install(f"toml{DEV_REQUIREMENTS['toml']}")
     session.install(f"black{DEV_REQUIREMENTS['black']}")
     session.run("python", "-m", "black", "--check", ".")
 
 
-@nox.session(python=["3.9"])
+@nox.session(python=["3.11"])
 def pylama(session):
     """
     Nox run pylama
@@ -150,11 +152,11 @@ def pylama(session):
         N/A
 
     """
-    session.install("-r", "requirements-dev.txt")
+    session.install(".[dev]")
     session.run("python", "-m", "pylama", ".")
 
 
-@nox.session(python=["3.9"])
+@nox.session(python=["3.11"])
 def pydocstyle(session):
     """
     Nox run pydocstyle
@@ -169,11 +171,12 @@ def pydocstyle(session):
         N/A
 
     """
+    session.install(f"toml{DEV_REQUIREMENTS['toml']}")
     session.install(f"pydocstyle{DEV_REQUIREMENTS['pydocstyle']}")
     session.run("python", "-m", "pydocstyle", ".")
 
 
-@nox.session(python=["3.9"])
+@nox.session(python=["3.11"])
 def mypy(session):
     """
     Nox run mypy
@@ -189,11 +192,12 @@ def mypy(session):
 
     """
     session.install(".")
+    session.install(f"toml{DEV_REQUIREMENTS['toml']}")
     session.install(f"mypy{DEV_REQUIREMENTS['mypy']}")
     session.run("python", "-m", "mypy", "--strict", "scrapli_community/")
 
 
-@nox.session(python=["3.9"])
+@nox.session(python=["3.11"])
 def darglint(session):
     """
     Nox run darglint

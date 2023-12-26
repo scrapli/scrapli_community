@@ -24,6 +24,7 @@ nav:
       - Versioning: user_guide/versioning.md
       - Installation: user_guide/installation.md
       - Basic Usage: user_guide/basic_usage.md
+  - API Reference: reference/
   - Changelog: changelog.md
   - More Scrapli:
     - Scrapli: more_scrapli/scrapli.md
@@ -31,6 +32,7 @@ nav:
     - Scrapli Cfg: more_scrapli/scrapli_cfg.md
     - Scrapli Replay: more_scrapli/scrapli_replay.md
     - Nornir Scrapli: more_scrapli/nornir_scrapli.md
+    - Scrapli SCP: more_scrapli/scrapli_scp.md
   - Other:
     - Contributing: about/contributing.md
     - Code of Conduct: about/code_of_conduct.md
@@ -42,8 +44,8 @@ markdown_extensions:
     - codehilite
     - extra
     - mdx_gh_links:
-        user: mkdocs
-        repo: mkdocs
+        user: scrapli
+        repo: scrapli_community
     - pymdownx.superfences
     - pymdownx.highlight:
         use_pygments: True
@@ -62,3 +64,17 @@ extra:
 
 plugins:
     - search
+    - gen-files:
+        scripts:
+        - docs/generate.py
+    - mkdocstrings:
+        handlers:
+          python:
+            paths: [ scrapli_community ]
+            options:
+              show_signature_annotations: true
+    - section-index
+    - literate-nav
+
+watch:
+    - scrapli_community

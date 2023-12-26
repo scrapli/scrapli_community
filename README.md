@@ -46,7 +46,7 @@ Please see the main [scrapli repo](https://github.com/carlmontanari/scrapli) for
 
 ## Requirements
 
-MacOS or \*nix<sup>1</sup>, Python 3.6+
+MacOS or \*nix<sup>1</sup>, Python 3.7+
 
 <sup>1</sup> Although many parts of scrapli *do* run on Windows, Windows is not officially supported
 
@@ -68,8 +68,8 @@ from scrapli import Scrapli
 
 my_device = {
     "host": "172.18.0.11",
-    "auth_username": "vrnetlab",
-    "auth_password": "VR-netlab9",
+    "auth_username": "scrapli",
+    "auth_password": "scrapli",
     "auth_strict_key": False,
     "platform": "ruckus_fastiron"
 }
