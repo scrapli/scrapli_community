@@ -19,7 +19,7 @@ async def default_async_on_open(conn: AsyncNetworkDriver) -> None:
 
     """
     await conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
-    await conn.send_command(command="screen-length 0 temporary")
+    await conn.send_command(command="paginate false")
 
 
 async def default_async_on_close(conn: AsyncNetworkDriver) -> None:
