@@ -1,15 +1,34 @@
-"""scrapli_community.datacom.dmos.async_driver"""
+"""scrapli_community.datacom.dmswitch.sync_driver"""
 from typing import Any
 
-from scrapli.driver import AsyncNetworkDriver
+from scrapli.driver import NetworkDriver
 
 
-async def default_async_on_open(conn: AsyncNetworkDriver) -> None:
+def default_sync_on_open(conn: NetworkDriver) -> None:
     """
-    Async datacom_dmos default on_open callable
+    Datacom datacom_dmswitch on_open callable
 
     Args:
-        conn: AsyncNetworkDriver object
+        conn: NetworkDriver object
+
+    Returns:
+        N/A
+
+    Raises:
+        N/A
+    """
+    conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
+    conn.send_command(command="configure")
+    conn.send_command(command="no terminal paging")
+    conn.send_command(command="exit")
+
+
+def default_sync_on_close(conn: NetworkDriver) -> None:
+    """
+    datacom_dmswitch default on_close callable
+
+    Args:
+        conn: NetworkDriver object
 
     Returns:
         N/A
@@ -18,33 +37,15 @@ async def default_async_on_open(conn: AsyncNetworkDriver) -> None:
         N/A
 
     """
-    await conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
-    await conn.send_command(command="paginate false")
-
-
-async def default_async_on_close(conn: AsyncNetworkDriver) -> None:
-    """
-    Async datacom_dmos default on_close callable
-
-    Args:
-        conn: AsyncNetworkDriver object
-
-    Returns:
-        N/A
-
-    Raises:
-        N/A
-
-    """
-    await conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
+    conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
     conn.channel.write(channel_input="exit")
     conn.channel.send_return()
 
 
-class AsyncDatacomDmosDriver(AsyncNetworkDriver):
+class DatacomDmSwitchDriver(NetworkDriver):
     def __init__(self, **kwargs: Any) -> None:
         """
-        Datacom DMOS platform class
+        Datacom dmswitch platform class
 
         Args:
             kwargs: keyword args

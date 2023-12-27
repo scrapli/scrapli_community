@@ -1,12 +1,12 @@
-"""scrapli_community.datacom.dmos.datacom_dmos"""
+"""scrapli_community.datacom.dmswitch.datacom_dmswitch"""
 from scrapli.driver.network.base_driver import PrivilegeLevel
-from scrapli_community.datacom.dmos.async_driver import (
-    AsyncDatacomDmosDriver,
+from scrapli_community.datacom.dmswitch.async_driver import (
+    AsyncDatacomDmSwitchDriver,
     default_async_on_close,
     default_async_on_open,
 )
-from scrapli_community.datacom.dmos.sync_driver import (
-    DatacomDmosDriver,
+from scrapli_community.datacom.dmswitch.sync_driver import (
+    DatacomDmSwitchDriver,
     default_sync_on_close,
     default_sync_on_open,
 )
@@ -29,7 +29,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
             name="configuration",
             previous_priv="exec",
             deescalate="exit",
-            escalate="config terminal",
+            escalate="configure",
             escalate_auth=False,
             escalate_prompt="",
         )
@@ -38,8 +38,8 @@ DEFAULT_PRIVILEGE_LEVELS = {
 
 SCRAPLI_PLATFORM = {
     "driver_type": {
-        "sync": DatacomDmosDriver,
-        "async": AsyncDatacomDmosDriver,
+        "sync": DatacomDmSwitchDriver,
+        "async": AsyncDatacomDmSwitchDriver,
     },
     "defaults": {
         "privilege_levels": DEFAULT_PRIVILEGE_LEVELS,

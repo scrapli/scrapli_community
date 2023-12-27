@@ -1,4 +1,4 @@
-"""scrapli_community.datacom.dmos.async_driver"""
+"""scrapli_community.datacom.dmswitch.async_driver"""
 from typing import Any
 
 from scrapli.driver import AsyncNetworkDriver
@@ -6,7 +6,7 @@ from scrapli.driver import AsyncNetworkDriver
 
 async def default_async_on_open(conn: AsyncNetworkDriver) -> None:
     """
-    Async datacom_dmos default on_open callable
+    Async datacom_dmswitch default on_open callable
 
     Args:
         conn: AsyncNetworkDriver object
@@ -19,12 +19,14 @@ async def default_async_on_open(conn: AsyncNetworkDriver) -> None:
 
     """
     await conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
-    await conn.send_command(command="paginate false")
+    await conn.send_command(command="configure")
+    await conn.send_command(command="no terminal paging")
+    await conn.send_command(command="exit")
 
 
 async def default_async_on_close(conn: AsyncNetworkDriver) -> None:
     """
-    Async datacom_dmos default on_close callable
+    Async datacom_dmswitch default on_close callable
 
     Args:
         conn: AsyncNetworkDriver object
@@ -41,10 +43,10 @@ async def default_async_on_close(conn: AsyncNetworkDriver) -> None:
     conn.channel.send_return()
 
 
-class AsyncDatacomDmosDriver(AsyncNetworkDriver):
+class AsyncDatacomDmSwitchDriver(AsyncNetworkDriver):
     def __init__(self, **kwargs: Any) -> None:
         """
-        Datacom DMOS platform class
+        Datacom dmswitch platform class
 
         Args:
             kwargs: keyword args
