@@ -29,7 +29,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
             name="configuration",
             previous_priv="exec",
             deescalate="exit",
-            escalate="configure terminal",
+            escalate="configure",
             escalate_auth=False,
             escalate_prompt="",
         )
