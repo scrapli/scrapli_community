@@ -10,6 +10,8 @@ from scrapli_community.nokia.srlinux.nokia_srlinux import DEFAULT_PRIVILEGE_LEVE
     [
         ("exec", "--{ running }--[  ]--\nA:srl#"),
         ("exec", "--{ + running }--[  ]--\nA:srl#"),
+        ("exec", "--{ [YANG RELOAD] [FACTORY] running }--[  ]--\nA:r2# "),
+        ("exec", "--{ [OLD STARTUP] running }--[  ]--\nA:r2# "),
         ("configuration", "--{ candidate shared-exclusive default }--[  ]--\nA:srl#"),
         ("configuration", "--{ candidate shared-exclusive default }--[ platform ]--\nA:srl#"),
         ("configuration", "--{ [FACTORY] candidate private private-root }--[  ]--\nA:r2# "),
@@ -19,6 +21,8 @@ from scrapli_community.nokia.srlinux.nokia_srlinux import DEFAULT_PRIVILEGE_LEVE
     ids=[
         "exec",
         "exec_config_not_saved",
+        "exec_factory_and_yang_reload",
+        "exec_old_startup",
         "configuration",
         "configuration_with_path",
         "configuration_private",
