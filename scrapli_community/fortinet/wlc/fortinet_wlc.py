@@ -1,4 +1,5 @@
 """scrapli_community.fortinet.wlc.fortinet_wlc"""
+
 from scrapli.driver.network.base_driver import PrivilegeLevel
 from scrapli_community.fortinet.wlc.async_driver import (
     default_async_on_close,

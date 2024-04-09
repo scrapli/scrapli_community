@@ -1,4 +1,5 @@
 """scrapli_community.scrapli.genericdriver.ansync_driver"""
+
 import asyncio
 
 from scrapli.driver import AsyncGenericDriver

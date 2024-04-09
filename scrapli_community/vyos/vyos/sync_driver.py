@@ -1,4 +1,5 @@
 """scrapli_community.vyos.vyos.sync_driver"""
+
 from scrapli.driver import NetworkDriver
 
 

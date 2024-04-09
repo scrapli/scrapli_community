@@ -1,4 +1,5 @@
 """scrapli_community.eltex.esr.async_driver"""
+
 from scrapli.driver import AsyncNetworkDriver
 
 

@@ -1,4 +1,5 @@
 """scrapli_community.ruckus.fastiron.ansync_driver"""
+
 from scrapli.driver import AsyncNetworkDriver
 
 

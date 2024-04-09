@@ -1,4 +1,5 @@
 """scrapli_community.fortinet.wlc.fortinet_wlc"""
+
 from scrapli_community.fortinet.fortios.async_driver import (
     AsyncFortinetFortiOSDriver,
     default_async_on_close,

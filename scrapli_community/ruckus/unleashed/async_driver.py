@@ -1,4 +1,5 @@
 """scrapli_community.ruckus.unleashed.async_driver"""
+
 from scrapli.driver import AsyncNetworkDriver
 
 

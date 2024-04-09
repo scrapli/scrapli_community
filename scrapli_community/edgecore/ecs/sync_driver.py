@@ -1,4 +1,5 @@
 """scrapli_community.edgecore.ecs.sync_driver"""
+
 from scrapli.driver import NetworkDriver
 
 

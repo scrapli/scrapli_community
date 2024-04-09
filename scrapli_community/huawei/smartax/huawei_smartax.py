@@ -1,4 +1,5 @@
 """scrapli_community.huawei.smartax.huawei_smartax"""
+
 from scrapli.driver.network.base_driver import PrivilegeLevel
 from scrapli_community.huawei.smartax.async_driver import (
     AsyncHuaweiSmartAXDriver,

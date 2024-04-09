@@ -1,4 +1,5 @@
 """scrapli_community.cumulus.vtysh.cumulus_vtysh"""
+
 from scrapli.driver.network.base_driver import PrivilegeLevel
 from scrapli_community.cumulus.vtysh.async_driver import (
     default_async_on_close,

@@ -1,4 +1,5 @@
 """scrapli_community.ruckus.unleashed.ruckus_unleashed"""
+
 from scrapli.driver.network.base_driver import PrivilegeLevel
 from scrapli_community.ruckus.unleashed.async_driver import (
     default_async_on_close,

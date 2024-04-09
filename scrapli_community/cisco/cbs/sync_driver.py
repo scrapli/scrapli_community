@@ -1,4 +1,5 @@
 """scrapli_community.cisco.cbs.sync_driver"""
+
 from scrapli.driver import NetworkDriver
 
 

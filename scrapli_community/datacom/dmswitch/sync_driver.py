@@ -1,4 +1,5 @@
 """scrapli_community.datacom.dmswitch.sync_driver"""
+
 from typing import Any
 
 from scrapli.driver import NetworkDriver

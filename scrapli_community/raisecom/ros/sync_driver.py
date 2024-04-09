@@ -1,4 +1,5 @@
 """scrapli_community.raisecom.ros.sync_driver"""
+
 from scrapli.driver import NetworkDriver
 
 

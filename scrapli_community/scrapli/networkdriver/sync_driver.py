@@ -1,4 +1,5 @@
 """scrapli_community.scrapli.networkdriver.sync_driver"""
+
 from typing import Any
 
 from scrapli.driver import NetworkDriver

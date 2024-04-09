@@ -1,4 +1,5 @@
 """scrapli_community.fortinet.fortios.sync_driver"""
+
 import re
 import textwrap
 from time import sleep

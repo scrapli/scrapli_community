@@ -1,4 +1,5 @@
 """scrapli_community.paloalto.panos.sync_driver"""
+
 from scrapli.driver import NetworkDriver
 
 

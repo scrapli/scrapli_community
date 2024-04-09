@@ -1,4 +1,5 @@
 """scrapli_community.dlink.os.sync_driver"""
+
 from scrapli.driver import NetworkDriver
 
 

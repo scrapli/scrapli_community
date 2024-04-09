@@ -1,4 +1,5 @@
 """scrapli_community.cumulus.vtysh.sync_driver"""
+
 from scrapli.driver import NetworkDriver
 
 

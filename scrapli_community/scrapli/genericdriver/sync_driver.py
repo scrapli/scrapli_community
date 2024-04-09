@@ -1,4 +1,5 @@
 """scrapli_community.scrapli.genericdriver.sync_driver"""
+
 import time
 
 from scrapli.driver import GenericDriver

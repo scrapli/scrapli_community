@@ -1,4 +1,5 @@
 """scrapli_community.fortinet.fortios.async_driver"""
+
 import asyncio
 import re
 import textwrap

@@ -1,4 +1,5 @@
 """scrapli_community.vyos.vyos.vyos"""
+
 from scrapli.driver.network.base_driver import PrivilegeLevel
 from scrapli_community.vyos.vyos.async_driver import default_async_on_close, default_async_on_open
 from scrapli_community.vyos.vyos.sync_driver import default_sync_on_close, default_sync_on_open

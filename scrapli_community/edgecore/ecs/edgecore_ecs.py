@@ -1,4 +1,5 @@
 """scrapli_community.edgecore.ecs.edgecore_ecs"""
+
 from scrapli.driver.network.base_driver import PrivilegeLevel
 from scrapli_community.edgecore.ecs.async_driver import (
     default_async_on_close,

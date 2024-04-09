@@ -1,4 +1,5 @@
 """scrapli_community.mikrotik.routeros.async_driver"""
+
 from typing import Any, List, Optional, Union
 
 from scrapli.driver import AsyncGenericDriver

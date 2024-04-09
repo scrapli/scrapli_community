@@ -1,4 +1,5 @@
 """scrapli_community.ruckus.fastiron.sync_driver"""
+
 from scrapli.driver import NetworkDriver
 
 

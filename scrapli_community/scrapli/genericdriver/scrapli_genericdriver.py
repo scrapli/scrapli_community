@@ -1,4 +1,5 @@
 """scrapli_community.scrapli.genericdriver.scrapli_example"""
+
 from scrapli_community.scrapli.genericdriver.async_driver import (
     default_async_on_close,
     default_async_on_open,

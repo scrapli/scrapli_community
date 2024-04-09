@@ -1,4 +1,5 @@
 """scrapli_community.aruba.aoscx.aruba_aoscx"""
+
 from scrapli.driver.network.base_driver import PrivilegeLevel
 from scrapli_community.aruba.aoscx.async_driver import default_async_on_close, default_async_on_open
 from scrapli_community.aruba.aoscx.sync_driver import default_sync_on_close, default_sync_on_open

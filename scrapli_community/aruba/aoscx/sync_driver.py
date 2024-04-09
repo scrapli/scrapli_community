@@ -1,4 +1,5 @@
 """scrapli_community.aruba.aoscx.aruba_aoscx"""
+
 from scrapli.driver import NetworkDriver
 
 

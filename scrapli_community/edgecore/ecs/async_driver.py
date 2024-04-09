@@ -1,4 +1,5 @@
 """scrapli_community.edgecore.ecs.async_driver"""
+
 from scrapli.driver import AsyncNetworkDriver
 
 

@@ -1,4 +1,5 @@
 """scrapli_community.eltex.esr.sync_driver"""
+
 from scrapli.driver import NetworkDriver
 
 

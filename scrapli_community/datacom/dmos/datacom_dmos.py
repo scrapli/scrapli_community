@@ -1,4 +1,5 @@
 """scrapli_community.datacom.dmos.datacom_dmos"""
+
 from scrapli.driver.network.base_driver import PrivilegeLevel
 from scrapli_community.datacom.dmos.async_driver import (
     AsyncDatacomDmosDriver,

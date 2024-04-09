@@ -1,4 +1,5 @@
 """scrapli_community.versa.flexvnf.versa_flexvnf"""
+
 from scrapli.driver.network.base_driver import PrivilegeLevel
 from scrapli_community.versa.flexvnf.async_driver import (
     default_async_on_close,

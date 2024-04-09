@@ -1,4 +1,5 @@
 """scrapli_community.siemens.roxii.sync_driver"""
+
 from scrapli.driver import NetworkDriver
 
 

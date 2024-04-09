@@ -1,4 +1,5 @@
 """scrapli_community.cumulus.linux.cumulus_linux"""
+
 from scrapli.driver.network.base_driver import PrivilegeLevel
 from scrapli_community.cumulus.linux.async_driver import (
     default_async_on_close,

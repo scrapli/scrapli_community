@@ -1,4 +1,5 @@
 """scrapli_community.fortinet.wlc.sync_driver"""
+
 from scrapli.driver import NetworkDriver
 
 

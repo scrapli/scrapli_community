@@ -1,4 +1,5 @@
 """scrapli_community.nokia.nokia_srlinux.async_driver"""
+
 from scrapli.driver import AsyncNetworkDriver
 
 

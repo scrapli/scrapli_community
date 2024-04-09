@@ -1,4 +1,5 @@
 """scrapli_community.raisecom.ros.raisecom_ros"""
+
 from scrapli.driver.network.base_driver import PrivilegeLevel
 from scrapli_community.raisecom.ros.async_driver import (
     default_async_on_close,

@@ -1,4 +1,5 @@
 """scrapli_community.cumulus.linux.sync_driver"""
+
 from scrapli.driver import NetworkDriver
 
 

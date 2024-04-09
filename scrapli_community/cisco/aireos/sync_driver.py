@@ -1,4 +1,5 @@
 """scrapli_community.cisco.aireos.sync_driver"""
+
 import time
 
 from scrapli.driver import NetworkDriver

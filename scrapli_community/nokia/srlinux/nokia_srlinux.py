@@ -1,4 +1,5 @@
 """scrapli_community.nokia.srlinux.nokia_srlinux"""
+
 from scrapli.driver.network.base_driver import PrivilegeLevel
 from scrapli_community.nokia.srlinux.async_driver import (
     default_async_on_close,

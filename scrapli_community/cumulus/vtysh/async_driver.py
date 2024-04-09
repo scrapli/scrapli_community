@@ -1,4 +1,5 @@
 """scrapli_community.cumulus.vtysh.async_driver"""
+
 from scrapli.driver import AsyncNetworkDriver
 
 

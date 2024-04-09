@@ -1,4 +1,5 @@
 """scrapli_community.versa.flexvnf.sync_driver"""
+
 from scrapli.driver import NetworkDriver
 
 

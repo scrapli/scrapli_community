@@ -1,4 +1,5 @@
 """scrapli_community.aethra.atosnt.sync_driver"""
+
 from scrapli.driver import GenericDriver
 
 

@@ -1,4 +1,5 @@
 """scrapli_community.aruba.aoscx.ansync_driver"""
+
 from scrapli.driver import AsyncNetworkDriver
 
 

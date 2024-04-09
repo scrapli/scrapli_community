@@ -1,4 +1,5 @@
 """scrapli_community.alcatel.aos.sync_driver"""
+
 from scrapli.driver import GenericDriver
 
 

@@ -1,4 +1,5 @@
 """scrapli_community.scrapli.networkdriver.scrapli_example"""
+
 from scrapli.driver.network.base_driver import PrivilegeLevel
 from scrapli_community.scrapli.networkdriver.async_driver import (
     AsyncScrapliNetworkDriverWithMethods,
