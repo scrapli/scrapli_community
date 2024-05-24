@@ -1,0 +1,1 @@
+::: huawei.smartax.huawei_smartax
