@@ -21,6 +21,19 @@ def default_sync_on_open(conn: NetworkDriver) -> None:
     conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
     conn.send_command(command="screen-length 0 temporary")
 
+    # Attempt to set screen width as a fallback in case the device does not accept the
+    # ptyprocess/cols property when using system transport (observed on some firmware versions).
+    #
+    # On some devices, the command below might not exist (some switches running < V200R019);
+    # on others it asks for confirmation (Y/N), and other devices accept the command as-is.
+    #
+    # Use write() instead of send_command() or send_interactive() to fail silently should the
+    # command not exist.
+    conn.channel.write(channel_input="screen-width 256\ny\n\n")
+
+    # Make sure that we have a prompt again, and are not stuck in some confirmation loop.
+    conn.channel.get_prompt()
+
 
 def default_sync_on_close(conn: NetworkDriver) -> None:
     """
