@@ -33,7 +33,7 @@ async def default_async_on_open(conn: AsyncNetworkDriver) -> None:
     conn.channel.write(channel_input="screen-width 256\ny\n\n")
 
     # Make sure that we have a prompt again, and are not stuck in some confirmation loop.
-    conn.channel.get_prompt()
+    await conn.channel.get_prompt()
 
 
 async def default_async_on_close(conn: AsyncNetworkDriver) -> None:
