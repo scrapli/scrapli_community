@@ -154,9 +154,9 @@ def black(session):
 
 
 @nox.session(python=["3.11"])
-def pylama(session):
+def pylint(session):
     """
-    Nox run pylama
+    Nox run pylint
 
     Args:
         session: nox session
@@ -169,7 +169,7 @@ def pylama(session):
 
     """
     session.install(*_get_install_test_args())
-    session.run("python", "-m", "pylama", ".")
+    session.run("python", "-m", "pylint", "scrapli_community/")
 
 
 @nox.session(python=["3.11"])
