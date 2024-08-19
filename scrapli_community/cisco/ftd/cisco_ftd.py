@@ -1,4 +1,5 @@
-"""scrapli_community.cisco.ftd.cisco_ftd
+"""
+scrapli_community.cisco.ftd.cisco_ftd
 
 Welcome to infamous FTD CLI driver!
 If you are so desperate to run this code, you have to know a couple of things:
@@ -29,16 +30,9 @@ If you are so desperate to run this code, you have to know a couple of things:
 
 """
 
-
 from scrapli.driver.network.base_driver import PrivilegeLevel
-from scrapli_community.cisco.ftd.async_driver import (
-    default_async_on_close,
-    default_async_on_open,
-)
-from scrapli_community.cisco.ftd.sync_driver import (
-    default_sync_on_close,
-    default_sync_on_open,
-)
+from scrapli_community.cisco.ftd.async_driver import default_async_on_close, default_async_on_open
+from scrapli_community.cisco.ftd.sync_driver import default_sync_on_close, default_sync_on_open
 
 DEFAULT_PRIVILEGE_LEVELS = {
     "exec": (
@@ -71,9 +65,9 @@ DEFAULT_PRIVILEGE_LEVELS = {
             deescalate="exit",
             escalate="sudo su -",
             escalate_auth=True,
-            escalate_prompt="Password:"
+            escalate_prompt="Password:",
         )
-    )
+    ),
 }
 
 SCRAPLI_PLATFORM = {
