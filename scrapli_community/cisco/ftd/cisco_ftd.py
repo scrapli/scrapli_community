@@ -5,16 +5,20 @@ Welcome to infamous FTD CLI driver!
 If you are so desperate to run this code, you have to know a couple of things:
 
 * Always use full words for commands!
-  Otherwise, your connection will stall because FTD tries to complete it and it confuses Scrapli logic.
-  E.g.: DO NOT do this: conn.send_command("show run"), instead: conn.send_command("show running-config")
+  Otherwise, your connection will stall because FTD tries to complete it and it confuses Scrapli
+  logic.
+  E.g.: DO NOT do this: conn.send_command("show run"), instead:
+  conn.send_command("show running-config")
 
 * Do not use CLI filters without testing first!
   Commands like: show failover | include This host:.*Active
-  might fail because prompt is handled strangely by FTD. In this case, just do not filter on the CLI but in your code.
+  might fail because prompt is handled strangely by FTD. In this case, just do not filter on the
+  CLI but in your code.
   Filters are buggy anyway: simple regex expressions don't work. E.g. parentheses.
   In the worst case, set `eager` to True.
 
-* If you want to run commands in expert/root mode, you need to specify desired_privilege_level by connection data and
+* If you want to run commands in expert/root mode, you need to specify desired_privilege_level by
+ connection data and
   specify auth_secondary (admin password)!
   data = {
     "host": "172.18.0.11",
