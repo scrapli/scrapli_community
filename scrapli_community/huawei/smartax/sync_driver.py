@@ -19,7 +19,6 @@ def default_sync_on_open(conn: NetworkDriver) -> None:
         N/A
     """
     conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
-    conn.send_command(command="screen-length 0 temporary")
     conn.send_command(command="undo smart")
     conn.send_command(command="scroll")
 
@@ -40,6 +39,8 @@ def default_sync_on_close(conn: NetworkDriver) -> None:
     """
     conn.acquire_priv(desired_priv=conn.default_desired_privilege_level)
     conn.channel.write(channel_input="quit")
+    conn.channel.send_return()
+    conn.channel.write(channel_input="y")
     conn.channel.send_return()
 
 
