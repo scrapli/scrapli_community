@@ -12,12 +12,14 @@ from scrapli_community.huawei.smartax.huawei_smartax import DEFAULT_PRIVILEGE_LE
         ("privilege_exec", "SCRAPLI_HUAWEI-SMARTAX_TEST_OLT1#"),
         ("configuration", "SCRAPLI_HUAWEI-SMARTAX_TEST_OLT1(config)#"),
         ("configuration", "SCRAPLI_HUAWEI-SMARTAX_TEST_OLT1(config-if-gpon-0/1)#"),
+        ("diagnose", "SCRAPLI_HUAWEI-SMARTAX_TEST_OLT1(diagnose)%%"),
     ],
     ids=[
         "ssh_prompt_non_privileged_exec",
         "ssh_prompt_privilege_exec",
         "ssh_prompt_configuration",
         "ssh_prompt_configuration_interface",
+        "ssh_prompt_diagnose",
     ],
 )
 def test_default_prompt_patterns(priv_pattern):
