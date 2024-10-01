@@ -29,7 +29,7 @@ DEFAULT_PRIVILEGE_LEVELS = {
             pattern=r"^\S{1,48}#$",
             name="privilege_exec",
             previous_priv="exec",
-            deescalate="quit",
+            deescalate="disable",
             escalate="enable",
             escalate_auth=False,
             escalate_prompt="",
@@ -37,11 +37,22 @@ DEFAULT_PRIVILEGE_LEVELS = {
     ),
     "configuration": (
         PrivilegeLevel(
-            pattern=r"^\S{1,48}\(config(\-\S+)+\)|\(config\)#$",
+            pattern=r"^(.*)\(.*(config)\S*\)#$",
             name="configuration",
             previous_priv="privilege_exec",
             deescalate="quit",
-            escalate="enable",
+            escalate="config",
+            escalate_auth=False,
+            escalate_prompt="",
+        )
+    ),
+    "diagnose": (
+        PrivilegeLevel(
+            pattern=r".*\(diagnose\)\%\%$",
+            name="diagnose",
+            previous_priv="privilege_exec",
+            deescalate="quit",
+            escalate="diagnose",
             escalate_auth=False,
             escalate_prompt="",
         )
@@ -60,12 +71,14 @@ SCRAPLI_PLATFORM = {
         "async_on_open": default_async_on_open,
         "sync_on_close": default_sync_on_close,
         "async_on_close": default_async_on_close,
-        "failed_when_contains": ["Error:"],
-        "textfsm_platform": "huawei_vrp",
+        "failed_when_contains": [
+            "% Ambiguous command",
+            "% Incomplete command",
+            "% Invalid input detected",
+            "% Unknown command",
+            "Error:",
+        ],
+        "textfsm_platform": "huawei_smartax",
         "genie_platform": "",
-        # Force the screen to be 256 characters wide.
-        # Might get overwritten by global Scrapli transport options.
-        # See issue #18 for more details.
-        "transport_options": {"ptyprocess": {"cols": 256}},
     },
 }
