@@ -9,11 +9,9 @@ from scrapli_community.zyxel.dslam.zyxel_dslam import DEFAULT_PRIVILEGE_LEVELS
     "priv_pattern",
     [
         ("exec", "ZSCRAPLI_DSLAM>"),
-        ("configuration", "ZSCRAPLI_CNF_DSLAM>"),
     ],
     ids=[
         "ssh_prompt_exec",
-        "ssh_prompt_configuration",
     ],
 )
 def test_default_prompt_patterns(priv_pattern):

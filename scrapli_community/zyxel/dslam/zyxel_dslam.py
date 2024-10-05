@@ -24,17 +24,6 @@ DEFAULT_PRIVILEGE_LEVELS = {
             escalate_prompt="",
         )
     ),
-    "configuration": (
-        PrivilegeLevel(
-            pattern=r"^(.*)[a-zA-Z0-9_\-]*[\>#]\s*$",
-            name="configuration",
-            previous_priv="",
-            deescalate="",
-            escalate="",
-            escalate_auth=False,
-            escalate_prompt="",
-        )
-    ),
 }
 
 SCRAPLI_PLATFORM = {
