@@ -71,11 +71,8 @@ def test_default_prompt_patterns_classic_variant(priv_pattern):
 
 @pytest.mark.parametrize(
     "priv_pattern",
-    [("exec", "leg:noa>#"), ("configuration", "leg:noa>#")],
-    ids=[
-        "exec",
-        "configuration",
-    ],
+    [("exec", "leg:noa>#")],
+    ids=["exec"],
 )
 def test_default_prompt_patterns_classic_aram_variant(priv_pattern):
     priv_level_name = priv_pattern[0]

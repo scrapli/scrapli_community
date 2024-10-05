@@ -87,17 +87,6 @@ CLASSIC_ARAM_PRIVILEGE_LEVELS = {
             escalate_prompt="",
         )
     ),
-    "configuration": (
-        PrivilegeLevel(
-            pattern=r"^(.*)[a-zA-Z0-9_\:\-\>]*[\#\$] ?$",
-            name="configuration",
-            previous_priv="",
-            deescalate="exit all",
-            escalate="",
-            escalate_auth=False,
-            escalate_prompt="",
-        )
-    ),
 }
 
 SCRAPLI_PLATFORM = {
