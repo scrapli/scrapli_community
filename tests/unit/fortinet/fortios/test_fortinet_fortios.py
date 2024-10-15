@@ -12,6 +12,7 @@ from scrapli_community.fortinet.fortios.fortinet_fortios import SCRAPLI_PLATFORM
         "SCRAPLI-FORTIGATE $ ",  # remote admin root prompt
         "SCRAPLI-FORTIGATE (global) # ",  # global context
         "SCRAPLI-FORTIGATE (interface) # ",  # interface config context
+        "SCRAPLI-FORTIGATE (ha-mgmt-interfaces) # ",  # subsection with dashes
         "SCRAPLI-FORTIGATE (vdom) # ",  # vdom config context
         "SCRAPLI-FORTIGATE (testvdom) # ",  # a user defined vdom context
     ],
