@@ -42,7 +42,7 @@ class AsyncMikrotikRouterOSDriver(AsyncGenericDriver):
 
         # Append login options to the username according to
         # https://wiki.mikrotik.com/wiki/Manual:Console_login_process
-        kwargs["auth_username"] += "+cet511w4098h"
+        kwargs["auth_username"] += "+ct511w4098h"
 
         super().__init__(**kwargs)
 
