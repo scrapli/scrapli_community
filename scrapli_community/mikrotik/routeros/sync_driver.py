@@ -42,7 +42,8 @@ class MikrotikRouterOSDriver(GenericDriver):
 
         # Append login options to the username according to
         # https://wiki.mikrotik.com/wiki/Manual:Console_login_process
-        kwargs["auth_username"] += "+cet511w4098h"
+        kwargs["auth_username"] += kwargs["routeros_login_options"]
+        kwargs.pop("routeros_login_options")
 
         super().__init__(**kwargs)
 
