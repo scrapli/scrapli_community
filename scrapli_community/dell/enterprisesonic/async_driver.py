@@ -1,4 +1,4 @@
-"""scrapli_community.dell.enterprise_sonic.async_driver"""
+"""scrapli_community.dell.enterprisesonic.async_driver"""
 
 from scrapli.driver import AsyncNetworkDriver
 

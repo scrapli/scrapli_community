@@ -1,4 +1,4 @@
-"""scrapli_community.dell.enterprise_sonic.sync_driver"""
+"""scrapli_community.dell.enterprisesonic.sync_driver"""
 
 from scrapli.driver import NetworkDriver
 

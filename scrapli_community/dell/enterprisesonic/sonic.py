@@ -1,11 +1,11 @@
-"""scrapli_community.dell.enterprise_sonic.sonic"""
+"""scrapli_community.dell.enterprisesonic.sonic"""
 
 from scrapli.driver.network.base_driver import PrivilegeLevel
-from scrapli_community.dell.enterprise_sonic.async_driver import (
+from scrapli_community.dell.enterprisesonic.async_driver import (
     default_async_on_close,
     default_async_on_open,
 )
-from scrapli_community.dell.enterprise_sonic.sync_driver import (
+from scrapli_community.dell.enterprisesonic.sync_driver import (
     default_sync_on_close,
     default_sync_on_open,
 )

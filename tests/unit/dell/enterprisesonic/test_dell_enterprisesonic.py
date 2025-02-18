@@ -2,7 +2,7 @@ import re
 
 import pytest
 
-from scrapli_community.dell.enterprise_sonic.sonic import DEFAULT_PRIVILEGE_LEVELS
+from scrapli_community.dell.enterprisesonic.sonic import DEFAULT_PRIVILEGE_LEVELS
 
 
 @pytest.mark.parametrize(
