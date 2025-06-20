@@ -1,8 +1,16 @@
 """scrapli_community.extreme.voss.extreme_voss"""
 
 from scrapli.driver.network.base_driver import PrivilegeLevel
-from scrapli_community.extreme.voss.async_driver import default_async_on_close, default_async_on_open
-from scrapli_community.extreme.voss.sync_driver import default_sync_on_close, default_sync_on_open
+from scrapli_community.extreme.voss.extreme_voss import (
+    default_async_on_close,
+    default_async_on_open,
+    read_only_async_on_open,
+)
+from scrapli_community.extreme.voss.extreme_voss import (
+    default_sync_on_close,
+    default_sync_on_open,
+    read_only_sync_on_open,
+)
 
 DEFAULT_PRIVILEGE_LEVELS = {
     "exec": (
@@ -59,8 +67,6 @@ SCRAPLI_PLATFORM = {
     },
     "variants": {
         "read_only": {
-            # Warning: terminal width may be default 80 which can interfere parsing!
-            # useful for users without config mode privilege
             "sync_on_open": read_only_sync_on_open,
             "async_on_open": read_only_async_on_open,
         }
