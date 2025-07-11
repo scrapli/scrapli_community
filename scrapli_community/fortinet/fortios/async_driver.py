@@ -87,8 +87,9 @@ class AsyncFortinetFortiOSDriver(AsyncGenericDriver):
             This won't exit deeply nested config blocks!
         """
         prompt = await self.get_prompt()
-        if "(" in prompt:
+        while "(" in prompt:
             await self.send_commands(["abort", "end"])
+            prompt = await self.get_prompt()
 
     async def gather_vdoms(self) -> Union[None, List[str]]:
         """Gather list of VDOMs
@@ -102,19 +103,17 @@ class AsyncFortinetFortiOSDriver(AsyncGenericDriver):
             # device is not in multi VDOM mode
             return None
         await self._to_system()
-        output = await self.send_command('show | grep "config vdom" -f -A1')
-        # """
-        # FIREWALL # show | grep "config vdom" -f -A1
-        # config vdom
-        # edit root
-        # --
-        # config vdom
-        # edit root
-        # --
-        # config vdom
-        # edit test1
-        # """
-        self._vdom_list = list(set(re.findall(r"^edit (\w+)$", output.result, re.M)))
+        await self.send_command('config global')
+        output = await self.send_command('diagnose sys vd list')
+        await self._to_system()
+
+        # Valid characters for VDOM name - 0-9, A-Z, a-z, -, _
+        vd_list = re.findall(r"name=([0-9A-Za-z-_]+)", output.result)
+
+        # Removal of system-defined VDOMs (vsys_.*)
+        vsys_re = re.compile(r"^vsys_")
+        self._vdom_list = [vd for vd in vd_list if not vsys_re.match(vd)]
+
         return self._vdom_list
 
     async def context(self, context: str) -> Union[None, str]:
