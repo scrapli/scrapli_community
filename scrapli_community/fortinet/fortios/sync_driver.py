@@ -80,16 +80,9 @@ class FortinetFortiOSDriver(GenericDriver):
             self.send_commands(restore_console.splitlines())
 
     def _to_system(self) -> None:
-        """Abort everything and go to the root prompt
-
-        Note:
-            This can't handle all cases, user needs to ensure all command blocks are closed.
-            This won't exit deeply nested config blocks!
-        """
-        prompt = self.get_prompt()
-        while "(" in prompt:
-            self.send_commands(["abort", "end"])
-            prompt = self.get_prompt()
+        """End and save last config and go to the root prompt"""
+        while "(" in self.get_prompt():
+            self.send_command("end")
 
     def gather_vdoms(self) -> Union[None, List[str]]:
         """Gather list of VDOMs
@@ -101,9 +94,9 @@ class FortinetFortiOSDriver(GenericDriver):
 
         if not self._vdoms_enabled:
             # device is not in multi VDOM mode
+            self._to_system()
             return None
-        self._to_system()
-        self.send_command('config global')
+        self.context("global")
         output = self.send_command('diagnose sys vd list')
         self._to_system()
 
