@@ -80,15 +80,9 @@ class AsyncFortinetFortiOSDriver(AsyncGenericDriver):
             await self.send_commands(restore_console.splitlines())
 
     async def _to_system(self) -> None:
-        """Abort everything and go to the root prompt
-
-        Note:
-            This can't handle all cases, user needs to ensure all command blocks are closed.
-            This won't exit deeply nested config blocks!
-        """
-        prompt = await self.get_prompt()
-        if "(" in prompt:
-            await self.send_commands(["abort", "end"])
+        """End and save last config and go to the root prompt"""
+        while "(" in await self.get_prompt():
+            await self.send_command("end")
 
     async def gather_vdoms(self) -> Union[None, List[str]]:
         """Gather list of VDOMs
@@ -100,21 +94,19 @@ class AsyncFortinetFortiOSDriver(AsyncGenericDriver):
 
         if not self._vdoms_enabled:
             # device is not in multi VDOM mode
+            await self._to_system()
             return None
+        await self.context("global")
+        output = await self.send_command("diagnose sys vd list")
         await self._to_system()
-        output = await self.send_command('show | grep "config vdom" -f -A1')
-        # """
-        # FIREWALL # show | grep "config vdom" -f -A1
-        # config vdom
-        # edit root
-        # --
-        # config vdom
-        # edit root
-        # --
-        # config vdom
-        # edit test1
-        # """
-        self._vdom_list = list(set(re.findall(r"^edit (\w+)$", output.result, re.M)))
+
+        # Valid characters for VDOM name - 0-9, A-Z, a-z, -, _
+        vd_list = re.findall(r"name=([0-9A-Za-z-_]+)", output.result)
+
+        # Removal of system-defined VDOMs (vsys_.*)
+        vsys_re = re.compile(r"^vsys_")
+        self._vdom_list = [vd for vd in vd_list if not vsys_re.match(vd)]
+
         return self._vdom_list
 
     async def context(self, context: str) -> Union[None, str]:
