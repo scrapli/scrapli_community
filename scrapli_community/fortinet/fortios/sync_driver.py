@@ -97,7 +97,7 @@ class FortinetFortiOSDriver(GenericDriver):
             self._to_system()
             return None
         self.context("global")
-        output = self.send_command('diagnose sys vd list')
+        output = self.send_command("diagnose sys vd list")
         self._to_system()
 
         # Valid characters for VDOM name - 0-9, A-Z, a-z, -, _

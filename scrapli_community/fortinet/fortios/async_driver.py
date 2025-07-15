@@ -97,7 +97,7 @@ class AsyncFortinetFortiOSDriver(AsyncGenericDriver):
             await self._to_system()
             return None
         await self.context("global")
-        output = await self.send_command('diagnose sys vd list')
+        output = await self.send_command("diagnose sys vd list")
         await self._to_system()
 
         # Valid characters for VDOM name - 0-9, A-Z, a-z, -, _
