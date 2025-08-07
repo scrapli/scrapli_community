@@ -24,6 +24,10 @@ from scrapli_community.ruckus.fastiron.ruckus_fastiron import DEFAULT_PRIVILEGE_
         ("privilege_exec", "SSH@ICX7150-24-Switch#"),
         ("configuration", "SSH@ICX7150-24-Switch(config)#"),
         ("configuration", "SSH@ICX7150-24-Switch(config-if-e1000-1/1/1)#"),
+        ("exec", "SSH@ICX7150-24-Switch(DEV)>"),
+        ("privilege_exec", "SSH@ICX7150-24-Switch(DEV)#"),
+        ("configuration", "SSH@ICX7150-24-Switch(DEV)(config)#"),
+        ("configuration", "SSH@ICX7150-24-Switch(DEV)(config-if-e1000-1/1/1)#"),
     ],
     ids=[
         "base_prompt_with_space_exec",
@@ -42,6 +46,10 @@ from scrapli_community.ruckus.fastiron.ruckus_fastiron import DEFAULT_PRIVILEGE_
         "ssh_prompt_privilege_exec",
         "ssh_prompt_configuration",
         "ssh_prompt_configuration_interface",
+        "ssh_prompt_exec_with_parentheses",
+        "ssh_prompt_privilege_exec_with_parentheses",
+        "ssh_prompt_with_parentheses_configuration",
+        "ssh_prompt_with_parentheses_configuration_interface",
     ],
 )
 def test_default_prompt_patterns(priv_pattern):
