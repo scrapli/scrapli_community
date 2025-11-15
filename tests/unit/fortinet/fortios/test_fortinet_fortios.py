@@ -1,4 +1,5 @@
 import re
+import textwrap
 
 import pytest
 
@@ -22,3 +23,16 @@ def test_default_prompt_patterns(prompt):
     match = re.search(pattern=prompt_pattern, string=prompt, flags=re.M | re.I)
 
     assert match
+
+
+def test_default_prompt_not_matching_in_config():
+    prompt_pattern = SCRAPLI_PLATFORM["defaults"]["comms_prompt_pattern"]
+    text = textwrap.dedent(
+        """\
+    Let's assume this is a config text:
+    somewhere I have a prompt like: HOSTNAME $ and some other text
+    """
+    )
+    match = re.search(pattern=prompt_pattern, string=text, flags=re.M | re.I)
+
+    assert not match

@@ -17,7 +17,7 @@ SCRAPLI_PLATFORM = {
         "async": AsyncFortinetFortiOSDriver,
     },
     "defaults": {
-        "comms_prompt_pattern": r"[\w_-]+ (\([\w-]+\) )?[$#]",
+        "comms_prompt_pattern": r"^[\w_-]+ (\([\w-]+\) )?[$#]",
         "sync_on_open": default_sync_on_open,
         "async_on_open": default_async_on_open,
         "sync_on_close": default_sync_on_close,
